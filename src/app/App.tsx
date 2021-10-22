@@ -7,6 +7,7 @@ import type {HeaderProps} from "./components/Header"
 import {useTranslation} from "./i18n/useTranslation";
 import { ThemeProvider } from "../theme";
 import {AppFooter} from "./AppFooter";
+import {Biography} from "./pages/Biography";
 
 
 
@@ -51,9 +52,9 @@ export const App = memo(() => {
 				"isRetracted": "smart"
 			}}
 		>
-			{route.name === "biography" && <p>{route.name}</p>}
-			{route.name === "futureEvents" && <p>{route.name}</p>}
 			{route.name === "home" && <Home />}
+			{route.name === "biography" && <Biography />}
+			{route.name === "futureEvents" && <p>{route.name}</p>}
 			{route.name === "media" && <p>{route.name}</p>}
 		</GlTemplate>
 	)
