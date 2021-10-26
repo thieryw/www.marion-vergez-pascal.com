@@ -76,14 +76,15 @@ export function useTheme() {
 			return "linear-gradient(270deg, rgba(240,240,244,1) 0%, rgba(221,219,219,1) 100%)";
 		})(),
 
-		"transparentBackground": (() => {
+		"transparentBackground": (params: {direction: "to left" | "to right" | "to bottom" | "to top"}) => {
+			const {direction} = params;
 			if (theme.isDarkModeEnabled) {
-				return "linear-gradient(to left, rgba(44,50,63,0.9), rgba(44,50,63, 1))";
+				return `linear-gradient(${direction}, rgba(44,50,63,0.9), rgba(44,50,63, 1))`;
 			};
 
-			return "linear-gradient(to left, rgba(241,240,235,0.7), rgba(241,240,235,1))";
+			return `linear-gradient(${direction}, rgba(241,240,235,0.7), rgba(241,240,235,1))`;
 
-		})()
+		}
 
 
 	}

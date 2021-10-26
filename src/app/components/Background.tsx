@@ -6,6 +6,7 @@ export type BackgroundProps = {
 	className?: string;
 	imageUrl?: string;
 	isImageCovered?: boolean;
+	fadeDirection?: "to left" | "to right" | "to bottom" | "to top";
 	classes?: {
 		imageBackground?: string;
 		imageCover?: string;
@@ -15,9 +16,10 @@ export type BackgroundProps = {
 
 
 export const Background = memo((props: BackgroundProps) => {
-	const { imageUrl, isImageCovered, className, classes: classesProp } = props;
+	const { imageUrl, isImageCovered, className, classes: classesProp, fadeDirection } = props;
 	const {classes, cx} = useStyles({
-		"backgroundImageUrl": imageUrl
+		"backgroundImageUrl": imageUrl,
+		"fadeDirection": fadeDirection ?? "to left"
 	});
 	return <div className={cx(classes.root, className)}>
 		{
@@ -32,8 +34,12 @@ export const Background = memo((props: BackgroundProps) => {
 	</div>
 });
 
-const useStyles = makeStyles<{ backgroundImageUrl: string | undefined }>()(
-	(theme, {backgroundImageUrl}) => ({
+
+const useStyles = makeStyles<{ 
+	backgroundImageUrl: string | undefined; 
+	fadeDirection: NonNullable<Required<BackgroundProps["fadeDirection"]>>;
+}>()(
+	(theme, {backgroundImageUrl, fadeDirection}) => ({
 		"root": {
 			"width": theme.windowInnerWidth,
 			"height": "100%",
@@ -56,7 +62,7 @@ const useStyles = makeStyles<{ backgroundImageUrl: string | undefined }>()(
 			"position": "absolute",
 			"top": "0",
 			"left": "0",
-			"background": theme.transparentBackground,
+			"background": theme.transparentBackground({"direction": fadeDirection}),
 			"zIndex": 0
 
 
