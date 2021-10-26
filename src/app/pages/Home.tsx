@@ -9,7 +9,7 @@ import { GlIllustration } from "gitlanding/GlIllustration";
 import {routes} from "../../router";
 import decorativeMp4 from "../../assets/video/home/decoration.mp4";
 import { Article } from "../components/Article";
-import contactImageUrl from "../../assets/img/home/marionPortrait.jpeg";
+import contactImageUrl from "../../assets/img/home/contact.jpeg";
 import bioImageUrl from "../../assets/img/home/marion-nabil.jpeg";
 import MuiLink from "@mui/material/Link";
 import {Background} from "../components/Background";
@@ -29,7 +29,7 @@ export const Home = memo(() => {
 		<section className={classes.hero}>
 			<div className={classes.titleWrapper}>
 				<Text className={classes.title} typo="my title">Marion Vergez-Pascal</Text>
-				<Text className={classes.subtitle} typo="subtitle">SOPRANO</Text>
+				<Text className={classes.subtitle} typo="subtitle">MEZZO-SOPRANO</Text>
 			</div>
 		</section>
 		<Article 
@@ -84,7 +84,7 @@ export const Home = memo(() => {
 		</section>
 		<Article
 			classes={{
-				"image": cx(classes.sectionImage, classes.contactImage),
+				"image": cx(classes.contactImage, classes.sectionImage),
 				"paragraph": classes.contactParagraph
 			}}
 			imageUrl={contactImageUrl}
@@ -125,13 +125,13 @@ const useStyles = makeStyles()(
 
 			} : {}),
 			...(theme.windowInnerWidth < breakpointsValues.sm ? {
-				"alignItems": "end"
+				"alignItems": "flex-end"
 			} : {})
 		},
 
 		"title": {
 			"fontWeight": 100,
-			"color": theme.colors.palette.light.light,
+			"color": "#F7BCF7",
 			...(theme.windowInnerWidth >= breakpointsValues.lg ? {
 				"fontSize": "3rem",
 			} : {
@@ -152,7 +152,7 @@ const useStyles = makeStyles()(
 			"fontWeight": 100,
 			"letterSpacing": theme.spacing(2),
 			"textAlign": "right",
-			"color": theme.colors.palette.light.main,
+			"color": "#F7BCF7",
 			...(theme.windowInnerWidth < breakpointsValues.lg ? {
 				"fontSize": "1rem"
 			} : {})
@@ -166,7 +166,7 @@ const useStyles = makeStyles()(
 		},
 
 		"contactImage": {
-			"maxWidth": 400,
+			"maxWidth": 600,
 		},
 
 		"contactParagraph": {

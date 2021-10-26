@@ -1,4 +1,4 @@
-import newsImage from "../../assets/img/home/newsImage.jpeg";
+import newsImage from "../../assets/img/home/news.jpeg";
 export const news = {
 	"fr": {
 		"title": `Titre de l'actualité`,

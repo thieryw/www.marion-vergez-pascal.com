@@ -62,7 +62,7 @@ export const AppFooter = memo(() => {
 		title={
 			<div>
 				<Text className={classes.title} typo="my title">Marion Vergez-Pascal</Text>
-				<Text className={classes.subtitle} typo="subtitle">SOPRANO</Text>
+				<Text className={classes.subtitle} typo="subtitle">MEZZO-SOPRANO</Text>
 			</div>
 		}
 
