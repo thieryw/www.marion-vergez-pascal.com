@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.50b3bbf0.chunk.js",
-    "main.js.map": "/static/js/main.50b3bbf0.chunk.js.map",
+    "main.js": "/static/js/main.87cd1f05.chunk.js",
+    "main.js.map": "/static/js/main.87cd1f05.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.f8d87d06.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.f8d87d06.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.806939eb.chunk.js",
@@ -306,13 +306,14 @@
     "react-syntax-highlighter_languages_refractor_yaml.js.map": "/static/js/react-syntax-highlighter_languages_refractor_yaml.2d6ee869.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.221a9fed.js",
     "runtime-main.js.map": "/static/js/runtime-main.221a9fed.js.map",
-    "static/js/153.b6dac8cf.chunk.js": "/static/js/153.b6dac8cf.chunk.js",
-    "static/js/153.b6dac8cf.chunk.js.map": "/static/js/153.b6dac8cf.chunk.js.map",
+    "static/js/153.1bfb6317.chunk.js": "/static/js/153.1bfb6317.chunk.js",
+    "static/js/153.1bfb6317.chunk.js.map": "/static/js/153.1bfb6317.chunk.js.map",
     "static/js/154.bbd21f4b.chunk.js": "/static/js/154.bbd21f4b.chunk.js",
     "static/js/154.bbd21f4b.chunk.js.map": "/static/js/154.bbd21f4b.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/153.b6dac8cf.chunk.js.LICENSE.txt": "/static/js/153.b6dac8cf.chunk.js.LICENSE.txt",
+    "static/js/153.1bfb6317.chunk.js.LICENSE.txt": "/static/js/153.1bfb6317.chunk.js.LICENSE.txt",
     "static/media/bio-banner.ca910f90.jpeg": "/static/media/bio-banner.ca910f90.jpeg",
+    "static/media/bio-portrait.6d4f1277.jpeg": "/static/media/bio-portrait.6d4f1277.jpeg",
     "static/media/contact.0a4251e9.jpeg": "/static/media/contact.0a4251e9.jpeg",
     "static/media/decoration.d853bbbd.mp4": "/static/media/decoration.d853bbbd.mp4",
     "static/media/downArrow.svg": "/static/media/downArrow.23758f40.svg",
@@ -325,7 +326,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.221a9fed.js",
-    "static/js/153.b6dac8cf.chunk.js",
-    "static/js/main.50b3bbf0.chunk.js"
+    "static/js/153.1bfb6317.chunk.js",
+    "static/js/main.87cd1f05.chunk.js"
   ]
 }
