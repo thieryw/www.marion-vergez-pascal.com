@@ -22,14 +22,15 @@
     "tss-react": "^1.1.0",
     "@mui/material": "^5.0.4",
     "@emotion/styled": "^11.3.0",
-    "@emotion/react": "^11.4.1"
+    "@emotion/react": "^11.4.1",
+    "react-art-gallery": "^0.0.4"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/jest": "^26.0.15",
-    "@types/node": "^12.0.0",
+    "@types/node": "^16.11.6",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/memoizee": "^0.4.6",
@@ -39,7 +40,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build && hack-gh-pages src/router.ts",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "postinstall": "ts-node --skip-project src/bin/generateImageUrlExports.ts",
+    "linkInHouseDep": "ts-node --skip-project src/bin/linkInHouseDep.ts"
   },
   "eslintConfig": {
     "extends": [

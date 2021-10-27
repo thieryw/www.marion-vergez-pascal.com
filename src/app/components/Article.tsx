@@ -20,8 +20,8 @@ export type ArticleProps = {
 	}
 	heading?: string;
 	imageUrl: string;
-	title: string;
-	paragraph: string;
+	title?: string;
+	paragraphs: string[];
 	button?: {
 		label: string;
 	} & Link;
@@ -32,7 +32,7 @@ export type ArticleProps = {
 
 export const Article = memo((props: ArticleProps) => {
 
-	const { button, heading, imageUrl, paragraph, title, className, imagePosition, classes: classesProp, customButton } = props;
+	const { button, heading, imageUrl, paragraphs, title, className, imagePosition, classes: classesProp, customButton } = props;
 
 	const { classes, cx } = useStyles({
 		"imagePosition": imagePosition ?? "left"
@@ -55,9 +55,20 @@ export const Article = memo((props: ArticleProps) => {
 				className={cx(classes.image, classesProp?.image)}
 			/>
 			<div className={cx(classes.text, classesProp?.text)}>
-				<Text className={classesProp?.title} typo="section heading">{title}</Text>
-				<Divider color="#e1bf59" width={6} height={2} />
-				<Text className={cx(classes.paragraph, classesProp?.paragraph)} typo="body 1">{paragraph}</Text>
+				{
+					title !== undefined &&
+					<>
+						<Text className={classesProp?.title} typo="section heading">{title}</Text>
+						<Divider color="#e1bf59" width={6} height={2} />
+					</>
+				}
+				{
+					paragraphs.map(paragraph => 
+						<Text className={cx(classes.paragraph, classesProp?.paragraph)} typo="body 1">
+							{paragraph}
+						</Text>
+					)
+				}
 				{
 					button !== undefined &&
 					<div>
@@ -127,9 +138,9 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 		"image": {
 			"maxWidth": 600,
 			...(theme.windowInnerWidth >= breakpointsValues.md ? {
-				"minWidth": 400
+				"minWidth": 400,
 			} : {
-				"maxWidth": "unset",
+				"maxWidth": 500,
 				"minWidth": "unset",
 			})
 

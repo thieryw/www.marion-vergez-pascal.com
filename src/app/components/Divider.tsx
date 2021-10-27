@@ -2,6 +2,7 @@ import { memo } from "react";
 import { makeStyles } from "../../theme";
 
 export type DividerProps = {
+	className?: string;
 	width: number;
 	height: number;
 	color?: string;
@@ -9,10 +10,10 @@ export type DividerProps = {
 
 
 export const Divider = memo((props: DividerProps) => {
-	const { width, height, color } = props;
-	const {classes} = useStyles({width, height, color})
+	const { width, height, color, className } = props;
+	const {classes, cx} = useStyles({width, height, color})
 
-	return <div className={classes.root}></div>
+	return <div className={cx(classes.root, className)}></div>
 
 });
 

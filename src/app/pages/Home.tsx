@@ -38,7 +38,7 @@ export const Home = memo(() => {
 			}}
 			heading={t("newsHeading")}
 			title={t("newsTitle")}
-			paragraph={t("newsParagraph")}
+			paragraphs={[t("newsParagraph")]}
 			imageUrl={news.imageUrl}
 			button={{
 				...routes.futureEvents().link,
@@ -54,7 +54,7 @@ export const Home = memo(() => {
 				"image": classes.sectionImage,
 			}}
 			title={t("bioTitle")}
-			paragraph={t("bioParagraph")}
+			paragraphs={[t("bioParagraph")]}
 			button={{
 				...routes.biography().link,
 				"label": t("bioButtonLabel")
@@ -89,7 +89,7 @@ export const Home = memo(() => {
 			}}
 			imageUrl={contactImageUrl}
 			title={t("contactTitle")}
-			paragraph={t("contactParagraph")}
+			paragraphs={[t("contactParagraph")]}
 			imagePosition="right"
 			customButton={<div className={classes.contactSocialMedia}>
 				<MuiLink className={classes.instagramAndFacebookButtons} href="https://www.facebook.com/marion.vergezpascal.9" underline="none">FACEBOOK →</MuiLink>
@@ -224,6 +224,7 @@ const useStyles = makeStyles()(
 		"iframe": {
 			"width": 1000,
 			"height": 600,
+			"border": "none",
 			...(()=>{
 				if(
 					theme.windowInnerWidth < breakpointsValues.lg && 

@@ -8,7 +8,7 @@ import {useTranslation} from "./i18n/useTranslation";
 import { ThemeProvider } from "../theme";
 import {AppFooter} from "./AppFooter";
 import {Biography} from "./pages/Biography";
-
+import {Media} from "./pages/Media";
 
 
 export const App = memo(() => {
@@ -55,7 +55,7 @@ export const App = memo(() => {
 			{route.name === "home" && <Home />}
 			{route.name === "biography" && <Biography />}
 			{route.name === "futureEvents" && <p>{route.name}</p>}
-			{route.name === "media" && <p>{route.name}</p>}
+			{route.name === "media" && <Media />}
 		</GlTemplate>
 	)
 });
