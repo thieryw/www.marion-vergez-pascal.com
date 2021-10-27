@@ -34,6 +34,7 @@ export const Biography = memo(() => {
 
 			<Article
 				imageUrl={portraitImg}
+				imageAltAttribute="biography page"
 				paragraphs={[
 					t("bioParagraph1"),
 					t("bioParagraph2"),

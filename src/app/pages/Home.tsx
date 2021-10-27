@@ -37,6 +37,7 @@ export const Home = memo(() => {
 			classes={{
 				"image": classes.sectionImage,
 			}}
+			imageAltAttribute="news"
 			heading={t("newsHeading")}
 			title={t("newsTitle")}
 			paragraphs={[t("newsParagraph")]}
@@ -54,6 +55,7 @@ export const Home = memo(() => {
 			classes={{
 				"image": classes.sectionImage,
 			}}
+			imageAltAttribute="biographie"
 			title={t("bioTitle")}
 			paragraphs={[t("bioParagraph")]}
 			button={{
@@ -90,6 +92,7 @@ export const Home = memo(() => {
 				"image": cx(classes.contactImage, classes.sectionImage),
 				"paragraph": classes.contactParagraph
 			}}
+			imageAltAttribute="contact"
 			imageUrl={contactImageUrl}
 			title={t("contactTitle")}
 			paragraphs={[t("contactParagraph")]}

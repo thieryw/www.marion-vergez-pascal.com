@@ -9,6 +9,7 @@ import { Button } from "../components/Button";
 
 export type ArticleProps = {
 	className?: string;
+	imageAltAttribute?: string
 	classes?: {
 		heading?: string;
 		textAndImageWrapper?: string;
@@ -32,7 +33,18 @@ export type ArticleProps = {
 
 export const Article = memo((props: ArticleProps) => {
 
-	const { button, heading, imageUrl, paragraphs, title, className, imagePosition, classes: classesProp, customButton } = props;
+	const { 
+		button, 
+		heading, 
+		imageUrl, 
+		paragraphs, 
+		title, 
+		className, 
+		imagePosition, 
+		classes: classesProp, 
+		customButton,
+		imageAltAttribute
+	 } = props;
 
 	const { classes, cx } = useStyles({
 		"imagePosition": imagePosition ?? "left"
@@ -53,6 +65,7 @@ export const Article = memo((props: ArticleProps) => {
 				url={imageUrl}
 				hasShadow={true}
 				className={cx(classes.image, classesProp?.image)}
+				alt={imageAltAttribute}
 			/>
 			<div className={cx(classes.text, classesProp?.text)}>
 				{
