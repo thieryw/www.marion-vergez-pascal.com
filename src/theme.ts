@@ -40,6 +40,10 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 					"fontSizeRem": 2,
 					"lineHeightRem": 2.5
 				},
+				"body 1": {
+					...typographyDesc.variants["body 1"],
+					"lineHeightRem": windowInnerWidth < breakpointsValues.md ? 1.2 : 1.5
+				}
 			},
 		};
 	},

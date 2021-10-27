@@ -63,8 +63,8 @@ export const Article = memo((props: ArticleProps) => {
 					</>
 				}
 				{
-					paragraphs.map(paragraph => 
-						<Text className={cx(classes.paragraph, classesProp?.paragraph)} typo="body 1">
+					paragraphs.map((paragraph, index) => 
+						<Text key={index} className={cx(classes.paragraph, classesProp?.paragraph)} typo="body 1">
 							{paragraph}
 						</Text>
 					)

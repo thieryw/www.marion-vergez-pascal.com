@@ -6,16 +6,17 @@ import { breakpointsValues } from "../../theme";
 import { useTranslation } from "../i18n/useTranslation";
 import { news } from "../user/news";
 import { GlIllustration } from "gitlanding/GlIllustration";
-import {routes} from "../../router";
+import { routes } from "../../router";
 import decorativeMp4 from "../../assets/video/home/decoration.mp4";
 import { Article } from "../components/Article";
 import contactImageUrl from "../../assets/img/home/contact.jpeg";
 import bioImageUrl from "../../assets/img/home/marion-nabil.jpeg";
 import MuiLink from "@mui/material/Link";
-import {Background} from "../components/Background";
+import { Background } from "../components/Background";
 import mediaBackgroundImageUrl from "../../assets/img/home/marion-soliste.jpeg";
-import {Divider} from "../components/Divider";
-import {Button} from "../components/Button";
+import { Divider } from "../components/Divider";
+import { Button } from "../components/Button";
+import { YouTubeIframe } from "../components/YouTubeIframe";
 
 
 export const Home = memo(() => {
@@ -32,7 +33,7 @@ export const Home = memo(() => {
 				<Text className={classes.subtitle} typo="subtitle">MEZZO-SOPRANO</Text>
 			</div>
 		</section>
-		<Article 
+		<Article
 			classes={{
 				"image": classes.sectionImage,
 			}}
@@ -49,7 +50,7 @@ export const Home = memo(() => {
 		<div>
 			<GlIllustration type="image" url={decorativeMp4} />
 		</div>
-		<Article 
+		<Article
 			classes={{
 				"image": classes.sectionImage,
 			}}
@@ -63,8 +64,8 @@ export const Home = memo(() => {
 
 		/>
 		<section className={classes.mediaSection}>
-			<Background 
-				isImageCovered={true} 
+			<Background
+				isImageCovered={true}
 				imageUrl={mediaBackgroundImageUrl}
 				classes={{
 					"imageBackground": classes.mediaImageBackground
@@ -76,7 +77,9 @@ export const Home = memo(() => {
 					<Text typo="subtitle">MEDIA</Text>
 					<Divider width={8} color={theme.colors.palette.gold} height={1} />
 				</div>
-					<iframe className={classes.iframe} allowFullScreen src="https://www.youtube-nocookie.com/embed/kIdTp7VaLV4" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+				<YouTubeIframe 
+					videoUrl="https://www.youtube-nocookie.com/embed/kIdTp7VaLV4"
+				/>
 				<Button {...routes.media().link} variant="outlined" color="secondary">{t("mediaButton")}</Button>
 			</div>
 
@@ -203,14 +206,14 @@ const useStyles = makeStyles()(
 			"position": "relative",
 		},
 		"mediaSectionInner": {
-				"position": "relative",
-				"zIndex": 1,
-				"display": "flex",
-				"flexDirection": "column",
-				"gap": theme.spacing(8),
-				"alignItems": "center",
-				...theme.spacing.topBottom("padding", `${theme.spacing(8)}px`)
-				
+			"position": "relative",
+			"zIndex": 1,
+			"display": "flex",
+			"flexDirection": "column",
+			"gap": theme.spacing(8),
+			"alignItems": "center",
+			...theme.spacing.topBottom("padding", `${theme.spacing(8)}px`)
+
 		},
 		"mediaTitleWrapper": {
 			"display": "flex",
@@ -221,7 +224,7 @@ const useStyles = makeStyles()(
 		"mediaImageBackground": {
 			"backgroundPosition": "right"
 		},
-		"iframe": {
+		/*"iframe": {
 			"width": 1000,
 			"height": 600,
 			"border": "none",
@@ -244,7 +247,7 @@ const useStyles = makeStyles()(
 				}
 
 			})()
-		},
+		},*/
 
 
 	})

@@ -94,6 +94,9 @@ export const translations = id<Record<Language, Translations>>({
         "Media": {
             "pageTitle": "MEDIA",
             "pageSubTitle": "MES IMAGES",
+            "videoTitle": "RECENTES",
+            "videoSubtitle": "VIDEOS",
+            "youtubeButton": "ma chaine youtube"
 
         }
     },
@@ -155,6 +158,9 @@ export const translations = id<Record<Language, Translations>>({
         "Media": {
             "pageTitle": "MEDIA",
             "pageSubTitle": "MES IMAGES",
+            "videoTitle": "RECENTES",
+            "videoSubtitle": "VIDEOS",
+            "youtubeButton": "ma chaine youtube"
 
         }
 
