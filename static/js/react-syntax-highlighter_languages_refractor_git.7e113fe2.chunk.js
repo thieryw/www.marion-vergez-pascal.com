@@ -1,2 +1,0 @@
-(this["webpackJsonpwww.marion-vergez-pascal.com"]=this["webpackJsonpwww.marion-vergez-pascal.com"]||[]).push([[45],{632:function(m,e,a){"use strict";function s(m){m.languages.git={comment:/^#.*/m,deleted:/^[-\u2013].*/m,inserted:/^\+.*/m,string:/("|')(?:\\.|(?!\1)[^\\\r\n])*\1/m,command:{pattern:/^.*\$ git .*$/m,inside:{parameter:/\s--?\w+/m}},coord:/^@@.*@@$/m,commit_sha1:/^commit \w{40}$/m}}m.exports=s,s.displayName="git",s.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_git.7e113fe2.chunk.js.map
