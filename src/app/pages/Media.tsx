@@ -3,7 +3,7 @@ import { memo } from "react";
 import { ArtGallery } from "react-art-gallery";
 import { files } from "../../generatedData";
 import { Background } from "../components/Background";
-import { makeStyles } from "../../theme";
+import { makeStyles, breakpointsValues } from "../../theme";
 import { useTranslation } from "../i18n/useTranslation";
 import { PageHeading } from "../components/PageHeading";
 import { GlSlider } from "gitlanding";
@@ -55,6 +55,12 @@ export const Media = memo(() => {
 				subtitle={t("videoSubtitle")}
 			/>
 			<GlSlider
+				classes={{
+					"sliderWrapper": classes.slider,
+					"next": classes.navSlider,
+					"prev": classes.navSlider
+
+				}}
 				slides={[
 					<YouTubeIframe
 						videoUrl="https://www.youtube.com/embed/FMqCz3IqdyE"
@@ -105,8 +111,42 @@ const useStyles = makeStyles()(
 			"paddingBottom": theme.spacing(8)
 		},
 		"videoSection": {
-			"position": "relative"
+			"position": "relative",
+			"display": "flex",
+			"flexDirection": "column",
+			"alignItems": "center"
+		},
+		"slider": {
+			...(() => {
+				if (
+					theme.windowInnerWidth < breakpointsValues.lg &&
+					theme.windowInnerWidth >= breakpointsValues.md
+				) {
+					return {
+						"width": 800
+					};
+				};
+
+				if (theme.windowInnerWidth < breakpointsValues.md) {
+					return {
+						"width": "100%"
+					}
+				}
+
+				return {
+					"width": 1100
+				}
+
+			})()
+		},
+		"navSlider": {
+			"width": theme.spacing(7),
+			"height": theme.spacing(7),
+			"position": "relative",
+			"left": theme.spacing(2)
+
 		}
+
 	})
 )
 

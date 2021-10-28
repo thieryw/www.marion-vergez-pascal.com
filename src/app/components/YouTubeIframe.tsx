@@ -21,25 +21,28 @@ export const YouTubeIframe = memo((props: YouTubeIframeProps)=>{
 const useStyle = makeStyles()(
 	theme => ({
 		"root": {
-			"width": 1000,
-			"height": 600,
 			"border": "none",
-			...(()=>{
-				if(
-					theme.windowInnerWidth < breakpointsValues.lg && 
+			...(() => {
+				if (
+					theme.windowInnerWidth < breakpointsValues.lg &&
 					theme.windowInnerWidth >= breakpointsValues.md
-				){
+				) {
 					return {
 						"width": 700,
 						"height": 450
 					}
 				};
 
-				if(theme.windowInnerWidth < breakpointsValues.md){
+				if (theme.windowInnerWidth < breakpointsValues.md) {
 					return {
 						"width": "100%",
 						"height": 300
 					}
+				};
+
+				return {
+					"width": 1000,
+					"height": 600,
 				}
 
 			})()
