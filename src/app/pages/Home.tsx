@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { memo } from "react";
 import { makeStyles, Text } from "../../theme";
-import heroJpeg from "../../assets/img/home/hero.jpeg";
+import heroPng from "../../assets/img/home/hero.png";
 import { breakpointsValues } from "../../theme";
 import { useTranslation } from "../i18n/useTranslation";
 import { news } from "../user/news";
@@ -32,6 +32,7 @@ export const Home = memo(() => {
 				<Text className={classes.title} typo="my title">Marion Vergez-Pascal</Text>
 				<Text className={classes.subtitle} typo="subtitle">MEZZO-SOPRANO</Text>
 			</div>
+			<div className={classes.heroOverlay}></div>
 		</section>
 		<Article
 			classes={{
@@ -117,10 +118,15 @@ const useStyles = makeStyles()(
 		"hero": {
 			"height": "100vh",
 			"width": theme.windowInnerWidth,
-			"background": `url("${heroJpeg}")`,
+			"background": `url("${heroPng}")`,
 			"backgroundSize": "cover",
 			"backgroundRepeat": "no-repeat",
-			"backgroundPosition": "center",
+			"backgroundPosition": (()=>{
+				if(theme.windowInnerWidth >= breakpointsValues.md){
+					return "center";
+				};
+				return "60% center"
+			})(),
 			"position": "relative",
 			"left": -theme.paddingRightLeft,
 			"display": "flex",
@@ -130,19 +136,37 @@ const useStyles = makeStyles()(
 				"paddingBottom": theme.spacing(4)
 
 			} : {}),
-			...(theme.windowInnerWidth < breakpointsValues.sm ? {
+			...(theme.windowInnerWidth < breakpointsValues.lg ? {
 				"alignItems": "flex-end"
 			} : {})
 		},
+		"heroOverlay": {
+			"width": "100%",
+			"height": "100%",
+			"position": "absolute",
+			"top": 0,
+			"left": 0,
+			"backdropFilter": theme.windowInnerWidth < breakpointsValues.md 
+				? "brightness(0.4)" : undefined,
 
+
+		},
 		"title": {
 			"fontWeight": 100,
 			"color": "#F7BCF7",
-			...(theme.windowInnerWidth >= breakpointsValues.lg ? {
-				"fontSize": "3rem",
-			} : {
-				"fontSize": "1.5rem"
-			}),
+				"fontSize": (()=>{
+					if(theme.windowInnerWidth >= breakpointsValues.xl){
+						return "3rem";
+					};
+
+					if(theme.windowInnerWidth >= breakpointsValues.sm){
+						return "2rem";
+					};
+
+					return "1.5rem";
+
+				})()
+
 		},
 
 		"titleWrapper": {
@@ -151,6 +175,7 @@ const useStyles = makeStyles()(
 				"rightLeft": `${theme.spacing(4)}px`,
 				"topBottom": `${theme.spacing(5)}px`
 			}),
+			"zIndex": 400
 		},
 
 		"subtitle": {
@@ -227,31 +252,6 @@ const useStyles = makeStyles()(
 		"mediaImageBackground": {
 			"backgroundPosition": "right"
 		},
-		/*"iframe": {
-			"width": 1000,
-			"height": 600,
-			"border": "none",
-			...(()=>{
-				if(
-					theme.windowInnerWidth < breakpointsValues.lg && 
-					theme.windowInnerWidth >= breakpointsValues.md
-				){
-					return {
-						"width": 700,
-						"height": 450
-					}
-				};
-
-				if(theme.windowInnerWidth < breakpointsValues.md){
-					return {
-						"width": "100%",
-						"height": 300
-					}
-				}
-
-			})()
-		},*/
-
 
 	})
 )
