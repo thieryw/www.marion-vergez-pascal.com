@@ -1,11 +1,11 @@
-import {convertImagesToWebp} from "react-art-gallery/utils/convertImagesToWebp";
+import {convertImages} from "react-art-gallery/utils/convertImages";
 import {join} from "path";
 
 
-convertImagesToWebp({
+convertImages({
 	"acceptedFileExtensions": [".jpeg", ".png"],
 	"pathToAssets": join(__dirname, "..", "assets", "img"),
 	"pathToConvertedImages": join(__dirname, "..", "assets", "webp"),
-	"convertTo": "webp"
-
+	"convertTo": "webp",
+	"overrideIfConvertedImagesExit": true
 });
