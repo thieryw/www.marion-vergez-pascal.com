@@ -1,2 +1,0 @@
-(this["webpackJsonpwww.marion-vergez-pascal.com"]=this["webpackJsonpwww.marion-vergez-pascal.com"]||[]).push([[8],{646:function(a,e,n){"use strict";function t(a){a.languages.arff={comment:/%.*/,string:{pattern:/(["'])(?:\\.|(?!\1)[^\\\r\n])*\1/,greedy:!0},keyword:/@(?:attribute|data|end|relation)\b/i,number:/\b\d+(?:\.\d+)?\b/,punctuation:/[{},]/}}a.exports=t,t.displayName="arff",t.aliases=[]}}]);
-//# sourceMappingURL=react-syntax-highlighter_languages_refractor_arff.a602e8ac.chunk.js.map
