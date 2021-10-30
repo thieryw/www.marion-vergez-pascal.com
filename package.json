@@ -17,13 +17,13 @@
     "powerhooks": "^0.9.6",
     "evt": "2.0.0-beta.38",
     "memoizee": "^0.4.15",
-    "gitlanding": "^0.4.9",
+    "gitlanding": "^0.4.11",
     "onyxia-ui": "^0.17.0",
     "tss-react": "^1.1.0",
     "@mui/material": "^5.0.4",
     "@emotion/styled": "^11.3.0",
     "@emotion/react": "^11.4.1",
-    "react-art-gallery": "^0.0.4"
+    "react-art-gallery": "^0.0.5"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",

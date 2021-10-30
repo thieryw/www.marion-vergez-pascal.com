@@ -71,7 +71,7 @@ export const Article = memo((props: ArticleProps) => {
 				{
 					title !== undefined &&
 					<>
-						<Text className={classesProp?.title} typo="section heading">{title}</Text>
+						<Text className={cx(classes.title, classesProp?.title)} typo="section heading">{title}</Text>
 						<Divider color="#e1bf59" width={6} height={2} />
 					</>
 				}
@@ -117,7 +117,6 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 		"root": {
 			"display": "flex",
 			"flexDirection": "column",
-			"gap": theme.spacing(8),
 			"alignItems": "center",
 			...theme.spacing.topBottom("padding", `${theme.spacing(8)}px`)
 
@@ -129,12 +128,12 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 		"headerWrapper": {
 			"display": "flex",
 			"flexDirection": "column",
-			"alignItems": "center"
+			"alignItems": "center",
+			"marginBottom": theme.spacing(8)
 		},
 
 		"textAndImageWrapper": {
 			"display": "flex",
-			"gap": theme.spacing(8),
 			"justifyContent": "center",
 			"alignItems": "center",
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
@@ -155,19 +154,39 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 			} : {
 				"maxWidth": 500,
 				"minWidth": "unset",
-			})
+			}),
 
 		},
 		"text": {
 			"maxWidth": 500,
 			"display": "flex",
 			"flexDirection": "column",
-			"gap": theme.spacing(4)
+			...(theme.windowInnerWidth < breakpointsValues.md ? {
+				"marginBottom": theme.spacing(8)
+			}: {}),
+			...(()=>{
+				if(theme.windowInnerWidth < breakpointsValues.md){
+					return;
+				}
+				const value = theme.spacing(8);
+				if(imagePosition === "right"){
+					return {
+						"marginRight": value
+					}
+				};
+				return {
+					"marginLeft": value
+				};
+			})()
 		},
 		"paragraph": {
-			"color": theme.colors.useCases.typography.textSecondary
+			"color": theme.colors.useCases.typography.textSecondary,
+			...theme.spacing.topBottom("margin", `${theme.spacing(4)}px`)
 
 		},
+		"title": {
+			"marginBottom": theme.spacing(4)
+		}
 
 	})
 )

@@ -17,10 +17,9 @@ export const Media = memo(() => {
 
 	const { t } = useTranslation("Media");
 
-	return <>
+	return <div>
 		<section className={classes.banner}>
 			<Background
-				className={classes.bannerBackground}
 				imageUrl={files.files[11].url}
 				isImageCovered={true}
 				fadeDirection="to bottom"
@@ -81,22 +80,18 @@ export const Media = memo(() => {
 				<Button href="https://www.youtube.com/channel/UC7FvEzh4S_F1W6JHcr2Ssqw">{t("youtubeButton")}</Button>
 			</div>
 		</section>
-	</>
+	</div>
 
 });
 
 const useStyles = makeStyles()(
 	theme => ({
 		"banner": {
-			"height": "100vh",
+			"height": "70vh",
 			"position": "relative",
 			"display": "flex",
 			"alignItems": "flex-end",
 			"justifyContent": "center"
-		},
-		"bannerBackground": {
-			"left": 0
-
 		},
 		"titleWrapper": {
 			"marginTop": "30%",

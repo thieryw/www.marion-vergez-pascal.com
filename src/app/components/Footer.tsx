@@ -101,12 +101,12 @@ const useStyles = makeStyles()(
 			"display": "flex",
 			"position": "relative",
 			"marginTop": theme.spacing(6),
-			"gap": theme.spacing(4),
 			...(theme.windowInnerWidth >= breakpointsValues.md ? {
 				"left": -theme.spacing(9),
 			} : {})
 		},
 		"socialLink": {
+			...theme.spacing.rightLeft("margin", `${theme.spacing(2)}px`),
 			"cursor": "pointer",
 			"& svg": {
 				":hover": {

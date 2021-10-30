@@ -27,7 +27,7 @@ export const PageHeading = memo((props: PageHeadingProps) => {
 				height={2}
 				width={6}
 				color={theme.colors.palette.gold}
-				className={classesProp?.divider}
+				className={cx(classes.divider, classesProp?.divider)}
 			/>
 			<Text className={cx(classes.subTitle, classesProp?.subTitle)} typo="section heading">{subtitle}</Text>
 
@@ -45,7 +45,6 @@ const useStyles = makeStyles()(
 			"alignItems": "center",
 			"zIndex": 1,
 			"position": "relative",
-			"gap": theme.spacing(5)
 		},
 		"title": {
 			"color": theme.colors.useCases.typography.textSecondary
@@ -56,6 +55,10 @@ const useStyles = makeStyles()(
 				"fontSize": "2.5rem"
 			}: {})
 			
+		},
+		"divider": {
+			...theme.spacing.topBottom("margin", `${theme.spacing(4)}px`)
+
 		},
 
 

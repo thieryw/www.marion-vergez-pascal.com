@@ -17,61 +17,61 @@ import _13 from "./assets/img/media/12-.jpeg";
 export const files = {
 "files": [
 {
-				"url": _0,
-				"name": "profil-marion"
-			},
+					"url": _0,
+					"name": "profil-marion"
+				},
 {
-				"url": _1,
-				"name": "bio-portrait"
-			},
+					"url": _1,
+					"name": "bio-portrait"
+				},
 {
-				"url": _2,
-				"name": "contact"
-			},
+					"url": _2,
+					"name": "contact"
+				},
 {
-				"url": _3,
-				"name": "hero"
-			},
+					"url": _3,
+					"name": "hero"
+				},
 {
-				"url": _4,
-				"name": "bio-banner"
-			},
+					"url": _4,
+					"name": "bio-banner"
+				},
 {
-				"url": _5,
-				"name": "marion-nabil"
-			},
+					"url": _5,
+					"name": "marion-nabil"
+				},
 {
-				"url": _6,
-				"name": "marion-soliste"
-			},
+					"url": _6,
+					"name": "marion-soliste"
+				},
 {
-				"url": _7,
-				"name": "news"
-			},
+					"url": _7,
+					"name": "news"
+				},
 {
-				"url": _8,
-				"name": ""
-			},
+					"url": _8,
+					"name": ""
+				},
 {
-				"url": _9,
-				"name": "9.1-"
-			},
+					"url": _9,
+					"name": "9.1-"
+				},
 {
-				"url": _10,
-				"name": "9.2-"
-			},
+					"url": _10,
+					"name": "9.2-"
+				},
 {
-				"url": _11,
-				"name": ""
-			},
+					"url": _11,
+					"name": ""
+				},
 {
-				"url": _12,
-				"name": ""
-			},
+					"url": _12,
+					"name": ""
+				},
 {
-				"url": _13,
-				"name": ""
-			},
+					"url": _13,
+					"name": ""
+				},
 
 ],
-}
+};

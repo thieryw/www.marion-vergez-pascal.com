@@ -16,10 +16,9 @@ export const Biography = memo(() => {
 	const { classes } = useStyles();
 
 	return (
-		<>
+		<div className={classes.root}>
 			<section className={classes.banner}>
 				<Background
-					className={classes.bannerBackground}
 					imageUrl={bannerImgUrl}
 					isImageCovered={true}
 					fadeDirection="to bottom"
@@ -43,13 +42,14 @@ export const Biography = memo(() => {
 				]}
 				classes={{
 					"textAndImageWrapper": classes.mainSection,
-					"paragraph": classes.text
+					"paragraph": classes.paragraph,
+					"text": classes.text
 				}}
 
 			/>
 
 
-		</>
+		</div>
 
 
 	)
@@ -62,15 +62,11 @@ const useStyles = makeStyles()(
 
 		},
 		"banner": {
-			"height": "100vh",
+			"height": "70vh",
 			"position": "relative",
 			"display": "flex",
 			"alignItems": "flex-end",
 			"justifyContent": "center"
-		},
-		"bannerBackground": {
-			"left": 0
-
 		},
 		"titleWrapper": {
 			"marginTop": "30%",
@@ -83,9 +79,17 @@ const useStyles = makeStyles()(
 				"flexDirection": "column"
 			})
 		},
-		"text": {
-			"textAlign": "justify"
+		"paragraph": {
+			"textAlign": "justify",
 		},
+
+		"text": {
+			...(theme.windowInnerWidth < breakpointsValues.md ? {
+				"marginBottom": 0,
+				"marginTop": theme.spacing(8)
+			}: {})
+		}
+
 
 	})
 )

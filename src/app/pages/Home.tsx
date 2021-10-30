@@ -18,13 +18,10 @@ import { Divider } from "../components/Divider";
 import { Button } from "../components/Button";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 
-
 export const Home = memo(() => {
-
 
 	const { classes, cx, theme } = useStyles();
 	const { t } = useTranslation("Home");
-
 
 	return <div className={classes.root}>
 		<section className={classes.hero}>
@@ -77,10 +74,11 @@ export const Home = memo(() => {
 			/>
 			<div className={classes.mediaSectionInner}>
 				<div className={classes.mediaTitleWrapper}>
-					<Text typo="subtitle">MEDIA</Text>
+					<Text className={classes.mediaTitle} typo="subtitle">MEDIA</Text>
 					<Divider width={8} color={theme.colors.palette.gold} height={1} />
 				</div>
 				<YouTubeIframe 
+					className={classes.iframe}
 					videoUrl="https://www.youtube-nocookie.com/embed/kIdTp7VaLV4"
 				/>
 				<Button {...routes.media().link} variant="outlined" color="secondary">{t("mediaButton")}</Button>
@@ -208,11 +206,11 @@ const useStyles = makeStyles()(
 		"contactSocialMedia": {
 			"display": "flex",
 			"flexDirection": "column",
-			"alignItems": "end",
-			"gap": theme.spacing(2),
+			"alignItems": "flex-end",
 			"marginTop": theme.spacing(4)
 		},
 		"instagramAndFacebookButtons": {
+			...theme.spacing.topBottom("margin", `${theme.spacing(1)}px`),
 			"transition": "transform 500ms",
 			"color": theme.colors.palette.gold,
 			":hover": {
@@ -221,6 +219,7 @@ const useStyles = makeStyles()(
 
 		},
 		"email": {
+			"marginTop": theme.spacing(1),
 			"color": theme.colors.useCases.typography.textSecondary,
 			"transition": "color 300ms",
 
@@ -238,7 +237,6 @@ const useStyles = makeStyles()(
 			"zIndex": 1,
 			"display": "flex",
 			"flexDirection": "column",
-			"gap": theme.spacing(8),
 			"alignItems": "center",
 			...theme.spacing.topBottom("padding", `${theme.spacing(8)}px`)
 
@@ -247,7 +245,13 @@ const useStyles = makeStyles()(
 			"display": "flex",
 			"flexDirection": "column",
 			"alignItems": "center",
-			"gap": theme.spacing(4)
+			"marginBottom": theme.spacing(8)
+		},
+		"mediaTitle": {
+			"marginBottom": theme.spacing(4)
+		},
+		"iframe": {
+			"marginBottom": theme.spacing(8)
 		},
 		"mediaImageBackground": {
 			"backgroundPosition": "right"
