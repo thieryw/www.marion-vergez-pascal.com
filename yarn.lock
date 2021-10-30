@@ -10275,10 +10275,10 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
-react-art-gallery@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/react-art-gallery/-/react-art-gallery-0.0.5.tgz#ea34e5b70fb16d61c14de332b89dde40e040de13"
-  integrity sha512-nhTyHR0tqzaVXmncQBvMMd7EbJuFlC+jPNvxKQKcYEsmuUcSgplOKXZ2XurKR334YJIP0KrvQwjOmYIFlke9wA==
+react-art-gallery@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-art-gallery/-/react-art-gallery-0.0.6.tgz#93aa8d9401714182f5d7b3ea07468dc320a4e2e1"
+  integrity sha512-spVZATBG04R8ACtMRPqVWvUdxJdTJckkTDjG5RCY1ipwpa2Pp38esCsNi1DkHfHNOgjyxZt01OYXOhKUfGqNYA==
   dependencies:
     "@emotion/react" "^11.4.1"
     powerhooks "^0.11.0"

@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { ArtGallery } from "react-art-gallery";
-import { files } from "../../generatedData";
+import { files } from "../../generatedWebpExports";
+import { files as imgFiles } from "../../generatedImgExports";
 import { Background } from "../components/Background";
 import { makeStyles, breakpointsValues } from "../../theme";
 import { useTranslation } from "../i18n/useTranslation";
@@ -9,6 +10,9 @@ import { PageHeading } from "../components/PageHeading";
 import { GlSlider } from "gitlanding";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 import { Button } from "../components/Button";
+import bannerJpeg from "../../assets/img/media/10-.jpeg";
+import videoBackJpeg from "../../assets/img/media/12-.jpeg";
+import type { ArtGalleryProps } from "react-art-gallery";
 
 
 
@@ -17,10 +21,26 @@ export const Media = memo(() => {
 
 	const { t } = useTranslation("Media");
 
+	const imageSources: ArtGalleryProps["thumbNailImageSources"] = useMemo(() => {
+
+		return files.files.map(({ url }, index) => {
+			return [
+				{
+					"srcSet": url,
+					"type": "image/webp"
+				},
+				{
+					"srcSet": imgFiles.files[index].url,
+					"type": "image/jpeg"
+				}
+			]
+		})
+	}, [])
+
 	return <div>
 		<section className={classes.banner}>
 			<Background
-				imageUrl={files.files[11].url}
+				imageUrl={bannerJpeg}
 				isImageCovered={true}
 				fadeDirection="to bottom"
 			/>
@@ -35,6 +55,8 @@ export const Media = memo(() => {
 		</section>
 		<ArtGallery
 			className={classes.gallery}
+			thumbNailImageSources={imageSources}
+			lightBoxImageSources={imageSources}
 			thumbNailImages={files.files}
 			lightBoxImages={files.files}
 			imageAverageHeight={220}
@@ -43,8 +65,8 @@ export const Media = memo(() => {
 
 		<section className={classes.videoSection}>
 
-			{<Background 
-				imageUrl={files.files[13].url}
+			{<Background
+				imageUrl={videoBackJpeg}
 				isImageCovered={true}
 				fadeDirection="to top"
 			/>}
@@ -80,7 +102,7 @@ export const Media = memo(() => {
 				<Button href="https://www.youtube.com/channel/UC7FvEzh4S_F1W6JHcr2Ssqw">{t("youtubeButton")}</Button>
 			</div>
 		</section>
-	</div>
+	</div >
 
 });
 

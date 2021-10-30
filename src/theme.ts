@@ -50,7 +50,7 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 	"palette": {
 		...defaultPalette,
 		"gold": "#e1bf59"
-	}
+	},
 });
 
 export function useTheme() {

@@ -23,7 +23,7 @@
     "@mui/material": "^5.0.4",
     "@emotion/styled": "^11.3.0",
     "@emotion/react": "^11.4.1",
-    "react-art-gallery": "^0.0.5"
+    "react-art-gallery": "^0.0.6"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -43,7 +43,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "postinstall": "ts-node --skip-project src/bin/generateImageUrlExports.ts",
-    "linkInHouseDep": "ts-node --skip-project src/bin/linkInHouseDep.ts"
+    "linkInHouseDep": "ts-node --skip-project src/bin/linkInHouseDep.ts",
+    "convertImages": "ts-node --skip-project src/bin/convertImages.ts"
   },
   "eslintConfig": {
     "extends": [
