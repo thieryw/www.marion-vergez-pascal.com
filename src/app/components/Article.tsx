@@ -71,8 +71,8 @@ export const Article = memo((props: ArticleProps) => {
 				{
 					title !== undefined &&
 					<>
-						<Text className={cx(classes.title, classesProp?.title)} typo="section heading">{title}</Text>
-						<Divider color="#e1bf59" width={6} height={2} />
+						<Text className={classesProp?.title} typo="section heading">{title}</Text>
+						<Divider className={classes.textDivider} color="#e1bf59" width={6} height={2} />
 					</>
 				}
 				{
@@ -181,11 +181,12 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 		},
 		"paragraph": {
 			"color": theme.colors.useCases.typography.textSecondary,
-			...theme.spacing.topBottom("margin", `${theme.spacing(4)}px`)
+			"marginBottom": theme.spacing(5)
+
 
 		},
-		"title": {
-			"marginBottom": theme.spacing(4)
+		"textDivider": {
+			...theme.spacing.topBottom("margin", `${theme.spacing(4)}px`)
 		}
 
 	})

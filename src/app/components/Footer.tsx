@@ -1,10 +1,12 @@
-import { memo } from "react";
+import { memo} from "react";
 import type { ReactNode } from "react";
 import MuiLink from "@mui/material/Link";
 import { GlLogo } from "gitlanding/utils/GlLogo";
 import { makeStyles } from "../../theme";
 import { breakpointsValues } from "../../theme";
 import type { Link } from "../../tools/link";
+import { scrollableDivId } from "gitlanding/GlTemplate";
+import {useCallbackFactory} from "powerhooks/useCallbackFactory";
 
 
 
@@ -28,6 +30,34 @@ export const Footer = memo((props: FooterProps) => {
 	const { classes } = useStyles();
 
 
+	const onClickFactory = useCallbackFactory( async (
+		[onClick]: [(()=> void) | undefined]
+	)=>{
+		const element = document.getElementById(scrollableDivId);
+			
+		onClick !== undefined && onClick();
+
+		await new Promise<void>(resolve => setTimeout(resolve, 1000));
+
+
+		if(element === null || element === undefined){
+			return;
+		};
+
+		element.style.scrollBehavior = "auto"
+
+		element.scrollTo({
+			"top": 0,
+			"behavior": "auto"
+		})
+
+	});
+
+
+
+
+
+
 	return <footer className={classes.root}>
 		<div className={classes.upperDivWrapper}>
 			<div className={classes.title}>{title}</div>
@@ -36,7 +66,7 @@ export const Footer = memo((props: FooterProps) => {
 					{
 						links !== undefined &&
 						links.map(({ href, label, onClick }) => <MuiLink
-							onClick={onClick}
+							onClick={onClickFactory(onClick)}
 							href={href}
 							className={classes.muiLink}
 							key={label}

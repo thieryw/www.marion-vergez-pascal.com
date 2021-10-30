@@ -17,7 +17,7 @@
     "powerhooks": "^0.9.6",
     "evt": "2.0.0-beta.38",
     "memoizee": "^0.4.15",
-    "gitlanding": "^0.4.11",
+    "gitlanding": "^0.4.13",
     "onyxia-ui": "^0.17.0",
     "tss-react": "^1.1.0",
     "@mui/material": "^5.0.4",
@@ -42,7 +42,7 @@
     "build": "react-scripts build && hack-gh-pages src/router.ts",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "ts-node --skip-project src/bin/generateImageUrlExports.ts",
+    "postinstall": "yarn convertImages && ts-node --skip-project src/bin/generateImageUrlExports.ts",
     "linkInHouseDep": "ts-node --skip-project src/bin/linkInHouseDep.ts",
     "convertImages": "ts-node --skip-project src/bin/convertImages.ts"
   },

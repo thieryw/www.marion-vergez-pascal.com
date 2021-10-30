@@ -26,15 +26,15 @@ export const AppFooter = memo(() => {
 				"label": headerTr("home")
 			},
 			{
-				...routes.home().link,
+				...routes.biography().link,
 				"label": headerTr("biography")
 			},
 			{
-				...routes.home().link,
+				...routes.futureEvents().link,
 				"label": headerTr("futureEvents")
 			},
 			{
-				...routes.home().link,
+				...routes.media().link,
 				"label": headerTr("media")
 			},
 		]

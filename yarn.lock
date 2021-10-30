@@ -6063,10 +6063,10 @@ github-pages-plugin-for-type-route@^0.0.8:
     evt "^1.8.11"
     scripting-tools "^0.19.13"
 
-gitlanding@^0.4.11:
-  version "0.4.11"
-  resolved "https://registry.yarnpkg.com/gitlanding/-/gitlanding-0.4.11.tgz#97fac72d6acff6152a78706eeb20d516f0c43dc0"
-  integrity sha512-uozLt+Fbm60oGnpATfVKZ+kq2hKVrA5zsJ0E6jPmJnb04C3Nh9f9n6iMBOH+A5xqLkhjCwP76xE90pzG+3e1wQ==
+gitlanding@^0.4.13:
+  version "0.4.13"
+  resolved "https://registry.yarnpkg.com/gitlanding/-/gitlanding-0.4.13.tgz#ed15b280b084f6102c4b64e33b862d2d9348b7d7"
+  integrity sha512-geZqjMZuBFQf7ow3ioT/Gvyu0+HCTU6armnaugdRta2yys7RL7CqYwFeEg9yGApM/gPBfnvaoCbzBjD6eJ+Blw==
   dependencies:
     "@mui/icons-material" "^5.0.3"
     embla-carousel "^4.1.5"

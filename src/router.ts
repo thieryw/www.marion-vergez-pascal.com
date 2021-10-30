@@ -12,4 +12,6 @@ export const routeDefs = {
 
 makeThisModuleAnExecutableRouteLister(routeDefs);
 
-export const {RouteProvider, routes, useRoute} = createRouter(routeDefs);
+export const {RouteProvider, routes, useRoute} = createRouter(
+	routeDefs
+);
