@@ -1,0 +1,2 @@
+(this["webpackJsonpwww.marion-vergez-pascal.com"]=this["webpackJsonpwww.marion-vergez-pascal.com"]||[]).push([[60],{694:function(t,a,n){"use strict";function s(t){t.languages.ini={comment:/^[ \t]*[;#].*$/m,selector:/^[ \t]*\[.*?\]/m,constant:/^[ \t]*[^\s=]+?(?=[ \t]*=)/m,"attr-value":{pattern:/=.*/,inside:{punctuation:/^[=]/}}}}t.exports=s,s.displayName="ini",s.aliases=[]}}]);
+//# sourceMappingURL=react-syntax-highlighter_languages_refractor_ini.af5e93a9.chunk.js.map
