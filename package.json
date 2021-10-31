@@ -23,7 +23,7 @@
     "@mui/material": "^5.0.4",
     "@emotion/styled": "^11.3.0",
     "@emotion/react": "^11.4.1",
-    "react-art-gallery": "^0.0.7"
+    "react-art-gallery": "^0.0.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
