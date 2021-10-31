@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { makeStyles } from "../../theme";
+import { makeStyles } from "../theme";
 
 
 export type BackgroundProps = {

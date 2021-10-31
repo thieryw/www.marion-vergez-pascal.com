@@ -1,5 +1,5 @@
 import {memo} from "react";
-import {makeStyles, breakpointsValues} from "../../theme";
+import {makeStyles, breakpointsValues} from "../theme";
 
 
 export type YouTubeIframeProps = {

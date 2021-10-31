@@ -1,13 +1,13 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { memo } from "react";
-import { makeStyles } from "../../theme";
+import { makeStyles } from "../theme";
 import {Background} from "../components/Background";
-import bannerImgUrl from "../../assets/img/bio/bio-banner.jpeg";
+import bannerImgUrl from "../assets/img/bio/bio-banner.jpeg";
 import {useTranslation} from "../i18n/useTranslation";
-import portraitImg from "../../assets/img/bio/bio-portrait.jpeg";
+import portraitImg from "../assets/img/bio/bio-portrait.jpeg";
 import { Article } from "../components/Article";
 import { PageHeading } from "../components/PageHeading";
-import { breakpointsValues } from "../../theme";
+import { breakpointsValues } from "../theme";
 
 
 export const Biography = memo(() => {

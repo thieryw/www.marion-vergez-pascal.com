@@ -1,17 +1,17 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { memo, useMemo } from "react";
 import { ArtGallery } from "react-art-gallery";
-import { files } from "../../generatedWebpExports";
-import { files as imgFiles } from "../../generatedImgExports";
+import { files } from "../generatedWebpExports";
+import { files as imgFiles } from "../generatedImgExports";
 import { Background } from "../components/Background";
-import { makeStyles, breakpointsValues } from "../../theme";
+import { makeStyles, breakpointsValues } from "../theme";
 import { useTranslation } from "../i18n/useTranslation";
 import { PageHeading } from "../components/PageHeading";
 import { GlSlider } from "gitlanding";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 import { Button } from "../components/Button";
-import bannerJpeg from "../../assets/img/media/10-.jpeg";
-import videoBackJpeg from "../../assets/img/media/12-.jpeg";
+import bannerJpeg from "../assets/img/media/10-.jpeg";
+import videoBackJpeg from "../assets/img/media/12-.jpeg";
 import type { ArtGalleryProps } from "react-art-gallery";
 
 

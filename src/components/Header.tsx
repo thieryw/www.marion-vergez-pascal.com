@@ -1,7 +1,7 @@
 import { memo, useState } from "react";
 import type {ReactNode} from "react";
-import {makeStyles} from "../../theme";
-import {Text} from "../../theme";
+import {makeStyles} from "../theme";
+import {Text} from "../theme";
 import {breakpointsValues} from "gitlanding/theme"
 import UnfoldIcon from '@mui/icons-material/FormatLineSpacing';
 import {useDomRect} from "powerhooks/useDomRect";

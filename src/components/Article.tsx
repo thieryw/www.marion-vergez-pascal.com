@@ -1,8 +1,8 @@
 import { memo } from "react";
 import type { ReactNode } from "react";
-import { makeStyles, breakpointsValues, Text } from "../../theme"
+import { makeStyles, breakpointsValues, Text } from "../theme"
 import { Divider } from "./Divider";
-import type { Link } from "../../tools/link";
+import type { Link } from "../tools/link";
 import { GlIllustration } from "gitlanding/GlIllustration";
 import { Button } from "../components/Button";
 

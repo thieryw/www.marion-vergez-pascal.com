@@ -2,12 +2,11 @@ import { memo} from "react";
 import type { ReactNode } from "react";
 import MuiLink from "@mui/material/Link";
 import { GlLogo } from "gitlanding/utils/GlLogo";
-import { makeStyles } from "../../theme";
-import { breakpointsValues } from "../../theme";
-import type { Link } from "../../tools/link";
+import { makeStyles } from "../theme";
+import { breakpointsValues } from "../theme";
+import type { Link } from "../tools/link";
 import { scrollableDivId } from "gitlanding/GlTemplate";
 import {useCallbackFactory} from "powerhooks/useCallbackFactory";
-
 
 
 export type FooterProps = {
@@ -98,7 +97,7 @@ export const Footer = memo((props: FooterProps) => {
 const useStyles = makeStyles()(
 	theme => ({
 		"root": {
-			"background": theme.customBackgroundColor
+			"background": theme.colors.useCases.customGradientBackground
 		},
 		"title": {
 			...(theme.windowInnerWidth < breakpointsValues.md ? {

@@ -1,5 +1,5 @@
 import {memo} from "react";
-import { makeStyles, Text, breakpointsValues } from "../../theme";
+import { makeStyles, Text, breakpointsValues } from "../theme";
 import { Divider } from "../components/Divider";
 
 

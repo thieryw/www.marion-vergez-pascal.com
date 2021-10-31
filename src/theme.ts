@@ -1,4 +1,4 @@
-import { createThemeProvider, defaultGetTypographyDesc, defaultPalette } from "onyxia-ui";
+import { createThemeProvider, defaultGetTypographyDesc, defaultPalette, createDefaultColorUseCases } from "onyxia-ui";
 import { createText } from "onyxia-ui/Text";
 import { createMakeStyles } from "tss-react";
 import { breakpointsValues as defaultBreakpointValues } from "onyxia-ui";
@@ -49,8 +49,20 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 	},
 	"palette": {
 		...defaultPalette,
-		"gold": "#e1bf59"
+		"gold": "#e1bf59",
+		"customGradientBackgroundColor": {
+			"light": "linear-gradient(270deg, rgba(240,240,244,1) 0%, rgba(221,219,219,1) 100%)",
+			"dark": "linear-gradient(270deg, rgba(36,41,52,1) 0%, rgba(19,22,29,1) 68%)"
+		},
 	},
+	"createColorUseCases": ({isDarkModeEnabled, palette})=>{
+		return {
+			...createDefaultColorUseCases({isDarkModeEnabled, palette}),
+			"customGradientBackground": isDarkModeEnabled ?
+				palette.customGradientBackgroundColor.dark : 
+				palette.customGradientBackgroundColor.light
+		}
+	}
 });
 
 export function useTheme() {
@@ -70,16 +82,6 @@ export function useTheme() {
 				return 4;
 			})(),
 		),
-		"customBackgroundColor": (() => {
-			if (theme.isDarkModeEnabled) {
-				return "linear-gradient(270deg, rgba(36,41,52,1) 0%, rgba(19,22,29,1) 68%)";
-
-
-			};
-
-			return "linear-gradient(270deg, rgba(240,240,244,1) 0%, rgba(221,219,219,1) 100%)";
-		})(),
-
 		"transparentBackground": (params: {direction: "to left" | "to right" | "to bottom" | "to top"}) => {
 			const {direction} = params;
 			if (theme.isDarkModeEnabled) {

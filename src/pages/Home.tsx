@@ -1,19 +1,19 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { memo } from "react";
-import { makeStyles, Text } from "../../theme";
-import heroPng from "../../assets/img/home/hero.png";
-import { breakpointsValues } from "../../theme";
+import { makeStyles, Text } from "../theme";
+import heroPng from "../assets/img/home/hero.png";
+import { breakpointsValues } from "../theme";
 import { useTranslation } from "../i18n/useTranslation";
 import { news } from "../user/news";
 import { GlIllustration } from "gitlanding/GlIllustration";
-import { routes } from "../../router";
-import decorativeMp4 from "../../assets/video/home/decoration.mp4";
+import { routes } from "../router";
+import decorativeMp4 from "../assets/video/home/decoration.mp4";
 import { Article } from "../components/Article";
-import contactImageUrl from "../../assets/img/home/contact.jpeg";
-import bioImageUrl from "../../assets/img/home/marion-nabil.jpeg";
+import contactImageUrl from "../assets/img/home/contact.jpeg";
+import bioImageUrl from "../assets/img/home/marion-nabil.jpeg";
 import MuiLink from "@mui/material/Link";
 import { Background } from "../components/Background";
-import mediaBackgroundImageUrl from "../../assets/img/home/marion-soliste.jpeg";
+import mediaBackgroundImageUrl from "../assets/img/home/marion-soliste.jpeg";
 import { Divider } from "../components/Divider";
 import { Button } from "../components/Button";
 import { YouTubeIframe } from "../components/YouTubeIframe";

@@ -1,7 +1,7 @@
 import { memo } from "react";
 import MuiButton from "@mui/material/Button";
 import type { ButtonProps } from "@mui/material/Button";
-import { makeStyles } from "../../theme";
+import { makeStyles } from "../theme";
 
 
 export const Button = memo((props: ButtonProps) => {

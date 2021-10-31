@@ -1,11 +1,11 @@
 import {memo, useMemo} from "react";
-import {useRoute, routes } from "../router"
+import {useRoute, routes } from "./router"
 import {Home} from "./pages/Home";
 import {GlTemplate} from "gitlanding";
 import {Header} from "./components/Header";
 import type {HeaderProps} from "./components/Header"
 import {useTranslation} from "./i18n/useTranslation";
-import { ThemeProvider } from "../theme";
+import { ThemeProvider } from "./theme";
 import {AppFooter} from "./AppFooter";
 import {Biography} from "./pages/Biography";
 import {Media} from "./pages/Media";

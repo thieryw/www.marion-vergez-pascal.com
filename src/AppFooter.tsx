@@ -3,13 +3,13 @@ import { memo, useMemo } from "react";
 import { Footer } from "./components/Footer";
 import type { FooterProps } from "./components/Footer";
 import { useTranslation } from "./i18n/useTranslation";
-import { routes } from "../router";
-import instagramIconUrl from "../assets/svg/instagram.svg";
-import facebookIconUrl from "../assets/svg/facebook.svg";
-import {Text} from "../theme";
+import { routes } from "./router";
+import instagramIconUrl from "./assets/svg/instagram.svg";
+import facebookIconUrl from "./assets/svg/facebook.svg";
+import {Text} from "./theme";
 import MuiLink from "@mui/material/Link";
-import { makeStyles } from "../theme";
-import { breakpointsValues } from "../theme";
+import { makeStyles } from "./theme";
+import { breakpointsValues } from "./theme";
 
 
 
