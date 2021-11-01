@@ -17,6 +17,7 @@ import mediaBackgroundImageUrl from "../assets/img/home/marion-soliste.jpeg";
 import { Divider } from "../components/Divider";
 import { Button } from "../components/Button";
 import { YouTubeIframe } from "../components/YouTubeIframe";
+import { CustomLink } from "../components/CustomLink";
 
 export const Home = memo(() => {
 
@@ -77,7 +78,7 @@ export const Home = memo(() => {
 					<Text className={classes.mediaTitle} typo="subtitle">MEDIA</Text>
 					<Divider width={8} color={theme.colors.palette.gold} height={1} />
 				</div>
-				<YouTubeIframe 
+				<YouTubeIframe
 					className={classes.iframe}
 					videoUrl="https://www.youtube-nocookie.com/embed/kIdTp7VaLV4"
 				/>
@@ -97,8 +98,18 @@ export const Home = memo(() => {
 			paragraphs={[t("contactParagraph")]}
 			imagePosition="right"
 			customButton={<div className={classes.contactSocialMedia}>
-				<MuiLink className={classes.instagramAndFacebookButtons} href="https://www.facebook.com/marion.vergezpascal.9" underline="none">FACEBOOK →</MuiLink>
-				<MuiLink className={classes.instagramAndFacebookButtons} href="https://www.instagram.com/marion_vergezpascal/" underline="none">INSTAGRAM →</MuiLink>
+				<CustomLink 
+					link={{
+						"href": "https://www.facebook.com/marion.vergezpascal.9"
+					}}
+					title="FACEBOOK"
+				/>
+				<CustomLink 
+					link={{
+						"href": "https://www.instagram.com/marion_vergezpascal/"
+					}}
+					title="INSTAGRAM"
+				/>
 				<MuiLink underline="none" href="mailto:email@gmail.com"><Text className={classes.email} typo="body 1">email@gmail.com</Text></MuiLink>
 			</div>}
 
@@ -119,8 +130,8 @@ const useStyles = makeStyles()(
 			"background": `url("${heroPng}")`,
 			"backgroundSize": "cover",
 			"backgroundRepeat": "no-repeat",
-			"backgroundPosition": (()=>{
-				if(theme.windowInnerWidth >= breakpointsValues.md){
+			"backgroundPosition": (() => {
+				if (theme.windowInnerWidth >= breakpointsValues.md) {
 					return "center";
 				};
 				return "60% center"
@@ -144,7 +155,7 @@ const useStyles = makeStyles()(
 			"position": "absolute",
 			"top": 0,
 			"left": 0,
-			"backdropFilter": theme.windowInnerWidth < breakpointsValues.md 
+			"backdropFilter": theme.windowInnerWidth < breakpointsValues.md
 				? "brightness(0.4)" : undefined,
 
 
@@ -152,18 +163,18 @@ const useStyles = makeStyles()(
 		"title": {
 			"fontWeight": 100,
 			"color": "#F7BCF7",
-				"fontSize": (()=>{
-					if(theme.windowInnerWidth >= breakpointsValues.xl){
-						return "3rem";
-					};
+			"fontSize": (() => {
+				if (theme.windowInnerWidth >= breakpointsValues.xl) {
+					return "3rem";
+				};
 
-					if(theme.windowInnerWidth >= breakpointsValues.sm){
-						return "2rem";
-					};
+				if (theme.windowInnerWidth >= breakpointsValues.sm) {
+					return "2rem";
+				};
 
-					return "1.5rem";
+				return "1.5rem";
 
-				})()
+			})()
 
 		},
 
@@ -208,15 +219,6 @@ const useStyles = makeStyles()(
 			"flexDirection": "column",
 			"alignItems": "flex-end",
 			"marginTop": theme.spacing(4)
-		},
-		"instagramAndFacebookButtons": {
-			...theme.spacing.topBottom("margin", `${theme.spacing(1)}px`),
-			"transition": "transform 500ms",
-			"color": theme.colors.palette.gold,
-			":hover": {
-				"transform": `translateX(${theme.spacing(2)}px)`
-			}
-
 		},
 		"email": {
 			"marginTop": theme.spacing(1),

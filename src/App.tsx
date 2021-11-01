@@ -1,14 +1,16 @@
-import {memo, useMemo} from "react";
-import {useRoute, routes } from "./router"
-import {Home} from "./pages/Home";
-import {GlTemplate} from "gitlanding";
-import {Header} from "./components/Header";
-import type {HeaderProps} from "./components/Header"
-import {useTranslation} from "./i18n/useTranslation";
+import { memo, useMemo } from "react";
+import { useRoute, routes } from "./router"
+import { Home } from "./pages/Home";
+import { GlTemplate } from "gitlanding";
+import { Header } from "./components/Header";
+import type { HeaderProps } from "./components/Header"
+import { useTranslation } from "./i18n/useTranslation";
 import { ThemeProvider } from "./theme";
-import {AppFooter} from "./AppFooter";
-import {Biography} from "./pages/Biography";
-import {Media} from "./pages/Media";
+import { AppFooter } from "./AppFooter";
+import { Biography } from "./pages/Biography";
+import { Media } from "./pages/Media";
+import { Concerts } from "./pages/Concerts";
+import { Legal } from "./pages/Legal";
 
 
 export const App = memo(() => {
@@ -43,9 +45,9 @@ export const App = memo(() => {
 
 
 	return (
-		<GlTemplate 
-			ThemeProvider={ThemeProvider} 
-			footer={<AppFooter />} 
+		<GlTemplate
+			ThemeProvider={ThemeProvider}
+			footer={<AppFooter />}
 			header={<Header links={headerLinks} />}
 			headerOptions={{
 				"position": "fixed",
@@ -54,8 +56,9 @@ export const App = memo(() => {
 		>
 			{route.name === "home" && <Home />}
 			{route.name === "biography" && <Biography />}
-			{route.name === "futureEvents" && <p>{route.name}</p>}
+			{route.name === "futureEvents" && <Concerts />}
 			{route.name === "media" && <Media />}
+			{route.name === "legal" && <Legal />}
 		</GlTemplate>
 	)
 });

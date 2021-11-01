@@ -8,6 +8,7 @@ import { AppFooter } from "../AppFooter";
 import { news } from "../user/news";
 import { Biography } from "../pages/Biography";
 import { Media } from "../pages/Media";
+import { Concerts } from "../pages/Concerts";
 
 
 export type Scheme = {
@@ -24,6 +25,7 @@ const reflectedI18nSchemes = {
     [symToStr({ AppFooter })]: Reflect<AppFooter.I18nScheme>(),
     [symToStr({ Biography })]: Reflect<Biography.I18nScheme>(),
     [symToStr({ Media })]: Reflect<Media.I18nScheme>(),
+    [symToStr({ Concerts })]: Reflect<Concerts.I18nScheme>(),
 };
 
 export type I18nSchemes = typeof reflectedI18nSchemes;
@@ -98,6 +100,10 @@ export const translations = id<Record<Language, Translations>>({
             "videoSubtitle": "VIDEOS",
             "youtubeButton": "ma chaine youtube"
 
+        },
+        "Concerts": {
+            "concertsTitle": "concerts",
+            "concertsSubtitle": "PROCHAIN CONCERTS"
         }
     },
 
@@ -162,6 +168,10 @@ export const translations = id<Record<Language, Translations>>({
             "videoSubtitle": "VIDEOS",
             "youtubeButton": "ma chaine youtube"
 
+        },
+        "Concerts": {
+            "concertsTitle": "concerts",
+            "concertsSubtitle": "PROCHAIN CONCERTS"
         }
 
     }
