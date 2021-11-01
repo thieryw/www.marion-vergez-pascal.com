@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.d3d5d604.chunk.js",
-    "main.js.map": "/static/js/main.d3d5d604.chunk.js.map",
+    "main.js": "/static/js/main.2bae6abb.chunk.js",
+    "main.js.map": "/static/js/main.2bae6abb.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.8d0980a0.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.8d0980a0.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.ab74d30c.chunk.js",
@@ -304,14 +304,14 @@
     "react-syntax-highlighter_languages_refractor_xquery.js.map": "/static/js/react-syntax-highlighter_languages_refractor_xquery.77656778.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_yaml.js": "/static/js/react-syntax-highlighter_languages_refractor_yaml.26c90621.chunk.js",
     "react-syntax-highlighter_languages_refractor_yaml.js.map": "/static/js/react-syntax-highlighter_languages_refractor_yaml.26c90621.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.05600910.js",
-    "runtime-main.js.map": "/static/js/runtime-main.05600910.js.map",
-    "static/js/153.8e1aef4b.chunk.js": "/static/js/153.8e1aef4b.chunk.js",
-    "static/js/153.8e1aef4b.chunk.js.map": "/static/js/153.8e1aef4b.chunk.js.map",
-    "static/js/154.197f4863.chunk.js": "/static/js/154.197f4863.chunk.js",
-    "static/js/154.197f4863.chunk.js.map": "/static/js/154.197f4863.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.755e446e.js",
+    "runtime-main.js.map": "/static/js/runtime-main.755e446e.js.map",
+    "static/js/153.22cbe5e7.chunk.js": "/static/js/153.22cbe5e7.chunk.js",
+    "static/js/153.22cbe5e7.chunk.js.map": "/static/js/153.22cbe5e7.chunk.js.map",
+    "static/js/154.44926c33.chunk.js": "/static/js/154.44926c33.chunk.js",
+    "static/js/154.44926c33.chunk.js.map": "/static/js/154.44926c33.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/153.8e1aef4b.chunk.js.LICENSE.txt": "/static/js/153.8e1aef4b.chunk.js.LICENSE.txt",
+    "static/js/153.22cbe5e7.chunk.js.LICENSE.txt": "/static/js/153.22cbe5e7.chunk.js.LICENSE.txt",
     "static/media/1-profil-marion.5ed1cd32.webp": "/static/media/1-profil-marion.5ed1cd32.webp",
     "static/media/1-profil-marion.d93dff25.jpeg": "/static/media/1-profil-marion.d93dff25.jpeg",
     "static/media/10-.ae388a92.webp": "/static/media/10-.ae388a92.webp",
@@ -343,6 +343,7 @@
     "static/media/bio-banner.ca910f90.jpeg": "/static/media/bio-banner.ca910f90.jpeg",
     "static/media/bio-portrait.6d4f1277.jpeg": "/static/media/bio-portrait.6d4f1277.jpeg",
     "static/media/cancel.svg": "/static/media/cancel.da5c4222.svg",
+    "static/media/concert-banner.6dc0159f.jpeg": "/static/media/concert-banner.6dc0159f.jpeg",
     "static/media/contact.0a4251e9.jpeg": "/static/media/contact.0a4251e9.jpeg",
     "static/media/decoration.d853bbbd.mp4": "/static/media/decoration.d853bbbd.mp4",
     "static/media/downArrow.svg": "/static/media/downArrow.23758f40.svg",
@@ -355,8 +356,8 @@
     "static/media/next.svg": "/static/media/next.2dc7a76f.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.05600910.js",
-    "static/js/153.8e1aef4b.chunk.js",
-    "static/js/main.d3d5d604.chunk.js"
+    "static/js/runtime-main.755e446e.js",
+    "static/js/153.22cbe5e7.chunk.js",
+    "static/js/main.2bae6abb.chunk.js"
   ]
 }
