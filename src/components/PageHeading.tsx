@@ -50,9 +50,12 @@ const useStyles = makeStyles()(
 			"color": theme.colors.useCases.typography.textSecondary
 		},
 		"subTitle": {
+			"textAlign": "center",
 			"fontSize": "3.5rem",
+			"lineHeight": "3.5rem",
 			...(theme.windowInnerWidth < breakpointsValues.sm ? {
-				"fontSize": "2.5rem"
+				"fontSize": "2.5rem",
+				"lineHeight": "2.5rem"
 			}: {})
 			
 		},

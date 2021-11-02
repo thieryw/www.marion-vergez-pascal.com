@@ -103,7 +103,7 @@ export const translations = id<Record<Language, Translations>>({
         },
         "Concerts": {
             "concertsTitle": "concerts",
-            "concertsSubtitle": "PROCHAIN CONCERTS"
+            "concertsSubtitle": "PROCHAINS CONCERTS"
         }
     },
 
@@ -171,7 +171,7 @@ export const translations = id<Record<Language, Translations>>({
         },
         "Concerts": {
             "concertsTitle": "concerts",
-            "concertsSubtitle": "PROCHAIN CONCERTS"
+            "concertsSubtitle": "PROCHAINS CONCERTS"
         }
 
     }
