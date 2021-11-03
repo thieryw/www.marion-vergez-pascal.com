@@ -14,14 +14,15 @@ import {GlLogo} from "gitlanding/utils/GlLogo";
 
 
 export type EventCardProps = {
-	day: string;
+	className?: string;
+	day: number;
 	month: string;
-	year: string;
+	year: number;
 	title: string;
 	hour: string;
 	description: string;
 	address: string;
-	eventImageUrl: string;
+	imageUrl?: string;
 	link: {
 		href: string;
 		onClick?: () => void;
@@ -35,8 +36,9 @@ export const EventCard = memo((props: EventCardProps) => {
 	const {
 		description,
 		hour,
-		eventImageUrl,
+		imageUrl,
 		address,
+		className,
 		...rest
 	} = props;
 
@@ -54,11 +56,12 @@ export const EventCard = memo((props: EventCardProps) => {
 
 	const { classes, cx } = useStyles({
 		isCardUnfolded,
-		"cardHeight": domRect.height
+		"cardHeight": domRect.height,
+		"hasImage": imageUrl !== undefined
 	});
 
 	return (
-		<div className={classes.root}>
+		<div className={cx(classes.root, className)}>
 			<TopDiv
 				{...rest}
 				onClick={toggleCard}
@@ -67,11 +70,15 @@ export const EventCard = memo((props: EventCardProps) => {
 			<div className={classes.card}>
 				<div className={classes.cardInner} ref={ref}>
 
-					<GlIllustration
-						className={classes.cardImage}
-						type="image"
-						url={eventImageUrl}
-					/>
+					{
+						imageUrl !== undefined &&
+							<GlIllustration
+								className={classes.cardImage}
+								type="image"
+								url={imageUrl}
+							/>
+					}
+
 
 					<div className={classes.textWrapper}>
 						<div className={classes.date}>
@@ -97,6 +104,7 @@ export const EventCard = memo((props: EventCardProps) => {
 						<CustomLink 
 							link={rest.link}
 							title="EN SAVOIR PLUS"
+							className={classes.link}
 						/>
 
 					</div>
@@ -109,13 +117,64 @@ export const EventCard = memo((props: EventCardProps) => {
 
 })
 
-const useStyles = makeStyles<{ isCardUnfolded: boolean, cardHeight: number }>()(
-	(theme, { cardHeight, isCardUnfolded }) => ({
+const useStyles = makeStyles<{ isCardUnfolded: boolean, cardHeight: number, hasImage: boolean }>()(
+	(theme, { cardHeight, isCardUnfolded, hasImage }) => ({
 		"root": {
-			...(theme.windowInnerWidth >= breakpointsValues.md ? {
-				...theme.spacing.rightLeft("padding", `${theme.spacing(9)}px`)
+			/*...(theme.windowInnerWidth >= breakpointsValues.md ? {
+				...theme.spacing.rightLeft(
+					"padding", 
+					`${theme.spacing(
+						hasImage ? 9 : 14
+						)}px`
+				)
 			} : {
-			})
+			})*/
+			...(() => {
+				/*if (theme.windowInnerWidth >= breakpointsValues["lg+"]) {
+					return {
+						...theme.spacing.rightLeft(
+							"padding",
+							`${theme.spacing(
+								hasImage ? 9 : 14
+							)}px`
+						)
+					}
+				};
+
+				if(theme.windowInnerWidth >= breakpointsValues.md){
+					return {
+						...theme.spacing.rightLeft(
+							"padding",
+							`${theme.spacing(
+								9
+							)}px`
+						)
+					}
+				}*/
+
+				return {
+
+					...theme.spacing.rightLeft(
+						"padding",
+						`${theme.spacing(
+							(()=>{
+								if(theme.windowInnerWidth >= breakpointsValues["lg+"]){
+									return hasImage ? 9 : 14;
+								}
+
+								if(theme.windowInnerWidth >= breakpointsValues.md){
+									return 9;
+								}
+
+								return 0;
+
+							})()
+						)}px`
+					)
+
+				}
+
+			})()
 		},
 
 		"card": {
@@ -132,14 +191,14 @@ const useStyles = makeStyles<{ isCardUnfolded: boolean, cardHeight: number }>()(
 			...(theme.windowInnerWidth < breakpointsValues.sm ? {
 				"flexDirection": "column",
 
-			}: {})
+			} : {})
 		},
 		"cardImage": {
 			"flex": 1,
 			...(theme.windowInnerWidth >= breakpointsValues.sm ? {
 				"marginRight": theme.spacing(4),
 				"paddingRight": theme.spacing(4),
-			}: {
+			} : {
 				"marginBottom": theme.spacing(4)
 			}),
 			"position": "relative",
@@ -175,13 +234,17 @@ const useStyles = makeStyles<{ isCardUnfolded: boolean, cardHeight: number }>()(
 			"maxWidth": 200,
 			"marginTop": theme.spacing(4),
 			"marginBottom": theme.spacing(3),
+		},
+		"link": {
+			"alignSelf": "flex-start"
+
 		}
 
 
 	})
 )
 
-const {Icon} = (()=>{
+const { Icon } = (() => {
 
 	type IconProps = {
 		imageUrl: string;
@@ -190,9 +253,9 @@ const {Icon} = (()=>{
 
 	const Icon = memo((props: IconProps) => {
 
-		const {imageUrl} = props;
+		const { imageUrl } = props;
 
-		const {classes, theme} = useStyles();
+		const { classes, theme } = useStyles();
 
 		return <GlLogo
 			logoUrl={imageUrl}
@@ -222,7 +285,8 @@ const { TopDiv } = (() => {
 		"description" |
 		"hour" |
 		"eventImageUrl" |
-		"address"
+		"address" |
+		"className"
 	> & {
 		onClick: () => void;
 		isCardUnfolded: boolean;

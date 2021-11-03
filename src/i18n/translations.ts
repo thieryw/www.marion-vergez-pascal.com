@@ -37,8 +37,8 @@ export type Translations = {
 export const translations = id<Record<Language, Translations>>({
     "en": {
         "Home": {
-            "newsParagraph": news.en.paragraph,
-            "newsTitle": news.en.title,
+            "newsParagraph": news.en?.paragraph ?? news.fr.paragraph,
+            "newsTitle": news.en?.title ?? news.fr.title,
             "newsHeading": "ACTUALITES",
             "newsButtonLabel": "Voir Plus",
             "bioTitle": "Qui suis-je ?",

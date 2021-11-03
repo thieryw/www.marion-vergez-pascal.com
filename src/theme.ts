@@ -62,7 +62,7 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 				palette.customGradientBackgroundColor.dark : 
 				palette.customGradientBackgroundColor.light
 		}
-	}
+	},
 });
 
 export function useTheme() {
@@ -100,5 +100,8 @@ export const { makeStyles } = createMakeStyles({ useTheme });
 
 export const { Text } = createText({ useTheme });
 
-export const breakpointsValues = defaultBreakpointValues;
+export const breakpointsValues = {
+	...defaultBreakpointValues,
+	"lg+": 1400 as const
+};
 

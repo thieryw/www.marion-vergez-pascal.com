@@ -42,7 +42,8 @@ export const Home = memo(() => {
 			paragraphs={[t("newsParagraph")]}
 			imageUrl={news.imageUrl}
 			button={{
-				...routes.futureEvents().link,
+				"href": news.buttonHref ?? routes.futureEvents().link.href,
+				"onClick": news.buttonHref !== undefined ? routes.futureEvents().link.onClick : undefined,
 				"label": t("newsButtonLabel")
 			}}
 			imagePosition="right"
