@@ -59,7 +59,7 @@ export const Media = memo(() => {
 			lightBoxImageSources={imageSources}
 			thumbNailImages={files.files}
 			lightBoxImages={files.files}
-			imageAverageHeight={220}
+			imageAverageHeight={250}
 			hideImageNames={true}
 		/>
 

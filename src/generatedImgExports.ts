@@ -1,17 +1,18 @@
 import _0 from "./assets/img/media/1-profil-marion.jpeg";
 import _1 from "./assets/img/media/2-bio-portrait.jpeg";
-import _2 from "./assets/img/media/3-contact.jpeg";
-import _3 from "./assets/img/media/4-hero.jpeg";
-import _4 from "./assets/img/media/5-bio-banner.jpeg";
-import _5 from "./assets/img/media/6-marion-nabil.jpeg";
-import _6 from "./assets/img/media/7-marion-soliste.jpeg";
-import _7 from "./assets/img/media/8-news.jpeg";
-import _8 from "./assets/img/media/9-.jpeg";
-import _9 from "./assets/img/media/9.1-.jpeg";
-import _10 from "./assets/img/media/9.2-.jpeg";
-import _11 from "./assets/img/media/10-.jpeg";
-import _12 from "./assets/img/media/11-.jpeg";
-import _13 from "./assets/img/media/12-.jpeg";
+import _2 from "./assets/img/media/2.5-bio-portrait.jpeg";
+import _3 from "./assets/img/media/3-contact.jpeg";
+import _4 from "./assets/img/media/4-hero.jpeg";
+import _5 from "./assets/img/media/5-bio-banner.jpeg";
+import _6 from "./assets/img/media/6-marion-nabil.jpeg";
+import _7 from "./assets/img/media/7-marion-soliste.jpeg";
+import _8 from "./assets/img/media/8-news.jpeg";
+import _9 from "./assets/img/media/9-.jpeg";
+import _10 from "./assets/img/media/9.1-.jpeg";
+import _11 from "./assets/img/media/9.2-.jpeg";
+import _12 from "./assets/img/media/10-.jpeg";
+import _13 from "./assets/img/media/11-.jpeg";
+import _14 from "./assets/img/media/12-.jpeg";
 
 
 export const files = {
@@ -26,43 +27,43 @@ export const files = {
 				},
 {
 					"url": _2,
-					"name": "contact"
+					"name": "2.5-bio-portrait"
 				},
 {
 					"url": _3,
-					"name": "hero"
+					"name": "contact"
 				},
 {
 					"url": _4,
-					"name": "bio-banner"
+					"name": "hero"
 				},
 {
 					"url": _5,
-					"name": "marion-nabil"
+					"name": "bio-banner"
 				},
 {
 					"url": _6,
-					"name": "marion-soliste"
+					"name": "marion-nabil"
 				},
 {
 					"url": _7,
-					"name": "news"
+					"name": "marion-soliste"
 				},
 {
 					"url": _8,
-					"name": ""
+					"name": "news"
 				},
 {
 					"url": _9,
-					"name": "9.1-"
+					"name": ""
 				},
 {
 					"url": _10,
-					"name": "9.2-"
+					"name": "9.1-"
 				},
 {
 					"url": _11,
-					"name": ""
+					"name": "9.2-"
 				},
 {
 					"url": _12,
@@ -70,6 +71,10 @@ export const files = {
 				},
 {
 					"url": _13,
+					"name": ""
+				},
+{
+					"url": _14,
 					"name": ""
 				},
 

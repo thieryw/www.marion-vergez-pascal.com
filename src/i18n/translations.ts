@@ -80,17 +80,37 @@ export const translations = id<Record<Language, Translations>>({
             "bioTitle": "BIOGRAPHIE",
             "bioSubtitle": "MON HISTOIRE",
             "bioParagraph1": `
-                Lorem hac habitasse platea dictumst. Donec vulputate vestibulum iaculis. Cras consequat lobortis enim nec efficitur. Sed volutpat enim id lacus tincidunt, eu dictum neque porttitor. Mauris cursus ligula efficitur eros egestas pharetra. Vestibulum augue dolor, pellentesque at cursus vitae, volutpat et tellus. Ut vel augue id orci interdum commodo. Morbi pharetra iaculis leo ac pellentesque. Pellentesque tincidunt semper efficitur. Quisque venenatis lectus dui, sit amet egestas purus pellentesque sed. Duis id congue erat. Etiam hendrerit mi turpis, id luctus lacus tempor venenatis. Proin imperdiet faucibus tellus. Nam finibus nibh non tincidunt rutrum. Donec pharetra ante erat, sed congue libero molestie vel. Sed eget urna et neque vulputate sollicitudin.
+                Originaire du Béarn, Marion découvre le chant à 11 ans dans une maîtrise d’enfants en Pays Basque, puis intègre le chœur d’enfants du Conservatoire de Pau sous la direction de Pascale Verdier et de Fayçal Karoui. À 14 ans elle entre à la Maîtrise de Radio-France et chante pendant 3 ans dans diverses productions Radio-France sous la baguette de Sofi Jeannin, Kurt Masur, Daniele Gatti. Après des études de lettres (hypokhâgne/khâgne classique), elle rentre au Département Supérieur pour Jeunes Chanteurs du CRR de Paris en 2014 où elle travaille avec Florence Guignolet. Au sein du Jeune Chœur, elle chante dans diverses productions prestigieuses, au Châtelet, à la Philharmonie, etc... Elle intègre en 2017 le Département Vocal du Conservatoire d’Amsterdam, dans la classe de Don Marrazo. En 2018, elle rentre au Conservatoire National Supérieur Musique et de Danse de Paris dans la classe de Frédéric Gindraux. Elle bénéficie des conseils d’Anne Le Bozec. Lors de Masterclasses, elle a pu bénéficier des conseils de Nelly Miriciaiu, Regina Verner, Margreet Honig ou encore Roberto Benzi.
             `,
             "bioParagraph2": `
-                Nam ultricies mauris nec pellentesque dapibus. Ut id magna consectetur, vestibulum est et, scelerisque sem. Ut nec risus at diam semper bibendum. Sed aliquet erat ligula, et blandit ipsum dictum sit amet. Praesent a massa id leo condimentum viverra. In placerat ex sit amet ipsum dapibus feugiat. Maecenas vitae mauris aliquet, lacinia urna nec, finibus arcu. Nam euismod suscipit purus, et dignissim eros. Fusce bibendum, urna at suscipit euismod, ligula magna lobortis dolor, vitae venenatis felis ipsum in diam. Quisque hendrerit nec nulla non euismod. Proin faucibus mi quis malesuada congue. Praesent pulvinar aliquam molestie.
+                Et septembre 2019, elle est sélectionnée comme Jeune Talent pour la prestigieuse académie de Bel Canto de la IVC Competition en Hollande à S’Hertogenbosch. Pour l’année 2020, elle est lauréate de l’académie des Frivolités Parisiennes et en 2021, elle fait partie du programme Jeunes Talents du Palais Royal (mécénat Crédit Agricole Île de France) et réalise à ce titre une série de mini-clips vidéos autour du répertoire lyrique français au Petit Palais ( R etrouvailles au P etit P alais ).
             `,
             "bioParagraph3": `
-                Curabitur a posuere erat, sit amet congue lorem. Proin quam tortor, aliquet id blandit ac, eleifend ut mi. Nam non enim interdum, porta dolor ut, mattis massa. Etiam tincidunt, ante vitae cursus scelerisque, lectus lectus commodo purus, ac aliquam dolor odio id nibh. Maecenas tempor urna nec nisi elementum, non blandit lacus eleifend. Proin egestas imperdiet mauris, at maximus diam bibendum in. Proin lectus lectus, scelerisque vitae sodales tempor, laoreet sit amet felis. Phasellus eget venenatis odio, eget pretium magna.
+                En juin 2021, elle chante avec sa pianiste Cécile Sagnier pour Jeunes Talents un programme autour des fables de La Fontaine à Château-Thierry intitulé « Fables, Contes et autres Légendes ». Elle incarne également Annio dans un spectacle de Franck Krawszyk librement inspiré de la Clémence de Titus de Mozart à la Seine Musicale. En juillet elle chante également dans une série de concerts dans un programme lyrique français intitulé « Deux hommes et une femme » avec l’orchestre du Palais Royal (direction J. P Sarcos) aux côtés de Kévin Amiel et Adrien Fournaison. Elle redonnera ce programme avec orchestre en novembre 2021 à Paris.
+
             `,
             "bioParagraph4": `
-                Proin posuere, nulla id tincidunt congue, purus enim faucibus metus, in cursus lectus metus id lectus. Nunc at luctus elit, pulvinar cursus lorem. Pellentesque a finibus tortor. Nulla erat purus, maximus et mattis et, sagittis in lectus. In tincidunt purus vel velit congue, vel lacinia turpis dictum. Donec posuere eros magna, nec pharetra orci ullamcorper non. Nam dignissim in nunc bibendum dignissim. Aenean auctor, lacus nec pretium malesuada, elit mi dapibus risus, sed tristique nulla purus nec purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse a mi egestas sapien condimentum molestie suscipit eget urna. Praesent lacus erat, aliquam rutrum pellentesque eget, vestibulum at mauris. Curabitur consequat mi ut arcu lobortis ornare a vel massa. Sed blandit posuere dolor vitae laoreet. Nullam consequat vitae libero vel vehicula.
+                Sensible à la transmission et l’accessibilité de l’opéra pour tous, Marion a chanté dans le cadre des mini- concerts de l’Orchestre de chambre de Paris dans des centres d’hébergements ou des hôpitaux, et a participé aux spectacles «T chek » (rôle de Zefka dans une adaptation du Journal d’un Disparu de Janaček) et «H elp !» (Clorinde dans une adaptation du Combat de T ancrède de Monteverdi) au théâtre des Bouffes du Nord avec la Compagnie Plein jour, dans un programme éducatif promouvant l’opéra pour tous.
             `,
+            "bioParagraph5": `
+                Cet automne, Marion chantera en récital avec Simon Adda-Reyss, au théâtre des Sablons de Neuilly un programme autour de Victor Hugo. Elle sera Sterling dans « Là-H aut » de Maurice Yvain avec la compagnie des Frivolités Parisiennes au théâtre de l’Athénée en février 2022 (dir. Nicolas Chesneau, mise en scène Pascal Neyron), et sera Nicklausse dans les Contes d’H offmann d’Offenbach dans une série de concerts Jeunes Chanteurs en collaboration avec l’opéra de Nancy (Nancy Opéra Passion).
+            `,
+
+            "interpretation": "Airs étudiés / interprétés en concert ou auditions",
+            "carmen": "Carmen de Bizet, Séguedille et Habanera",
+            "ottavia": "L’Incoronazione di Poppea de Monterverdi, Ottavia (« Disprezzata Regina », « Addio Roma » )",
+            "gounod": "La damnation de Faust de Gounod, rôle de Siébel (« Faites lui mes aveux »)",
+            "figaro": "La Clemenza di T ito de Mozart, rôle d’ Annio & N ozze di Figaro, rôle de Chérubin (airs seuls)",
+            "smeton": "Anna Bolena de Donizetti, rôle de Smeton (airs seuls)",
+            "ravel": "L’heure Espagnole de Ravel, rôle de Concepcion (« Oh la pitoyable aventure »)",
+            "offenbach": "La Grande duchesse de Gérolstein (« Ah que j’aime les militaires») et La Périchole (Griserie) d’Offenbach",
+            "mignon": "Mignon de Thomas (“Me voici dans son boudoir” )",
+            "viviane": "T oi c’est moi de Simons air de Viviane (“C’est ça la vie, C’est ça l’amour”)",
+            "massenet": "Cendrillon de Massenet, rôle de Mme de La Haltière"
+
+
+
+
 
         },
         "Media": {
@@ -104,7 +124,7 @@ export const translations = id<Record<Language, Translations>>({
         "Concerts": {
             "concertsTitle": "concerts",
             "concertsSubtitle": "PROCHAINS CONCERTS"
-        }
+        },
     },
 
     "fr": {
@@ -148,17 +168,32 @@ export const translations = id<Record<Language, Translations>>({
             "bioTitle": "BIOGRAPHIE",
             "bioSubtitle": "MON HISTOIRE",
             "bioParagraph1": `
-                Lorem hac habitasse platea dictumst. Donec vulputate vestibulum iaculis. Cras consequat lobortis enim nec efficitur. Sed volutpat enim id lacus tincidunt, eu dictum neque porttitor. Mauris cursus ligula efficitur eros egestas pharetra. Vestibulum augue dolor, pellentesque at cursus vitae, volutpat et tellus. Ut vel augue id orci interdum commodo. Morbi pharetra iaculis leo ac pellentesque. Pellentesque tincidunt semper efficitur. Quisque venenatis lectus dui, sit amet egestas purus pellentesque sed. Duis id congue erat. Etiam hendrerit mi turpis, id luctus lacus tempor venenatis. Proin imperdiet faucibus tellus. Nam finibus nibh non tincidunt rutrum. Donec pharetra ante erat, sed congue libero molestie vel. Sed eget urna et neque vulputate sollicitudin.
+                Originaire du Béarn, Marion découvre le chant à 11 ans dans une maîtrise d’enfants en Pays Basque, puis intègre le chœur d’enfants du Conservatoire de Pau sous la direction de Pascale Verdier et de Fayçal Karoui. À 14 ans elle entre à la Maîtrise de Radio-France et chante pendant 3 ans dans diverses productions Radio-France sous la baguette de Sofi Jeannin, Kurt Masur, Daniele Gatti. Après des études de lettres (hypokhâgne/khâgne classique), elle rentre au Département Supérieur pour Jeunes Chanteurs du CRR de Paris en 2014 où elle travaille avec Florence Guignolet. Au sein du Jeune Chœur, elle chante dans diverses productions prestigieuses, au Châtelet, à la Philharmonie, etc... Elle intègre en 2017 le Département Vocal du Conservatoire d’Amsterdam, dans la classe de Don Marrazo. En 2018, elle rentre au Conservatoire National Supérieur Musique et de Danse de Paris dans la classe de Frédéric Gindraux. Elle bénéficie des conseils d’Anne Le Bozec. Lors de Masterclasses, elle a pu bénéficier des conseils de Nelly Miriciaiu, Regina Verner, Margreet Honig ou encore Roberto Benzi.
             `,
             "bioParagraph2": `
-                Nam ultricies mauris nec pellentesque dapibus. Ut id magna consectetur, vestibulum est et, scelerisque sem. Ut nec risus at diam semper bibendum. Sed aliquet erat ligula, et blandit ipsum dictum sit amet. Praesent a massa id leo condimentum viverra. In placerat ex sit amet ipsum dapibus feugiat. Maecenas vitae mauris aliquet, lacinia urna nec, finibus arcu. Nam euismod suscipit purus, et dignissim eros. Fusce bibendum, urna at suscipit euismod, ligula magna lobortis dolor, vitae venenatis felis ipsum in diam. Quisque hendrerit nec nulla non euismod. Proin faucibus mi quis malesuada congue. Praesent pulvinar aliquam molestie.
+                Et septembre 2019, elle est sélectionnée comme Jeune Talent pour la prestigieuse académie de Bel Canto de la IVC Competition en Hollande à S’Hertogenbosch. Pour l’année 2020, elle est lauréate de l’académie des Frivolités Parisiennes et en 2021, elle fait partie du programme Jeunes Talents du Palais Royal (mécénat Crédit Agricole Île de France) et réalise à ce titre une série de mini-clips vidéos autour du répertoire lyrique français au Petit Palais ( R etrouvailles au P etit P alais ).
             `,
             "bioParagraph3": `
-                Curabitur a posuere erat, sit amet congue lorem. Proin quam tortor, aliquet id blandit ac, eleifend ut mi. Nam non enim interdum, porta dolor ut, mattis massa. Etiam tincidunt, ante vitae cursus scelerisque, lectus lectus commodo purus, ac aliquam dolor odio id nibh. Maecenas tempor urna nec nisi elementum, non blandit lacus eleifend. Proin egestas imperdiet mauris, at maximus diam bibendum in. Proin lectus lectus, scelerisque vitae sodales tempor, laoreet sit amet felis. Phasellus eget venenatis odio, eget pretium magna.
+                En juin 2021, elle chante avec sa pianiste Cécile Sagnier pour Jeunes Talents un programme autour des fables de La Fontaine à Château-Thierry intitulé « Fables, Contes et autres Légendes ». Elle incarne également Annio dans un spectacle de Franck Krawszyk librement inspiré de la Clémence de Titus de Mozart à la Seine Musicale. En juillet elle chante également dans une série de concerts dans un programme lyrique français intitulé « Deux hommes et une femme » avec l’orchestre du Palais Royal (direction J. P Sarcos) aux côtés de Kévin Amiel et Adrien Fournaison. Elle redonnera ce programme avec orchestre en novembre 2021 à Paris.
+
             `,
             "bioParagraph4": `
-                Proin posuere, nulla id tincidunt congue, purus enim faucibus metus, in cursus lectus metus id lectus. Nunc at luctus elit, pulvinar cursus lorem. Pellentesque a finibus tortor. Nulla erat purus, maximus et mattis et, sagittis in lectus. In tincidunt purus vel velit congue, vel lacinia turpis dictum. Donec posuere eros magna, nec pharetra orci ullamcorper non. Nam dignissim in nunc bibendum dignissim. Aenean auctor, lacus nec pretium malesuada, elit mi dapibus risus, sed tristique nulla purus nec purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse a mi egestas sapien condimentum molestie suscipit eget urna. Praesent lacus erat, aliquam rutrum pellentesque eget, vestibulum at mauris. Curabitur consequat mi ut arcu lobortis ornare a vel massa. Sed blandit posuere dolor vitae laoreet. Nullam consequat vitae libero vel vehicula.
+                Sensible à la transmission et l’accessibilité de l’opéra pour tous, Marion a chanté dans le cadre des mini- concerts de l’Orchestre de chambre de Paris dans des centres d’hébergements ou des hôpitaux, et a participé aux spectacles «T chek » (rôle de Zefka dans une adaptation du Journal d’un Disparu de Janaček) et «H elp !» (Clorinde dans une adaptation du Combat de T ancrède de Monteverdi) au théâtre des Bouffes du Nord avec la Compagnie Plein jour, dans un programme éducatif promouvant l’opéra pour tous.
             `,
+            "bioParagraph5": `
+                Cet automne, Marion chantera en récital avec Simon Adda-Reyss, au théâtre des Sablons de Neuilly un programme autour de Victor Hugo. Elle sera Sterling dans « Là-H aut » de Maurice Yvain avec la compagnie des Frivolités Parisiennes au théâtre de l’Athénée en février 2022 (dir. Nicolas Chesneau, mise en scène Pascal Neyron), et sera Nicklausse dans les Contes d’H offmann d’Offenbach dans une série de concerts Jeunes Chanteurs en collaboration avec l’opéra de Nancy (Nancy Opéra Passion).
+            `,
+            "interpretation": "Airs étudiés / interprétés en concert ou auditions",
+            "carmen": "Carmen de Bizet, Séguedille et Habanera",
+            "ottavia": "L’Incoronazione di Poppea de Monterverdi, Ottavia (« Disprezzata Regina », « Addio Roma » )",
+            "gounod": "La damnation de Faust de Gounod, rôle de Siébel (« Faites lui mes aveux »)",
+            "figaro": "La Clemenza di T ito de Mozart, rôle d’ Annio & N ozze di Figaro, rôle de Chérubin (airs seuls)",
+            "smeton": "Anna Bolena de Donizetti, rôle de Smeton (airs seuls)",
+            "ravel": "L’heure Espagnole de Ravel, rôle de Concepcion (« Oh la pitoyable aventure »)",
+            "offenbach": "La Grande duchesse de Gérolstein (« Ah que j’aime les militaires») et La Périchole (Griserie) d’Offenbach",
+            "mignon": "Mignon de Thomas (“Me voici dans son boudoir” )",
+            "viviane": "T oi c’est moi de Simons air de Viviane (“C’est ça la vie, C’est ça l’amour”)",
+            "massenet": "Cendrillon de Massenet, rôle de Mme de La Haltière"
 
         },
         "Media": {
