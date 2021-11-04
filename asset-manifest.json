@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.7da8119f.chunk.js",
-    "main.js.map": "/static/js/main.7da8119f.chunk.js.map",
+    "main.js": "/static/js/main.6698f9e8.chunk.js",
+    "main.js.map": "/static/js/main.6698f9e8.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.8d0980a0.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.8d0980a0.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.ab74d30c.chunk.js",
@@ -322,6 +322,8 @@
     "static/media/12-.cb6a3d76.jpeg": "/static/media/12-.cb6a3d76.jpeg",
     "static/media/2-bio-portrait.6d4f1277.jpeg": "/static/media/2-bio-portrait.6d4f1277.jpeg",
     "static/media/2-bio-portrait.d24ebcb5.webp": "/static/media/2-bio-portrait.d24ebcb5.webp",
+    "static/media/2.5-bio-portrait.e600ccb6.jpeg": "/static/media/2.5-bio-portrait.e600ccb6.jpeg",
+    "static/media/2.5-bio-portrait.f7e14ed0.webp": "/static/media/2.5-bio-portrait.f7e14ed0.webp",
     "static/media/3-contact.0a4251e9.jpeg": "/static/media/3-contact.0a4251e9.jpeg",
     "static/media/3-contact.7e3ad41a.webp": "/static/media/3-contact.7e3ad41a.webp",
     "static/media/4-hero.a04a4ae8.webp": "/static/media/4-hero.a04a4ae8.webp",
@@ -341,7 +343,7 @@
     "static/media/9.2-.6759402b.webp": "/static/media/9.2-.6759402b.webp",
     "static/media/9.2-.679a13ff.jpeg": "/static/media/9.2-.679a13ff.jpeg",
     "static/media/bio-banner.ca910f90.jpeg": "/static/media/bio-banner.ca910f90.jpeg",
-    "static/media/bio-portrait.6d4f1277.jpeg": "/static/media/bio-portrait.6d4f1277.jpeg",
+    "static/media/bio-portrait.e600ccb6.jpeg": "/static/media/bio-portrait.e600ccb6.jpeg",
     "static/media/cancel.svg": "/static/media/cancel.da5c4222.svg",
     "static/media/concert-banner.6dc0159f.jpeg": "/static/media/concert-banner.6dc0159f.jpeg",
     "static/media/contact.0a4251e9.jpeg": "/static/media/contact.0a4251e9.jpeg",
@@ -358,6 +360,6 @@
   "entrypoints": [
     "static/js/runtime-main.755e446e.js",
     "static/js/153.536e2032.chunk.js",
-    "static/js/main.7da8119f.chunk.js"
+    "static/js/main.6698f9e8.chunk.js"
   ]
 }
