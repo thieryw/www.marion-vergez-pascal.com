@@ -34,16 +34,18 @@ export const Concerts = memo(() => {
 
 			<section className={classes.concerts}>
 
-					{
-						concerts.map(concert => <EventCard 
+				{
+					concerts.map((concert, index) => 
+						<EventCard
 							{...concert.fr}
 							link={{
 								"href": concert.linkHref
 							}}
 							linkLabel="EN SAVOIR PLUS"
-							key={concert.fr.title}
-						/>)
-					}
+							key={index}
+						/>
+					)
+				}
 
 			</section>
 
@@ -81,12 +83,5 @@ export declare namespace Concerts {
 	export type I18nScheme = {
 		concertsTitle: undefined;
 		concertsSubtitle: undefined;
-		/*cardTitle: undefined;
-		cardDescription: undefined;
-		cardAddress: undefined;
-		cardLinkLabel: undefined;
-		cardHour: undefined;
-		cardMonth: undefined;*/
-
 	};
 };

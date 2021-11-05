@@ -13,6 +13,7 @@ import _11 from "./assets/img/media/9.2-.jpeg";
 import _12 from "./assets/img/media/10-.jpeg";
 import _13 from "./assets/img/media/11-.jpeg";
 import _14 from "./assets/img/media/12-.jpeg";
+import _15 from "./assets/img/media/13-.jpeg";
 
 
 export const files = {
@@ -75,6 +76,10 @@ export const files = {
 				},
 {
 					"url": _14,
+					"name": ""
+				},
+{
+					"url": _15,
 					"name": ""
 				},
 

@@ -13,6 +13,7 @@ import _11 from "./assets/webp/media/9.2-.webp";
 import _12 from "./assets/webp/media/10-.webp";
 import _13 from "./assets/webp/media/11-.webp";
 import _14 from "./assets/webp/media/12-.webp";
+import _15 from "./assets/webp/media/13-.webp";
 
 
 export const files = {
@@ -75,6 +76,10 @@ export const files = {
 				},
 {
 					"url": _14,
+					"name": ""
+				},
+{
+					"url": _15,
 					"name": ""
 				},
 

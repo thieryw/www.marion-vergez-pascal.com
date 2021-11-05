@@ -1,10 +1,9 @@
-import {memo, useState} from "react";
+import {memo, useState, useRef, useEffect} from "react";
 import {makeStyles} from "../theme";
 import { Text } from "../theme";
 import { CustomLink } from "../components/CustomLink";
 import { GlArrow } from "gitlanding/utils/GlArrow";
 import { breakpointsValues } from "../theme";
-import { useDomRect } from "powerhooks/useDomRect";
 import { useConstCallback } from "powerhooks/useConstCallback";
 import { GlIllustration } from "gitlanding/GlIllustration";
 import calendarIconPng from "../assets/icons/calendar.png";
@@ -15,23 +14,25 @@ import {GlLogo} from "gitlanding/utils/GlLogo";
 
 export type EventCardProps = {
 	className?: string;
-	day: number;
-	month: string;
-	year: number;
+	day?: number;
+	month?: string;
+	year?: number;
 	title: string;
-	hour: string;
+	hour?: string;
 	description: string;
-	address: string;
+	address?: string;
 	imageUrl?: string;
 	link: {
 		href: string;
 		onClick?: () => void;
 	};
 	linkLabel: string;
+	additionalTextBlocks?: string[];
 
 }
 
 export const EventCard = memo((props: EventCardProps) => {
+
 
 	const {
 		description,
@@ -39,16 +40,21 @@ export const EventCard = memo((props: EventCardProps) => {
 		imageUrl,
 		address,
 		className,
+		additionalTextBlocks,
 		...rest
 	} = props;
 
 	const [isCardUnfolded, setIsCardUnfolded] = useState(false);
 
+	const cardRef = useRef<HTMLDivElement>(null);
+	const [cardHeight, setCardHeight] = useState(0);
 
-	const {
-		ref,
-		domRect
-	} = useDomRect();
+	useEffect(()=>{
+		if(!cardRef.current){
+			return;
+		};
+		setCardHeight(cardRef.current.clientHeight);
+	},[])
 
 	const toggleCard = useConstCallback(() => {
 		setIsCardUnfolded(!isCardUnfolded);
@@ -56,19 +62,20 @@ export const EventCard = memo((props: EventCardProps) => {
 
 	const { classes, cx } = useStyles({
 		isCardUnfolded,
-		"cardHeight": domRect.height,
+		"cardHeight": cardHeight,
 		"hasImage": imageUrl !== undefined
 	});
 
 	return (
 		<div className={cx(classes.root, className)}>
-			<TopDiv
+			{<TopDiv
 				{...rest}
 				onClick={toggleCard}
 				isCardUnfolded={isCardUnfolded}
-			/>
+			/>}
 			<div className={classes.card}>
-				<div className={classes.cardInner} ref={ref}>
+				
+				<div className={classes.cardInner} ref={cardRef}>
 
 					{
 						imageUrl !== undefined &&
@@ -80,34 +87,62 @@ export const EventCard = memo((props: EventCardProps) => {
 					}
 
 
-					<div className={classes.textWrapper}>
+					{<div className={classes.textWrapper}>
+					
 						<div className={classes.date}>
-							<div className={classes.textAndIcon}>
-								<Icon imageUrl={calendarIconPng}/>
-								<Text typo="body 2">{rest.day} {rest.month} {rest.year}</Text>
-							</div>
-							<div className={classes.textAndIcon}>
-								<Icon imageUrl={clockIconPng} />
-								<Text typo="body 2">{hour}</Text>
-							</div>
+							{
+								(
+									rest.day !== undefined ||
+									rest.month !== undefined ||
+									rest.year !== undefined
+								) &&
+								<div className={classes.textAndIcon}>
+									<Icon imageUrl={calendarIconPng} />
+									<Text typo="body 2">{rest.day} {rest.month} {rest.year}</Text>
+								</div>
+
+							}
+
+							{
+								hour !== undefined &&
+								<div className={classes.textAndIcon}>
+									<Icon imageUrl={clockIconPng} />
+									<Text typo="body 2">{hour}</Text>
+								</div>
+
+							}
 
 						</div>
 
-						<div className={cx(classes.textAndIcon, classes.address)}>
-							<Icon imageUrl={venueIconPng} />
-							<Text typo="body 1">{address}</Text>
-						</div>
+						{
+							address !== undefined &&
+							<div className={cx(classes.textAndIcon, classes.address)}>
+								<Icon imageUrl={venueIconPng} />
+								<Text typo="body 1">{address}</Text>
+							</div>
+						}
 
 						<Text className={classes.description} typo="body 1">{description}</Text>
 
+						{
+							additionalTextBlocks !== undefined &&
+							<div className={classes.additionalText}>
+								{
+									additionalTextBlocks.map(text => 
+										<Text key={text} typo="body 1">{text}</Text>
+									)
+								}
+							</div>
+							}
 
-						<CustomLink 
+
+						<CustomLink
 							link={rest.link}
 							title="EN SAVOIR PLUS"
 							className={classes.link}
 						/>
 
-					</div>
+						</div>}
 
 				</div>
 			</div>
@@ -120,49 +155,19 @@ export const EventCard = memo((props: EventCardProps) => {
 const useStyles = makeStyles<{ isCardUnfolded: boolean, cardHeight: number, hasImage: boolean }>()(
 	(theme, { cardHeight, isCardUnfolded, hasImage }) => ({
 		"root": {
-			/*...(theme.windowInnerWidth >= breakpointsValues.md ? {
-				...theme.spacing.rightLeft(
-					"padding", 
-					`${theme.spacing(
-						hasImage ? 9 : 14
-						)}px`
-				)
-			} : {
-			})*/
 			...(() => {
-				/*if (theme.windowInnerWidth >= breakpointsValues["lg+"]) {
-					return {
-						...theme.spacing.rightLeft(
-							"padding",
-							`${theme.spacing(
-								hasImage ? 9 : 14
-							)}px`
-						)
-					}
-				};
-
-				if(theme.windowInnerWidth >= breakpointsValues.md){
-					return {
-						...theme.spacing.rightLeft(
-							"padding",
-							`${theme.spacing(
-								9
-							)}px`
-						)
-					}
-				}*/
 
 				return {
 
 					...theme.spacing.rightLeft(
 						"padding",
 						`${theme.spacing(
-							(()=>{
-								if(theme.windowInnerWidth >= breakpointsValues["lg+"]){
+							(() => {
+								if (theme.windowInnerWidth >= breakpointsValues["lg+"]) {
 									return hasImage ? 9 : 14;
 								}
 
-								if(theme.windowInnerWidth >= breakpointsValues.md){
+								if (theme.windowInnerWidth >= breakpointsValues.md) {
 									return 9;
 								}
 
@@ -228,6 +233,9 @@ const useStyles = makeStyles<{ isCardUnfolded: boolean, cardHeight: number, hasI
 		"description": {
 			"marginTop": theme.spacing(3),
 			"marginBottom": theme.spacing(4),
+		},
+		"additionalText": {
+			"marginBottom": theme.spacing(4)
 
 		},
 		"address": {
@@ -237,7 +245,6 @@ const useStyles = makeStyles<{ isCardUnfolded: boolean, cardHeight: number, hasI
 		},
 		"link": {
 			"alignSelf": "flex-start"
-
 		}
 
 
@@ -286,7 +293,8 @@ const { TopDiv } = (() => {
 		"hour" |
 		"eventImageUrl" |
 		"address" |
-		"className"
+		"className" |
+		"additionalTextBlocks" 
 	> & {
 		onClick: () => void;
 		isCardUnfolded: boolean;
@@ -298,17 +306,28 @@ const { TopDiv } = (() => {
 		const { day, month, title, year, link, linkLabel, onClick, isCardUnfolded } = props;
 
 		const { classes } = useStyles({
-			isCardUnfolded
+			isCardUnfolded,
+			"hasDate": day !== undefined || month !== undefined || year !== undefined
 		});
 
 
 
 		return <div className={classes.root}>
-			<div className={classes.dateWrapper}>
-				<Text typo="my title">{day}</Text>
-				<Text className={classes.month} typo="object heading">{month}</Text>
-				<Text typo="my title">{year}</Text>
-			</div>
+			{
+				(
+					day !== undefined ||
+					month !== undefined ||
+					year !== undefined
+				) &&
+				<div className={classes.dateWrapper}>
+					{
+						[day, month, year].map(unit => {
+							return unit !== undefined && <Text key={unit} className={unit === month ? classes.month : undefined} typo="object heading">{unit}</Text>
+						})
+					}
+				</div>
+
+			}
 
 			<Text className={classes.title} typo="object heading" >{title}</Text>
 
@@ -328,8 +347,8 @@ const { TopDiv } = (() => {
 	})
 
 
-	const useStyles = makeStyles<{ isCardUnfolded: boolean }>()(
-		(theme, { isCardUnfolded }) => ({
+	const useStyles = makeStyles<{ isCardUnfolded: boolean; hasDate: boolean }>()(
+		(theme, { isCardUnfolded, hasDate }) => ({
 
 			"root": {
 				"display": "flex",
@@ -347,11 +366,21 @@ const { TopDiv } = (() => {
 			},
 			"title": {
 				"color": theme.colors.useCases.typography.textSecondary,
-				...theme.spacing.rightLeft("margin", `${theme.spacing(4)}px`),
+				...(()=>{
+
+					const value = theme.spacing(4)
+
+					if(hasDate){
+						return {...theme.spacing.rightLeft("margin", `${value}px`)}
+					};
+
+					return {
+						"marginRight": value
+					};
+
+				})(),
 				...(theme.windowInnerWidth < breakpointsValues.sm ? {
 					...theme.spacing.topBottom("margin", `${theme.spacing(3)}px`)
-
-
 				} : {})
 
 
