@@ -56,7 +56,7 @@ const useStyles = makeStyles<{
 			"backgroundImage": `url("${backgroundImageUrl}")`,
 			"backgroundRepeat": "no-repeat",
 			"backgroundSize": "cover",
-			"backgroundPosition": "center",
+			"backgroundPositionX": "center",
 			"zIndex": -1,
 		},
 		"backgroundCover": {
