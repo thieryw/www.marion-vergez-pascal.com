@@ -9953,10 +9953,10 @@ powerhooks@^0.11.0:
     resize-observer-polyfill "^1.5.1"
     tsafe "^0.8.1"
 
-powerhooks@^0.9.6:
-  version "0.9.6"
-  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-0.9.6.tgz#45bdd7e7713d0a620b1b099cf2685e5f56cebd8f"
-  integrity sha512-vXGcC5Ty3e5wxnRP37c7rnTE/UY86VVLwAj3tqAMvC9xf1C9wOmu2Q7xTj/4FGK1oGvgqbTiiWuxd+WK4C7kEQ==
+powerhooks@^0.11.1:
+  version "0.11.1"
+  resolved "https://registry.yarnpkg.com/powerhooks/-/powerhooks-0.11.1.tgz#047d2e723f51c57edca8713c096422775cf0922c"
+  integrity sha512-4BEJdLvlSdRlhs7VVylct+R1iYuy+3RjhKdIickClv1cfTSYods0zxkM0uzvTjkR6A1pDC6gIIPTu1CY3TmhsA==
   dependencies:
     evt "2.0.0-beta.38"
     memoizee "^0.4.15"

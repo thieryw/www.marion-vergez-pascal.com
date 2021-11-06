@@ -1,5 +1,5 @@
-import {memo, useState, useRef, useEffect} from "react";
-import {makeStyles} from "../theme";
+import { memo, useState } from "react";
+import { makeStyles } from "../theme";
 import { Text } from "../theme";
 import { CustomLink } from "../components/CustomLink";
 import { GlArrow } from "gitlanding/utils/GlArrow";
@@ -9,7 +9,8 @@ import { GlIllustration } from "gitlanding/GlIllustration";
 import calendarIconPng from "../assets/icons/calendar.png";
 import clockIconPng from "../assets/icons/clock.png";
 import venueIconPng from "../assets/icons/venue.png";
-import {GlLogo} from "gitlanding/utils/GlLogo";
+import { GlLogo } from "gitlanding/utils/GlLogo";
+import { useDomRect } from "powerhooks/useDomRect";
 
 
 export type EventCardProps = {
@@ -33,7 +34,6 @@ export type EventCardProps = {
 
 export const EventCard = memo((props: EventCardProps) => {
 
-
 	const {
 		description,
 		hour,
@@ -46,15 +46,12 @@ export const EventCard = memo((props: EventCardProps) => {
 
 	const [isCardUnfolded, setIsCardUnfolded] = useState(false);
 
-	const cardRef = useRef<HTMLDivElement>(null);
-	const [cardHeight, setCardHeight] = useState(0);
-
-	useEffect(()=>{
-		if(!cardRef.current){
-			return;
-		};
-		setCardHeight(cardRef.current.clientHeight);
-	},[])
+	const {
+		ref: cardRef,
+		domRect: {
+			height: cardHeight
+		}
+	} = useDomRect()
 
 	const toggleCard = useConstCallback(() => {
 		setIsCardUnfolded(!isCardUnfolded);
@@ -74,21 +71,21 @@ export const EventCard = memo((props: EventCardProps) => {
 				isCardUnfolded={isCardUnfolded}
 			/>}
 			<div className={classes.card}>
-				
+
 				<div className={classes.cardInner} ref={cardRef}>
 
 					{
 						imageUrl !== undefined &&
-							<GlIllustration
-								className={classes.cardImage}
-								type="image"
-								url={imageUrl}
-							/>
+						<GlIllustration
+							className={classes.cardImage}
+							type="image"
+							url={imageUrl}
+						/>
 					}
 
 
 					{<div className={classes.textWrapper}>
-					
+
 						<div className={classes.date}>
 							{
 								(
@@ -128,12 +125,12 @@ export const EventCard = memo((props: EventCardProps) => {
 							additionalTextBlocks !== undefined &&
 							<div className={classes.additionalText}>
 								{
-									additionalTextBlocks.map(text => 
+									additionalTextBlocks.map(text =>
 										<Text key={text} typo="body 1">{text}</Text>
 									)
 								}
 							</div>
-							}
+						}
 
 
 						<CustomLink
@@ -142,7 +139,7 @@ export const EventCard = memo((props: EventCardProps) => {
 							className={classes.link}
 						/>
 
-						</div>}
+					</div>}
 
 				</div>
 			</div>
@@ -294,7 +291,7 @@ const { TopDiv } = (() => {
 		"eventImageUrl" |
 		"address" |
 		"className" |
-		"additionalTextBlocks" 
+		"additionalTextBlocks"
 	> & {
 		onClick: () => void;
 		isCardUnfolded: boolean;
@@ -366,12 +363,12 @@ const { TopDiv } = (() => {
 			},
 			"title": {
 				"color": theme.colors.useCases.typography.textSecondary,
-				...(()=>{
+				...(() => {
 
 					const value = theme.spacing(4)
 
-					if(hasDate){
-						return {...theme.spacing.rightLeft("margin", `${value}px`)}
+					if (hasDate) {
+						return { ...theme.spacing.rightLeft("margin", `${value}px`) }
 					};
 
 					return {

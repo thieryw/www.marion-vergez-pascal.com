@@ -12,7 +12,6 @@ export const concerts: {
 	linkHref: string;
 }[] = [
 
-
 	{
 		"fr": {
 			"title": "Récital avec orgue et trompette",

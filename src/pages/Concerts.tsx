@@ -6,7 +6,7 @@ import { PageHeading } from "../components/PageHeading";
 import bannerJpeg from "../assets/img/concerts/concert-banner.jpeg";
 import { useTranslation } from "../i18n/useTranslation";
 import { EventCard } from "../components/EventCard";
-import {concerts} from "../user/concerts";
+import { concerts } from "../user/concerts";
 
 
 
@@ -35,7 +35,7 @@ export const Concerts = memo(() => {
 			<section className={classes.concerts}>
 
 				{
-					concerts.map((concert, index) => 
+					concerts.map((concert, index) =>
 						<EventCard
 							{...concert.fr}
 							link={{
