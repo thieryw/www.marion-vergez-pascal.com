@@ -7,13 +7,19 @@ import _5 from "./assets/webp/media/5-bio-banner.webp";
 import _6 from "./assets/webp/media/6-marion-nabil.webp";
 import _7 from "./assets/webp/media/7-marion-soliste.webp";
 import _8 from "./assets/webp/media/8-news.webp";
-import _9 from "./assets/webp/media/9-.webp";
-import _10 from "./assets/webp/media/9.1-.webp";
-import _11 from "./assets/webp/media/9.2-.webp";
-import _12 from "./assets/webp/media/10-.webp";
-import _13 from "./assets/webp/media/11-.webp";
-import _14 from "./assets/webp/media/12-.webp";
-import _15 from "./assets/webp/media/13-.webp";
+import _9 from "./assets/webp/media/9-bonnelie.webp";
+import _10 from "./assets/webp/media/9.1-bonnelie.webp";
+import _11 from "./assets/webp/media/10-bonnelie.webp";
+import _12 from "./assets/webp/media/11-.webp";
+import _13 from "./assets/webp/media/12-.webp";
+import _14 from "./assets/webp/media/13-.webp";
+import _15 from "./assets/webp/media/14-.webp";
+import _16 from "./assets/webp/media/15-.webp";
+import _17 from "./assets/webp/media/16-.webp";
+import _18 from "./assets/webp/media/17-.webp";
+import _19 from "./assets/webp/media/18-.webp";
+import _20 from "./assets/webp/media/19-.webp";
+import _21 from "./assets/webp/media/20-.webp";
 
 
 export const files = {
@@ -56,15 +62,15 @@ export const files = {
 				},
 {
 					"url": _9,
-					"name": ""
+					"name": "bonnelie"
 				},
 {
 					"url": _10,
-					"name": "9.1-"
+					"name": "9.1-bonnelie"
 				},
 {
 					"url": _11,
-					"name": "9.2-"
+					"name": "bonnelie"
 				},
 {
 					"url": _12,
@@ -80,6 +86,30 @@ export const files = {
 				},
 {
 					"url": _15,
+					"name": ""
+				},
+{
+					"url": _16,
+					"name": ""
+				},
+{
+					"url": _17,
+					"name": ""
+				},
+{
+					"url": _18,
+					"name": ""
+				},
+{
+					"url": _19,
+					"name": ""
+				},
+{
+					"url": _20,
+					"name": ""
+				},
+{
+					"url": _21,
 					"name": ""
 				},
 

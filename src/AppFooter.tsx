@@ -6,6 +6,7 @@ import { useTranslation } from "./i18n/useTranslation";
 import { routes } from "./router";
 import instagramIconUrl from "./assets/svg/instagram.svg";
 import facebookIconUrl from "./assets/svg/facebook.svg";
+import youtubeIconUrl from "./assets/svg/youtube.svg";
 import {Text} from "./theme";
 import MuiLink from "@mui/material/Link";
 import { makeStyles } from "./theme";
@@ -51,6 +52,10 @@ export const AppFooter = memo(() => {
 				"href": "https://www.facebook.com/marion.vergezpascal.9",
 				"iconUrl": facebookIconUrl,
 			},
+			{
+				"href": "https://www.youtube.com/channel/UC7FvEzh4S_F1W6JHcr2Ssqw",
+				"iconUrl": youtubeIconUrl
+			}
 		]
 	}, []);
 

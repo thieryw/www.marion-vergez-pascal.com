@@ -23,6 +23,7 @@ export const Biography = memo(() => {
 					imageUrl={bannerImgUrl}
 					isImageCovered={true}
 					fadeDirection="to bottom"
+
 				/>
 				<PageHeading
 					title={t("bioTitle")}
@@ -35,13 +36,7 @@ export const Biography = memo(() => {
 			<Article
 				imageUrl={portraitImg}
 				imageAltAttribute="biography page"
-				paragraphs={[
-					t("bioParagraph1"),
-					t("bioParagraph2"),
-					t("bioParagraph3"),
-					t("bioParagraph4"),
-					t("bioParagraph5")
-				]}
+				paragraph={t("bioParagraph")}
 				classes={{
 					"textAndImageWrapper": classes.mainSection,
 					"paragraph": classes.paragraph,
@@ -99,6 +94,7 @@ export const Biography = memo(() => {
 const useStyles = makeStyles()(
 	theme => ({
 		"root": {
+			"paddingTop": "0px !important"
 
 		},
 		"banner": {
@@ -107,6 +103,10 @@ const useStyles = makeStyles()(
 			"display": "flex",
 			"alignItems": "flex-end",
 			"justifyContent": "center"
+		},
+		"backgroundCover": {
+
+
 		},
 		"titleWrapper": {
 			"marginTop": "30%",
@@ -198,11 +198,7 @@ export declare namespace Biography {
 	export type I18nScheme = {
 		bioTitle: undefined;
 		bioSubtitle: undefined;
-		bioParagraph1: undefined;
-		bioParagraph2: undefined;
-		bioParagraph3: undefined;
-		bioParagraph4: undefined;
-		bioParagraph5: undefined;
+		bioParagraph: undefined;
 		interpretation: undefined;
 		carmen: undefined
 		ottavia: undefined

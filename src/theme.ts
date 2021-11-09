@@ -85,10 +85,10 @@ export function useTheme() {
 		"transparentBackground": (params: {direction: "to left" | "to right" | "to bottom" | "to top"}) => {
 			const {direction} = params;
 			if (theme.isDarkModeEnabled) {
-				return `linear-gradient(${direction}, rgba(44,50,63,0.9), rgba(44,50,63, 1))`;
+				return `linear-gradient(${direction}, rgba(44,50,63,0.4), rgba(44,50,63, 1))`;
 			};
 
-			return `linear-gradient(${direction}, rgba(241,240,235,0.7), rgba(241,240,235,1))`;
+			return `linear-gradient(${direction}, rgba(241,240,235,0.4), rgba(241,240,235,1))`;
 
 		}
 

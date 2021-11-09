@@ -29,20 +29,21 @@ const useStyle = makeStyles()(
 				) {
 					return {
 						"width": 700,
-						"height": 450
+						"height": (700 / 100) * 55
 					}
 				};
 
 				if (theme.windowInnerWidth < breakpointsValues.md) {
 					return {
 						"width": "100%",
-						"height": 300
+						"height": (theme.windowInnerWidth / 100) * 60
 					}
 				};
 
+
 				return {
 					"width": 1000,
-					"height": 600,
+					"height": 550,
 				}
 
 			})()

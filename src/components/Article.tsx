@@ -5,6 +5,7 @@ import { Divider } from "./Divider";
 import type { Link } from "../tools/link";
 import { GlIllustration } from "gitlanding/GlIllustration";
 import { Button } from "../components/Button";
+import ReactMarkdown from "react-markdown";
 
 
 export type ArticleProps = {
@@ -22,7 +23,7 @@ export type ArticleProps = {
 	heading?: string;
 	imageUrl: string;
 	title?: string;
-	paragraphs: string[];
+	paragraph: string;
 	button?: {
 		label: string;
 	} & Link;
@@ -37,7 +38,7 @@ export const Article = memo((props: ArticleProps) => {
 		button, 
 		heading, 
 		imageUrl, 
-		paragraphs, 
+		paragraph, 
 		title, 
 		className, 
 		imagePosition, 
@@ -75,13 +76,10 @@ export const Article = memo((props: ArticleProps) => {
 						<Divider className={classes.textDivider} color="#e1bf59" width={6} height={2} />
 					</>
 				}
-				{
-					paragraphs.map((paragraph, index) => 
-						<Text key={index} className={cx(classes.paragraph, classesProp?.paragraph)} typo="body 1">
-							{paragraph}
-						</Text>
-					)
-				}
+
+					<ReactMarkdown className={cx(classes.paragraph, classesProp?.paragraph)}>
+						{paragraph}
+					</ReactMarkdown>
 				{
 					button !== undefined &&
 					<div>
@@ -163,13 +161,13 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 			"flexDirection": "column",
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"marginBottom": theme.spacing(8)
-			}: {}),
-			...(()=>{
-				if(theme.windowInnerWidth < breakpointsValues.md){
+			} : {}),
+			...(() => {
+				if (theme.windowInnerWidth < breakpointsValues.md) {
 					return;
 				}
 				const value = theme.spacing(8);
-				if(imagePosition === "right"){
+				if (imagePosition === "right") {
 					return {
 						"marginRight": value
 					}
@@ -181,7 +179,8 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 		},
 		"paragraph": {
 			"color": theme.colors.useCases.typography.textSecondary,
-			"marginBottom": theme.spacing(5)
+			"marginBottom": theme.spacing(5),
+			...theme.typography.variants["body 1"].style
 
 
 		},

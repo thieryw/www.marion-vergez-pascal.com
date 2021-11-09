@@ -319,7 +319,14 @@ const { TopDiv } = (() => {
 				<div className={classes.dateWrapper}>
 					{
 						[day, month, year].map(unit => {
-							return unit !== undefined && <Text key={unit} className={unit === month ? classes.month : undefined} typo="object heading">{unit}</Text>
+							return unit !== undefined &&
+								<Text
+									key={unit}
+									className={unit === month ? classes.month : undefined}
+									typo="object heading"
+								>
+									{unit}
+								</Text>
 						})
 					}
 				</div>

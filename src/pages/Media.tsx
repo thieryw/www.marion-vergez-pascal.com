@@ -10,7 +10,7 @@ import { PageHeading } from "../components/PageHeading";
 import { GlSlider } from "gitlanding";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 import { Button } from "../components/Button";
-import bannerJpeg from "../assets/img/media/10-.jpeg";
+import bannerJpeg from "../assets/img/media/14-.jpeg";
 import videoBackJpeg from "../assets/img/media/12-.jpeg";
 import type { ArtGalleryProps } from "react-art-gallery";
 
@@ -37,7 +37,7 @@ export const Media = memo(() => {
 		})
 	}, [])
 
-	return <div>
+	return <div className={classes.root}>
 		<section className={classes.banner}>
 			<Background
 				imageUrl={bannerJpeg}
@@ -108,6 +108,10 @@ export const Media = memo(() => {
 
 const useStyles = makeStyles()(
 	theme => ({
+		"root": {
+			"paddingTop": "0px !important"
+
+		},
 		"banner": {
 			"height": "70vh",
 			"position": "relative",
@@ -157,8 +161,15 @@ const useStyles = makeStyles()(
 			})()
 		},
 		"navSlider": {
-			"width": theme.spacing(7),
-			"height": theme.spacing(7),
+			...(theme.windowInnerWidth < breakpointsValues.md ? {
+				"width": theme.spacing(5),
+				"height": theme.spacing(5),
+
+			} : {
+
+				"width": theme.spacing(7),
+				"height": theme.spacing(7),
+			}),
 			"position": "relative",
 			"left": theme.spacing(2)
 

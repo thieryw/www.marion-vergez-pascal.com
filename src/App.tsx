@@ -1,9 +1,9 @@
 import { memo, useMemo } from "react";
-import { useRoute, routes } from "./router"
+import { useRoute, routes } from "./router";
 import { Home } from "./pages/Home";
 import { GlTemplate } from "gitlanding";
 import { Header } from "./components/Header";
-import type { HeaderProps } from "./components/Header"
+import type { HeaderProps } from "./components/Header";
 import { useTranslation } from "./i18n/useTranslation";
 import { ThemeProvider } from "./theme";
 import { AppFooter } from "./AppFooter";
@@ -11,6 +11,9 @@ import { Biography } from "./pages/Biography";
 import { Media } from "./pages/Media";
 import { Concerts } from "./pages/Concerts";
 import { Legal } from "./pages/Legal";
+import { makeStyles } from "./theme";
+import { ReturnType } from "tsafe";
+
 
 
 export const App = memo(() => {
@@ -41,27 +44,60 @@ export const App = memo(() => {
 	}, [t]);
 
 
+	const { classes } = useStyles({
+		route
+	});
+
 
 
 
 	return (
 		<GlTemplate
+			classes={{
+				"headerWrapper": classes.headerWrapper
+			}}
 			ThemeProvider={ThemeProvider}
 			footer={<AppFooter />}
-			header={<Header links={headerLinks} />}
-			headerOptions={{
-				"position": "fixed",
-				"isRetracted": "smart"
-			}}
+			header={<Header classes={{
+				"link": classes.link,
+				"linkUnderline": classes.linkUnderline,
+				"unFoldIcon": classes.unfoldIcon,
+				"darkModeSwitch": classes.darkModeSwitch
+			}} links={headerLinks} />}
 		>
 			{route.name === "home" && <Home />}
 			{route.name === "biography" && <Biography />}
 			{route.name === "futureEvents" && <Concerts />}
 			{route.name === "media" && <Media />}
 			{route.name === "legal" && <Legal />}
+
 		</GlTemplate>
 	)
 });
+
+const useStyles = makeStyles<{route: ReturnType<typeof useRoute>}>()(
+	(theme, {route}) => ({
+		"headerWrapper": {
+			"background": "none",
+		},
+		"link": {
+			"color": route.name === "home" ? theme.colors.palette.light.light : undefined,
+		},
+		"linkUnderline": {
+			"backgroundColor": route.name === "home" ? theme.colors.palette.light.light : undefined,
+		},
+		"unfoldIcon": {
+				"fill": route.name === "home" ? theme.colors.palette.light.light : undefined
+		},
+		"darkModeSwitch": {
+			"& svg": {
+				"fill": route.name === "home" ? theme.colors.palette.light.light : undefined
+
+			}
+		}
+
+	})
+)
 
 export declare namespace AppHeader {
 	export type I18nScheme = {
