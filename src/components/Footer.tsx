@@ -123,7 +123,9 @@ const useStyles = makeStyles()(
 			"transition": "transform 400ms",
 			":hover": {
 				"transform": `translateX(${theme.spacing(2)}px)`
-			}
+			},
+			...theme.typography.variants.navigation.style
+
 
 		},
 		"socialLinks": {

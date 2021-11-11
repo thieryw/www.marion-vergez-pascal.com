@@ -28,21 +28,26 @@ export const Home = memo(() => {
 	const { t } = useTranslation("Home");
 
 	return <div className={classes.root}>
-		<section className={classes.hero}>
-			<div className={classes.heroTitleLarge}>
+		<section className={classes.heroSection}>
+			<div className={classes.hero}>
+				<div className={classes.heroTitleLarge}>
+					<HeroTitle />
+				</div>
+			</div>
+			<div className={classes.heroTitleSmall}>
 				<HeroTitle />
 			</div>
 		</section>
-		<div className={classes.heroTitleSmall}>
-			<HeroTitle />
-		</div>
 
 		<Article
 			classes={{
 				"image": classes.sectionImage,
 			}}
 			imageAltAttribute="news"
-			heading={t("newsHeading")}
+			heading={<div className={classes.newsHeaderWrapper}>
+				<Text className={classes.newsHeading} typo="subtitle">{t("newsHeading")}<span>...</span></Text>
+				<Divider width={9} height={1} />
+			</div>}
 			title={t("newsTitle")}
 			paragraph={t("newsParagraph")}
 			imageUrl={news.imageUrl}
@@ -61,7 +66,7 @@ export const Home = memo(() => {
 				"image": classes.sectionImage,
 			}}
 			imageAltAttribute="biographie"
-			title={t("bioTitle")}
+			title={<Text className={classes.bioTitle} typo="section heading">{t("bioTitle")}<span> ?</span></Text>}
 			paragraph={t("bioParagraph")}
 			button={{
 				...routes.biography().link,
@@ -96,11 +101,14 @@ export const Home = memo(() => {
 		<Article
 			classes={{
 				"image": cx(classes.contactImage, classes.sectionImage),
-				"paragraph": classes.contactParagraph
+				"paragraph": classes.contactParagraph,
+				"textAndImageWrapper": classes.contact,
+				"text": classes.contactText,
+				"imageWrapper": classes.contactImageWrapper
 			}}
 			imageAltAttribute="contact"
 			imageUrl={contactImageUrl}
-			title={t("contactTitle")}
+			title={<Text className={classes.bioTitle} typo="section heading">{t("contactTitle")}<span> !</span></Text>}
 			paragraph={t("contactParagraph")}
 			imagePosition="right"
 			customButton={<div className={classes.contactSocialMedia}>
@@ -130,9 +138,20 @@ const useStyles = makeStyles()(
 			"paddingTop": "0px !important",
 			...theme.spacing.rightLeft("padding", `${theme.paddingRightLeft}px`)
 		},
+		"heroSection": {
+			"position": "relative",
+			"width": theme.windowInnerWidth,
+			"height": "100vh",
+			"left": -theme.paddingRightLeft,
+			"display": "flex",
+			"flexDirection": "column",
+			"backgroundColor": "#030224"
+
+
+		},
 		"hero": {
 			"height": theme.windowInnerWidth >= breakpointsValues.sm ? "100vh" : "60vh",
-			"width": theme.windowInnerWidth,
+			"width": "100%",
 			"background": `url("${theme.windowInnerWidth >= breakpointsValues.sm ? heroPng : heroSmallPng}")`,
 			"backgroundSize": "cover",
 			"backgroundRepeat": "no-repeat",
@@ -143,7 +162,6 @@ const useStyles = makeStyles()(
 				return "60% center";
 			})(),
 			"position": "relative",
-			"left": -theme.paddingRightLeft,
 			"display": "flex",
 			"alignItems": "center",
 			...theme.spacing.rightLeft("padding", `${theme.paddingRightLeft}px`),
@@ -153,23 +171,47 @@ const useStyles = makeStyles()(
 			} : {}),
 			...(theme.windowInnerWidth < breakpointsValues.lg ? {
 				"alignItems": "flex-end"
-			} : {})
+			} : {}),
+			"justifyContent": theme.windowInnerWidth > breakpointsValues.md ? undefined : "center"
 		},
 		"heroTitleLarge": {
 			"display": theme.windowInnerWidth >= breakpointsValues.sm ? undefined : "none"
 
 		},
 		"heroTitleSmall": {
-			"display": theme.windowInnerWidth >= breakpointsValues.sm ? "none" : undefined,
-			"width": theme.windowInnerWidth,
-			"paddingTop": theme.spacing(6),
+			"display": theme.windowInnerWidth >= breakpointsValues.sm ? "none" : "flex",
+			"paddingTop": theme.spacing(7),
+			"width": "100%",
 			"position": "relative",
-			"top": -40,
-			"left": -theme.paddingRightLeft,
-			"background": "linear-gradient(0deg, rgba(3,2,36,1) 81%, rgba(28,83,212,0) 100%)"
+			"top": -60,
+			"background": "linear-gradient(0deg, rgba(3,2,36,1) 81%, rgba(28,83,212,0) 100%)",
+			"flex": 1,
+			"alignItems": "center",
+			"justifyContent": "center"
 
+		},
 
+		"newsHeaderWrapper": {
+			"display": "flex",
+			"flexDirection": "column",
+			"alignItems": "center",
+			"marginBottom": theme.spacing(8),
+			"& span": {
+				"color": theme.colors.palette.flamingoPink
 
+			}
+		},
+
+		"newsHeading": {
+			"marginBottom": theme.spacing(5)
+
+		},
+
+		"bioTitle": {
+			"& span": {
+				"color": theme.colors.palette.flamingoPink
+
+			}
 		},
 
 		"sectionImage": {
@@ -179,12 +221,26 @@ const useStyles = makeStyles()(
 
 		},
 
+		"contact": {
+			"flexDirection": theme.windowInnerWidth < breakpointsValues.md ? "column-reverse" : undefined
+		},
+
 		"contactImage": {
 			"maxWidth": 600,
 		},
 
 		"contactParagraph": {
-			"maxWidth": 400
+			"maxWidth": 400,
+
+		},
+
+		"contactImageWrapper": {
+			"marginBottom": 0
+		},
+
+		"contactText": {
+			"marginBottom": theme.windowInnerWidth < breakpointsValues.md ? theme.spacing(8) : undefined
+
 
 		},
 
@@ -272,7 +328,7 @@ const { HeroTitle } = (() => {
 			},
 			"title": {
 				"fontWeight": 100,
-				"color": "#F7BCF7",
+				"color": theme.colors.palette.flamingoPink,
 				"textAlign": "center",
 				"fontSize": (() => {
 					if (theme.windowInnerWidth >= breakpointsValues.xl) {

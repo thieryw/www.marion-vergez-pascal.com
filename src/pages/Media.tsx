@@ -53,15 +53,6 @@ export const Media = memo(() => {
 
 
 		</section>
-		<ArtGallery
-			className={classes.gallery}
-			thumbNailImageSources={imageSources}
-			lightBoxImageSources={imageSources}
-			thumbNailImages={files.files}
-			lightBoxImages={files.files}
-			imageAverageHeight={250}
-			hideImageNames={true}
-		/>
 
 		<section className={classes.videoSection}>
 
@@ -71,10 +62,6 @@ export const Media = memo(() => {
 				fadeDirection="to top"
 			/>}
 
-			<PageHeading
-				title={t("videoTitle")}
-				subtitle={t("videoSubtitle")}
-			/>
 			<GlSlider
 				classes={{
 					"sliderWrapper": classes.slider,
@@ -83,6 +70,9 @@ export const Media = memo(() => {
 
 				}}
 				slides={[
+					<YouTubeIframe
+						videoUrl="https://www.youtube.com/embed/aNQzcmDlE0w"
+					/>,
 					<YouTubeIframe
 						videoUrl="https://www.youtube.com/embed/FMqCz3IqdyE"
 					/>,
@@ -102,6 +92,25 @@ export const Media = memo(() => {
 				<Button href="https://www.youtube.com/channel/UC7FvEzh4S_F1W6JHcr2Ssqw">{t("youtubeButton")}</Button>
 			</div>
 		</section>
+
+		<section>
+			<PageHeading
+				className={classes.galleryHeading}
+				title={t("galleryTitle")}
+				subtitle={t("gallerySubtitle")}
+			/>
+			<ArtGallery
+				className={classes.gallery}
+				thumbNailImageSources={imageSources}
+				lightBoxImageSources={imageSources}
+				thumbNailImages={files.files}
+				lightBoxImages={files.files}
+				imageAverageHeight={250}
+				hideImageNames={true}
+			/>
+
+		</section>
+
 	</div >
 
 });
@@ -125,6 +134,10 @@ const useStyles = makeStyles()(
 		},
 		"gallery": {
 			"marginBottom": theme.spacing(9),
+		},
+		"galleryHeading": {
+			...theme.spacing.topBottom("margin", `${theme.spacing(8)}px`)
+
 		},
 		"buttonWrapper": {
 			"display": "flex",
@@ -182,8 +195,8 @@ export declare namespace Media {
 	export type I18nScheme = {
 		pageTitle: undefined;
 		pageSubTitle: undefined;
-		videoTitle: undefined;
-		videoSubtitle: undefined;
+		galleryTitle: undefined;
+		gallerySubtitle: undefined;
 		youtubeButton: undefined;
 	}
 }

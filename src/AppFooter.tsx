@@ -119,7 +119,7 @@ const useStyles = makeStyles()(
 			"fontWeight": 100,
 			"letterSpacing": theme.spacing(2),
 			"color": theme.colors.useCases.typography.textSecondary,
-			"textAlign": "right",
+			"textAlign": "center",
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"fontSize": "1rem"
 

@@ -15,14 +15,15 @@ export type ArticleProps = {
 		heading?: string;
 		textAndImageWrapper?: string;
 		image?: string;
+		imageWrapper?: string;
 		text?: string;
 		button?: string;
 		title?: string;
 		paragraph?: string;
 	}
-	heading?: string;
+	heading?: ReactNode;
 	imageUrl: string;
-	title?: string;
+	title?: ReactNode;
 	paragraph: string;
 	button?: {
 		label: string;
@@ -55,31 +56,41 @@ export const Article = memo((props: ArticleProps) => {
 	return <section className={cx(classes.root, className)}>
 		{
 			heading !== undefined &&
-			<div className={classes.headerWrapper}>
-				<Text className={cx(classes.heading, classesProp?.heading)} typo="subtitle">{heading}</Text>
-				<Divider width={9} height={1} />
-			</div>
+
+				typeof heading === "string" ?
+				<div className={classes.headerWrapper}>
+					<Text className={cx(classes.heading, classesProp?.heading)} typo="subtitle">{heading}</Text>
+					<Divider width={9} height={1} />
+				</div> :
+				heading
 		}
 		<div className={cx(classes.textAndImageWrapper, classesProp?.textAndImageWrapper)}>
-			<GlIllustration
-				type="image"
-				url={imageUrl}
-				hasShadow={true}
-				className={cx(classes.image, classesProp?.image)}
-				alt={imageAltAttribute}
-			/>
+			<div className={cx(classes.imageWrapper, classesProp?.imageWrapper)}>
+				<GlIllustration
+					type="image"
+					url={imageUrl}
+					hasShadow={true}
+					className={cx(classes.image, classesProp?.image)}
+					alt={imageAltAttribute}
+				/>
+			</div>
+
 			<div className={cx(classes.text, classesProp?.text)}>
 				{
 					title !== undefined &&
 					<>
-						<Text className={classesProp?.title} typo="section heading">{title}</Text>
+						{
+							typeof title === "string" ?
+								<Text className={classesProp?.title} typo="section heading">{title}</Text> :
+								title
+						}
 						<Divider className={classes.textDivider} color="#e1bf59" width={6} height={2} />
 					</>
 				}
 
-					<ReactMarkdown className={cx(classes.paragraph, classesProp?.paragraph)}>
-						{paragraph}
-					</ReactMarkdown>
+				<ReactMarkdown className={cx(classes.paragraph, classesProp?.paragraph)}>
+					{paragraph}
+				</ReactMarkdown>
 				{
 					button !== undefined &&
 					<div>
@@ -135,7 +146,7 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 			"justifyContent": "center",
 			"alignItems": "center",
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
-				"flexDirection": "column-reverse"
+				"flexDirection": "column"
 			} : {
 				"flexDirection": (() => {
 					switch (imagePosition) {
@@ -144,6 +155,12 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 					}
 				})()
 			}),
+		},
+		"imageWrapper": {
+			...(theme.windowInnerWidth < breakpointsValues.md ? {
+				"marginBottom": theme.spacing(8)
+			} : {}),
+
 		},
 		"image": {
 			"maxWidth": 600,
@@ -154,14 +171,12 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 				"minWidth": "unset",
 			}),
 
+
 		},
 		"text": {
 			"maxWidth": 500,
 			"display": "flex",
 			"flexDirection": "column",
-			...(theme.windowInnerWidth < breakpointsValues.md ? {
-				"marginBottom": theme.spacing(8)
-			} : {}),
 			...(() => {
 				if (theme.windowInnerWidth < breakpointsValues.md) {
 					return;

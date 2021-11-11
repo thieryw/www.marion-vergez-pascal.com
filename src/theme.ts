@@ -17,7 +17,7 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 		});
 
 		return {
-			"fontFamily": '"Open Sans", sans-serif',
+			"fontFamily": '"Inria Serif", serif',
 			"rootFontSizePx": typographyDesc.rootFontSizePx,
 			"variants": {
 				...typographyDesc.variants,
@@ -43,6 +43,14 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 				"body 1": {
 					...typographyDesc.variants["body 1"],
 					"lineHeightRem": windowInnerWidth < breakpointsValues.md ? 1.2 : 1.5
+				},
+				"navigation": {
+					"htmlComponent": "p",
+					"fontWeight": "bold",
+					"fontSizeRem": 1,
+					"lineHeightRem": 2,
+					"fontFamily": "'Open Sans', cursive"
+
 				}
 			},
 		};
@@ -50,6 +58,7 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 	"palette": {
 		...defaultPalette,
 		"gold": "#e1bf59",
+		"flamingoPink": "#F7BCF7",
 		"customGradientBackgroundColor": {
 			"light": "linear-gradient(270deg, rgba(240,240,244,1) 0%, rgba(221,219,219,1) 100%)",
 			"dark": "linear-gradient(270deg, rgba(36,41,52,1) 0%, rgba(19,22,29,1) 68%)"

@@ -77,7 +77,7 @@ const useStyles = makeStyles<{
 		"smallDeviceLinksWrapper": {
 			"position": "absolute",
 			"backgroundColor": theme.colors.useCases.surfaces.background,
-			"width": theme.windowInnerWidth,
+			//"width": theme.windowInnerWidth / 2,
 			"left": -theme.paddingRightLeft,
 			"top": headerHeight + theme.spacing(3),
 			"opacity": 0,
@@ -86,9 +86,10 @@ const useStyles = makeStyles<{
 			"pointerEvents": "none",
 			"display": "flex",
 			"flexDirection": "column",
-			"alignItems": "center",
+			"alignItems": "flex-start",
 			"justifyContent": "center",
 			"transition": "height 300ms, border-top-color 300ms",
+			...theme.spacing.rightLeft("padding", `${theme.spacing(3)}px`),
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"borderTop": isMenuUnfolded ? `solid 1px ${theme.colors.useCases.typography.textSecondary}` : undefined,
 				"height": isMenuUnfolded && isMenuVisible ? linksHeight : 0,
@@ -247,7 +248,8 @@ const { Links } = (() => {
 			},
 			"linkWrapper": {
 				"display": "flex",
-				"justifyContent": "center"
+				//"justifyContent": "center"
+				"cursor": "pointer"
 
 			}
 		})
@@ -328,7 +330,9 @@ const { Link } = (() => {
 				},
 				underline,
 				"text": {
-					...theme.spacing.rightLeft("padding", `${theme.spacing(2)}px`)
+					...theme.spacing.rightLeft("padding", `${theme.spacing(2)}px`),
+					...theme.typography.variants.navigation.style
+
 				}
 			}
 		}

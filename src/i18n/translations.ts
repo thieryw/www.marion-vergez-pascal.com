@@ -39,13 +39,13 @@ export const translations = id<Record<Language, Translations>>({
         "Home": {
             "newsParagraph": news.en?.paragraph ?? news.fr.paragraph,
             "newsTitle": news.en?.title ?? news.fr.title,
-            "newsHeading": "ACTUALITES",
+            "newsHeading": "ACTUALITÉS",
             "newsButtonLabel": "Voir Plus",
-            "bioTitle": "Qui suis-je ?",
+            "bioTitle": "Qui suis-je",
             "bioParagraph": `Originaire du Béarn, Marion découvre le chant à 11 ans dans une maîtrise d’enfants en Pays Basque, puis intègre le chœur d’enfants du Conservatoire de Pau sous la direction de Pascale Verdier et de Fayçal Karoui. À 14 ans elle entre à la Maîtrise de Radio-France et chante pendant 3 ans dans diverses productions Radio-France sous la baguette de Sofi Jeannin, Kurt Masur, Daniele Gatti. Après des études de lettres (hypokhâgne/khâgne classique), elle rentre au Département Supérieur pour Jeunes Chanteurs du CRR de Paris en 2014 où elle travaille avec Florence Guignolet. Au sein du Jeune Chœur, elle chante dans diverses productions prestigieuses, au Châtelet, à la Philharmonie, etc...`,
             "bioButtonLabel": "Biographie",
             "contactHeading": "CONTACT",
-            "contactTitle": "Gardons Contact",
+            "contactTitle": "Gardons-contact",
             "contactParagraph": `N'hésitez pas à m'écrire, j'ai hâte de vous lire ! 
                 Soyez aussi les premiers informés de mon actualité en me 
                 suivant sur les réseaux sociaux.
@@ -98,10 +98,10 @@ Cet automne, Marion chantera en récital avec Simon Adda-Reyss, au théâtre des
 
         },
         "Media": {
-            "pageTitle": "MEDIA",
-            "pageSubTitle": "MES IMAGES",
-            "videoTitle": "RECENTES",
-            "videoSubtitle": "VIDEOS",
+            "pageTitle": "RÉCENTES",
+            "pageSubTitle": "VIDÉOS",
+            "galleryTitle": "MES",
+            "gallerySubtitle": "IMAGES",
             "youtubeButton": "ma chaine youtube"
 
         },
@@ -115,13 +115,13 @@ Cet automne, Marion chantera en récital avec Simon Adda-Reyss, au théâtre des
         "Home": {
             "newsParagraph": news.fr.paragraph,
             "newsTitle": news.fr.title,
-            "newsHeading": "ACTUALITES",
+            "newsHeading": "ACTUALITÉS",
             "newsButtonLabel": "Voir Plus",
-            "bioTitle": "Qui suis-je ?",
+            "bioTitle": "Qui suis-je",
             "bioParagraph": `Originaire du Béarn, Marion découvre le chant à 11 ans dans une maîtrise d’enfants en Pays Basque, puis intègre le chœur d’enfants du Conservatoire de Pau sous la direction de Pascale Verdier et de Fayçal Karoui. À 14 ans elle entre à la Maîtrise de Radio-France et chante pendant 3 ans dans diverses productions Radio-France sous la baguette de Sofi Jeannin, Kurt Masur, Daniele Gatti. Après des études de lettres (hypokhâgne/khâgne classique), elle rentre au Département Supérieur pour Jeunes Chanteurs du CRR de Paris en 2014 où elle travaille avec Florence Guignolet. Au sein du Jeune Chœur, elle chante dans diverses productions prestigieuses, au Châtelet, à la Philharmonie, etc...`,
             "bioButtonLabel": "Biographie",
             "contactHeading": "CONTACT",
-            "contactTitle": "Gardons Contact",
+            "contactTitle": "Gardons-contact",
             "contactParagraph": `N'hésitez pas à m'écrire, j'ai hâte de vous lire ! 
                 Soyez aussi les premiers informés de mon actualité en me 
                 suivant sur les réseaux sociaux.
@@ -166,10 +166,10 @@ Cet automne, Marion chantera en récital avec Simon Adda-Reyss, au théâtre des
 
         },
         "Media": {
-            "pageTitle": "MEDIA",
-            "pageSubTitle": "MES IMAGES",
-            "videoTitle": "RECENTES",
-            "videoSubtitle": "VIDEOS",
+            "pageTitle": "RÉCENTES",
+            "pageSubTitle": "VIDÉOS",
+            "galleryTitle": "MES",
+            "gallerySubtitle": "IMAGES",
             "youtubeButton": "ma chaine youtube"
 
         },

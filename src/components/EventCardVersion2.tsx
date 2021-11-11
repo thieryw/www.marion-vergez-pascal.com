@@ -84,7 +84,8 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 		},
 		"date": {
 			...theme.typography.variants.subtitle.style,
-			"fontSize": "1.5rem"
+			"fontSize": "1.5rem",
+			"textAlign": "center"
 
 		},
 		"textWrapper": {
@@ -150,7 +151,12 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 			"color": theme.colors.useCases.typography.textSecondary
 		},
 		"button": {
-			"alignSelf": "center"
+			"alignSelf": "center",
+			"backgroundColor": theme.colors.palette.flamingoPink,
+			"color": "black",
+			":hover": {
+				"color": theme.isDarkModeEnabled ? "white" : undefined
+			}
 
 		}
 
