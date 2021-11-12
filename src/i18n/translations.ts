@@ -103,7 +103,7 @@ Cet automne, Marion chantera en récital avec Simon Adda-Reyss, au théâtre des
             "galleryTitle": "MES",
             "gallerySubtitle": "IMAGES",
             "youtubeButton": "ma chaine youtube",
-            "photoCredit": "Crédit photos: Lorem Ipsum / Nabil Belhadj"
+            "photoCredit": "Crédit photos: Crédit photos: Capucine de Chocqueuse / Nabil Belhadj"
 
         },
         "Concerts": {
