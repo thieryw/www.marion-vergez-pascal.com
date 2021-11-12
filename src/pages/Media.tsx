@@ -4,15 +4,14 @@ import { ArtGallery } from "react-art-gallery";
 import { files } from "../generatedWebpExports";
 import { files as imgFiles } from "../generatedImgExports";
 import { Background } from "../components/Background";
-import { makeStyles, breakpointsValues } from "../theme";
+import { makeStyles, breakpointsValues, Text } from "../theme";
 import { useTranslation } from "../i18n/useTranslation";
 import { PageHeading } from "../components/PageHeading";
 import { GlSlider } from "gitlanding";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 import { Button } from "../components/Button";
-import bannerJpeg from "../assets/img/media/14-.jpeg";
-import videoBackJpeg from "../assets/img/media/12-.jpeg";
 import type { ArtGalleryProps } from "react-art-gallery";
+import bannerJpeg  from "../assets/img/media-banner.jpg"
 
 
 
@@ -56,11 +55,6 @@ export const Media = memo(() => {
 
 		<section className={classes.videoSection}>
 
-			{<Background
-				imageUrl={videoBackJpeg}
-				isImageCovered={true}
-				fadeDirection="to top"
-			/>}
 
 			<GlSlider
 				classes={{
@@ -93,14 +87,13 @@ export const Media = memo(() => {
 			</div>
 		</section>
 
-		<section>
+		<section className={classes.gallery}>
 			<PageHeading
 				className={classes.galleryHeading}
 				title={t("galleryTitle")}
 				subtitle={t("gallerySubtitle")}
 			/>
 			<ArtGallery
-				className={classes.gallery}
 				thumbNailImageSources={imageSources}
 				lightBoxImageSources={imageSources}
 				thumbNailImages={files.files}
@@ -108,6 +101,7 @@ export const Media = memo(() => {
 				imageAverageHeight={250}
 				hideImageNames={true}
 			/>
+			<Text className={classes.gallerySubtext} typo="object heading"><em>{t("photoCredit")}</em></Text>
 
 		</section>
 
@@ -135,14 +129,19 @@ const useStyles = makeStyles()(
 		"gallery": {
 			"marginBottom": theme.spacing(9),
 		},
+		"gallerySubtext": {
+			"textAlign": "right",
+			"position": "relative",
+			"top": theme.spacing(2),
+			"color": theme.colors.useCases.typography.textSecondary
+		},
+
 		"galleryHeading": {
 			...theme.spacing.topBottom("margin", `${theme.spacing(8)}px`)
-
 		},
 		"buttonWrapper": {
 			"display": "flex",
 			"justifyContent": "center",
-			"paddingBottom": theme.spacing(8)
 		},
 		"videoSection": {
 			"position": "relative",
@@ -198,5 +197,6 @@ export declare namespace Media {
 		galleryTitle: undefined;
 		gallerySubtitle: undefined;
 		youtubeButton: undefined;
+		photoCredit: undefined;
 	}
 }
