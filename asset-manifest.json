@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/static/js/main.b844b538.chunk.js",
-    "main.js.map": "/static/js/main.b844b538.chunk.js.map",
+    "main.js": "/static/js/main.62f38f72.chunk.js",
+    "main.js.map": "/static/js/main.62f38f72.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_abap.js": "/static/js/react-syntax-highlighter_languages_refractor_abap.27201d50.chunk.js",
     "react-syntax-highlighter_languages_refractor_abap.js.map": "/static/js/react-syntax-highlighter_languages_refractor_abap.27201d50.chunk.js.map",
     "react-syntax-highlighter_languages_refractor_actionscript.js": "/static/js/react-syntax-highlighter_languages_refractor_actionscript.1aad5672.chunk.js",
@@ -306,12 +306,12 @@
     "react-syntax-highlighter_languages_refractor_yaml.js.map": "/static/js/react-syntax-highlighter_languages_refractor_yaml.7c090892.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.828eb850.js",
     "runtime-main.js.map": "/static/js/runtime-main.828eb850.js.map",
-    "static/js/153.4a8ecf24.chunk.js": "/static/js/153.4a8ecf24.chunk.js",
-    "static/js/153.4a8ecf24.chunk.js.map": "/static/js/153.4a8ecf24.chunk.js.map",
+    "static/js/153.38e2299e.chunk.js": "/static/js/153.38e2299e.chunk.js",
+    "static/js/153.38e2299e.chunk.js.map": "/static/js/153.38e2299e.chunk.js.map",
     "static/js/154.30aa6f28.chunk.js": "/static/js/154.30aa6f28.chunk.js",
     "static/js/154.30aa6f28.chunk.js.map": "/static/js/154.30aa6f28.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/153.4a8ecf24.chunk.js.LICENSE.txt": "/static/js/153.4a8ecf24.chunk.js.LICENSE.txt",
+    "static/js/153.38e2299e.chunk.js.LICENSE.txt": "/static/js/153.38e2299e.chunk.js.LICENSE.txt",
     "static/media/1-profil-marion.5ed1cd32.webp": "/static/media/1-profil-marion.5ed1cd32.webp",
     "static/media/1-profil-marion.d93dff25.jpeg": "/static/media/1-profil-marion.d93dff25.jpeg",
     "static/media/10-bonnelie.a1ac6ed9.webp": "/static/media/10-bonnelie.a1ac6ed9.webp",
@@ -356,8 +356,7 @@
     "static/media/9-bonnelie.df38f255.jpeg": "/static/media/9-bonnelie.df38f255.jpeg",
     "static/media/9.1-bonnelie.6c3aa61e.jpeg": "/static/media/9.1-bonnelie.6c3aa61e.jpeg",
     "static/media/9.1-bonnelie.cc1b5bb9.webp": "/static/media/9.1-bonnelie.cc1b5bb9.webp",
-    "static/media/bio-banner.ca910f90.jpeg": "/static/media/bio-banner.ca910f90.jpeg",
-    "static/media/bio-portrait.e600ccb6.jpeg": "/static/media/bio-portrait.e600ccb6.jpeg",
+    "static/media/bio-banner.88b732c4.jpeg": "/static/media/bio-banner.88b732c4.jpeg",
     "static/media/cancel.svg": "/static/media/cancel.da5c4222.svg",
     "static/media/concert-banner.fea7d3b9.jpeg": "/static/media/concert-banner.fea7d3b9.jpeg",
     "static/media/contact.0a4251e9.jpeg": "/static/media/contact.0a4251e9.jpeg",
@@ -369,13 +368,14 @@
     "static/media/instagram.3091acf9.svg": "/static/media/instagram.3091acf9.svg",
     "static/media/marion-nabil.10d24b33.jpeg": "/static/media/marion-nabil.10d24b33.jpeg",
     "static/media/marion-soliste.49145d52.jpeg": "/static/media/marion-soliste.49145d52.jpeg",
+    "static/media/media-banner.1fef0e57.jpg": "/static/media/media-banner.1fef0e57.jpg",
     "static/media/news.24ddba06.jpeg": "/static/media/news.24ddba06.jpeg",
     "static/media/next.svg": "/static/media/next.2dc7a76f.svg",
     "static/media/youtube.4d291f41.svg": "/static/media/youtube.4d291f41.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.828eb850.js",
-    "static/js/153.4a8ecf24.chunk.js",
-    "static/js/main.b844b538.chunk.js"
+    "static/js/153.38e2299e.chunk.js",
+    "static/js/main.62f38f72.chunk.js"
   ]
 }
