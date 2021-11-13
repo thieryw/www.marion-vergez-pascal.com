@@ -7,22 +7,21 @@ import { breakpointsValues as defaultBreakpointValues } from "onyxia-ui";
 export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider({
 	"getTypographyDesc": ({
 		windowInnerWidth,
-		browserFontSizeFactor,
-		windowInnerHeight
+		...rest
 	}) => {
-		const typographyDesc = defaultGetTypographyDesc({
+		const defaultTypographyDesc = defaultGetTypographyDesc({
 			windowInnerWidth,
-			browserFontSizeFactor,
-			windowInnerHeight
+			...rest
 		});
 
 		return {
+			...defaultTypographyDesc,
 			"fontFamily": '"Inria Serif", serif',
-			"rootFontSizePx": typographyDesc.rootFontSizePx,
+			"rootFontSizePx": defaultTypographyDesc.rootFontSizePx,
 			"variants": {
-				...typographyDesc.variants,
+				...defaultTypographyDesc.variants,
 				"subtitle": {
-					...typographyDesc.variants["display heading"],
+					...defaultTypographyDesc.variants["display heading"],
 					"fontFamily": "'Playfair Display', serif",
 					"fontWeight": 100
 				},
@@ -34,14 +33,14 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 					"fontFamily": "'Cinzel Decorative', cursive"
 				},
 				"section heading": {
-					...typographyDesc.variants["display heading"],
+					...defaultTypographyDesc.variants["display heading"],
 					"fontFamily": "'Playfair Display', serif",
 					"fontWeight": 100,
 					"fontSizeRem": 2,
 					"lineHeightRem": 2.5
 				},
 				"body 1": {
-					...typographyDesc.variants["body 1"],
+					...defaultTypographyDesc.variants["body 1"],
 					"lineHeightRem": windowInnerWidth < breakpointsValues.md ? 1.2 : 1.5
 				},
 				"navigation": {
