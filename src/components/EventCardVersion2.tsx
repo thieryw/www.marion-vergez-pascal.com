@@ -5,6 +5,14 @@ import { Button } from "../components/Button";
 
 export type EventCardPropsVersion2 = {
 	className?: string;
+	classes?: {
+		dateWrapper?: string;
+		date?: string;
+		textWrapper?: string;
+		title?: string;
+		description?: string;
+		button?: string;
+	}
 	date?: string;
 	title: string;
 	description: string;
@@ -12,13 +20,13 @@ export type EventCardPropsVersion2 = {
 	link: {
 		href: string;
 		onClick?: () => void;
-	}
+	};
 
 };
 
 export const EventCardVersion2 = memo((props: EventCardPropsVersion2) => {
 
-	const { buttonLabel, date, link, description, title, className } = props;
+	const { buttonLabel, date, link, description, title, className, classes: classesProp } = props;
 
 
 	const {classes, cx} = useStyles({
@@ -29,20 +37,20 @@ export const EventCardVersion2 = memo((props: EventCardPropsVersion2) => {
 	return <div className={cx(classes.root, className)}>
 		{
 			date !== undefined &&
-			<div className={classes.dateWrapper}>
-				<ReactMarkdown className={classes.date}>
+			<div className={cx(classes.dateWrapper, classesProp?.dateWrapper)}>
+				<ReactMarkdown className={cx(classes.date, classesProp?.date)}>
 					{date}
 				</ReactMarkdown>
 
 			</div>
 
 		}
-		<div className={classes.textWrapper}>
-			<ReactMarkdown className={classes.title}>{title}</ReactMarkdown>
-			<ReactMarkdown className={classes.description}>{description}</ReactMarkdown>
+		<div className={cx(classes.textWrapper, classesProp?.textWrapper)}>
+			<ReactMarkdown className={cx(classes.title, classesProp?.title)}>{title}</ReactMarkdown>
+			<ReactMarkdown className={cx(classes.description, classesProp?.description)}>{description}</ReactMarkdown>
 		</div>
 
-		<Button className={classes.button} {...link}>{buttonLabel}</Button>
+		<Button className={cx(classes.button, classesProp?.button)} {...link}>{buttonLabel}</Button>
 
 
 	</div>
@@ -152,11 +160,6 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 		},
 		"button": {
 			"alignSelf": "center",
-			"backgroundColor": theme.colors.palette.flamingoPink,
-			"color": "black",
-			":hover": {
-				"color": theme.isDarkModeEnabled ? "white" : undefined
-			}
 
 		}
 

@@ -32,17 +32,6 @@ export const Biography = memo(() => {
 
 			</section>
 
-			{/*<Article
-				imageAltAttribute="biography page"
-				paragraph={t("bioParagraph")}
-				classes={{
-					"textAndImageWrapper": classes.mainSection,
-					"paragraph": classes.paragraph,
-					"text": classes.text
-				}}
-
-			/>*/}
-
 			<div className={classes.sectionWrapper}>
 				<section className={classes.interpretationsAndBio}>
 					<ReactMarkdown className={classes.paragraph}>
@@ -120,6 +109,9 @@ const useStyles = makeStyles()(
 			...theme.typography.variants["body 1"].style,
 			"color": theme.colors.useCases.typography.textSecondary,
 			"marginBottom": theme.spacing(8),
+			"& strong": {
+				"color": theme.colors.useCases.typography.textPrimary
+			}
 		},
 
 		"interpretationsAndBio": {
@@ -155,27 +147,6 @@ const useStyles = makeStyles()(
 			"flexDirection": "column",
 			"alignItems": "center",
 			"marginBottom": theme.spacing(8)
-
-			/*...(() => {
-				if (theme.windowInnerWidth >= breakpointsValues.lg) {
-					return {
-						"width": 1150
-					};
-				};
-
-				if (theme.windowInnerWidth >= breakpointsValues.md) {
-					return {
-						"width": "100%"
-					};
-				}
-
-				return {
-					"width": undefined,
-					"maxWidth": 500
-				}
-
-
-			})()*/
 
 		},
 		"interpretationText": {

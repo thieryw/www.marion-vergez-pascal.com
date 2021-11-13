@@ -20,12 +20,27 @@ import { YouTubeIframe } from "../components/YouTubeIframe";
 import { CustomLink } from "../components/CustomLink";
 import { motion } from "framer-motion";
 import heroSmallPng from "../assets/img/home/hero-small.png";
+import { scrollToTopOnLinkClick } from "../tools/scrollToTopOnLinkClick";
+import { useCallbackFactory } from "powerhooks/useCallbackFactory";
+import { scrollableDivId } from "gitlanding/GlTemplate";
 
 
 export const Home = memo(() => {
 
 	const { classes, cx, theme } = useStyles();
 	const { t } = useTranslation("Home");
+
+	const onClickFactory = useCallbackFactory((
+		[onClick]: [()=> void | undefined]
+	)=>{
+
+		scrollToTopOnLinkClick({
+			scrollableDivId,
+			onClick
+		})
+
+	})
+
 
 	return <div className={classes.root}>
 		<section className={classes.heroSection}>
@@ -42,6 +57,7 @@ export const Home = memo(() => {
 		<Article
 			classes={{
 				"image": classes.sectionImage,
+				"button": classes.button
 			}}
 			imageAltAttribute="news"
 			heading={<div className={classes.newsHeaderWrapper}>
@@ -64,13 +80,15 @@ export const Home = memo(() => {
 		<Article
 			classes={{
 				"image": classes.sectionImage,
+				"button": classes.button
 			}}
 			imageAltAttribute="biographie"
 			title={<Text className={classes.bioTitle} typo="section heading">{t("bioTitle")}<span> ?</span></Text>}
 			paragraph={t("bioParagraph")}
 			button={{
-				...routes.biography().link,
-				"label": t("bioButtonLabel")
+				"label": t("bioButtonLabel"),
+				"href": routes.biography().link.href,
+				"onClick": onClickFactory(routes.biography().link.onClick)
 			}}
 			imageUrl={bioImageUrl}
 
@@ -93,7 +111,15 @@ export const Home = memo(() => {
 					className={classes.iframe}
 					videoUrl="https://www.youtube-nocookie.com/embed/kIdTp7VaLV4"
 				/>
-				<Button {...routes.media().link} variant="outlined" color="secondary">{t("mediaButton")}</Button>
+				<Button 
+					className={classes.button}
+					variant="outlined" 
+					color="secondary"
+					href={routes.media().link.href}
+					onClick={onClickFactory(routes.media().link.onClick)}
+				>
+					{t("mediaButton")}
+				</Button>
 			</div>
 
 
@@ -172,7 +198,7 @@ const useStyles = makeStyles()(
 			...(theme.windowInnerWidth < breakpointsValues.lg ? {
 				"alignItems": "flex-end"
 			} : {}),
-			"justifyContent": theme.windowInnerWidth > breakpointsValues.md ? undefined : "center"
+			"justifyContent": theme.windowInnerWidth >= breakpointsValues.lg ? undefined : "center"
 		},
 		"heroTitleLarge": {
 			"display": theme.windowInnerWidth >= breakpointsValues.sm ? undefined : "none"
@@ -288,6 +314,13 @@ const useStyles = makeStyles()(
 		"mediaImageBackground": {
 			"backgroundPosition": "right"
 		},
+		"button": {
+			"backgroundColor": theme.colors.palette.flamingoPink,
+			"color": "black",
+			":hover": {
+				"color": theme.isDarkModeEnabled ? "white" : undefined
+			}
+		}
 
 	})
 );

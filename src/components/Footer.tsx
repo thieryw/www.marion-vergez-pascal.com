@@ -6,7 +6,8 @@ import { makeStyles } from "../theme";
 import { breakpointsValues } from "../theme";
 import type { Link } from "../tools/link";
 import { scrollableDivId } from "gitlanding/GlTemplate";
-import {useCallbackFactory} from "powerhooks/useCallbackFactory";
+import { useCallbackFactory } from "powerhooks/useCallbackFactory";
+import { scrollToTopOnLinkClick } from "../tools/scrollToTopOnLinkClick";
 
 
 export type FooterProps = {
@@ -29,27 +30,13 @@ export const Footer = memo((props: FooterProps) => {
 	const { classes } = useStyles();
 
 
-	const onClickFactory = useCallbackFactory( async (
-		[onClick]: [(()=> void) | undefined]
-	)=>{
-		const element = document.getElementById(scrollableDivId);
-			
-		onClick !== undefined && onClick();
-
-		await new Promise<void>(resolve => setTimeout(resolve, 1000));
-
-
-		if(element === null || element === undefined){
-			return;
-		};
-
-		element.style.scrollBehavior = "auto"
-
-		element.scrollTo({
-			"top": 0,
-			"behavior": "auto"
+	const onClickFactory = useCallbackFactory(async (
+		[onClick]: [(() => void) | undefined]
+	) => {
+		scrollToTopOnLinkClick({
+			scrollableDivId,
+			onClick
 		})
-
 	});
 
 

@@ -45,6 +45,9 @@ export const Concerts = memo(() => {
 					concerts.map((concert, index) =>
 						<EventCardVersion2
 							className={classes.eventCard}
+							classes={{
+								"button": classes.button
+							}}
 							{...concert.fr}
 							link={{
 								"href": concert.linkHref
@@ -95,6 +98,13 @@ const useStyles = makeStyles()(
 		},
 		"bannerTitleSmall": {
 			"display": theme.windowInnerWidth >= breakpointsValues.sm ? "none" : undefined,
+		},
+		"button": {
+			"backgroundColor": theme.colors.palette.flamingoPink,
+			"color": "black",
+			":hover": {
+				"color": theme.isDarkModeEnabled ? "white" : undefined
+			}
 		}
 	})
 )
