@@ -9111,10 +9111,10 @@ onetime@^5.1.0:
   dependencies:
     mimic-fn "^2.1.0"
 
-onyxia-ui@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/onyxia-ui/-/onyxia-ui-0.17.0.tgz#93be7eff44791885b04884eb41c026552c54fbcf"
-  integrity sha512-KAzw4HFCjKNDJCvG1fr+rQQsm6mJwOBsIMpsBVp0ZpisnI9QqAtLaaeqUbvSZ4Fv11A3ndK1Ka60Gh0yk6NZRA==
+onyxia-ui@^0.20.0:
+  version "0.20.0"
+  resolved "https://registry.yarnpkg.com/onyxia-ui/-/onyxia-ui-0.20.0.tgz#97b7b543ba4dc9b09be8af23c90c6ae1f9562e36"
+  integrity sha512-VoWRDSkK/+AmNOxSdEpFtbj5YsXHAaDdYdP33nxfsUIvu8cfVZjJQHm+fDT4JfKWQeT5JeV4qlDm5eUH/7JbdQ==
   dependencies:
     "@mui/icons-material" "^5.0.3"
     color "3.1.3"

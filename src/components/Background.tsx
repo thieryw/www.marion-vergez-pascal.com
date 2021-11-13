@@ -63,13 +63,9 @@ const useStyles = makeStyles<{
 			"position": "absolute",
 			"top": "0",
 			"left": "0",
-			"background": theme.transparentBackground({"direction": fadeDirection}),
+			"background": theme.colors.useCases.getTransparentBackground(fadeDirection),
 			"zIndex": 0
-
-
-
 		}
-
 	})
 )
 

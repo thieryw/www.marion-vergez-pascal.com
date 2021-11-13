@@ -64,14 +64,12 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 			"dark": "linear-gradient(270deg, rgba(36,41,52,1) 0%, rgba(19,22,29,1) 68%)"
 		},
 	},
-	"createColorUseCases": ({isDarkModeEnabled, palette})=>{
-		return {
-			...createDefaultColorUseCases({isDarkModeEnabled, palette}),
-			"customGradientBackground": isDarkModeEnabled ?
-				palette.customGradientBackgroundColor.dark : 
-				palette.customGradientBackgroundColor.light
-		}
-	},
+	"createColorUseCases": ({isDarkModeEnabled, palette})=>({
+		...createDefaultColorUseCases({ isDarkModeEnabled, palette }),
+		"customGradientBackground": palette.customGradientBackgroundColor[isDarkModeEnabled ? "dark" : "light"],
+		"getTransparentBackground": (direction: "to left" | "to right" | "to bottom" | "to top") => 
+			`linear-gradient(${direction}, ${isDarkModeEnabled ? "rgba(44,50,63,0.4), rgba(44,50,63, 1)" : "rgba(241,240,235,0.4), rgba(241,240,235,1)"})`
+	})
 });
 
 export function useTheme() {
@@ -90,18 +88,7 @@ export function useTheme() {
 
 				return 4;
 			})(),
-		),
-		"transparentBackground": (params: {direction: "to left" | "to right" | "to bottom" | "to top"}) => {
-			const {direction} = params;
-			if (theme.isDarkModeEnabled) {
-				return `linear-gradient(${direction}, rgba(44,50,63,0.4), rgba(44,50,63, 1))`;
-			};
-
-			return `linear-gradient(${direction}, rgba(241,240,235,0.4), rgba(241,240,235,1))`;
-
-		}
-
-
+		)
 	}
 }
 
