@@ -6022,10 +6022,10 @@ github-pages-plugin-for-type-route@^0.0.8:
     evt "^1.8.11"
     scripting-tools "^0.19.13"
 
-gitlanding@^0.4.14:
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/gitlanding/-/gitlanding-0.4.14.tgz#20f6d9eb3b4e73cdd69d81e0effbbf0734c67d8e"
-  integrity sha512-mloegbS218AldySRUX3wuUzVSzvIkzCeEbaTIuulR4s7G/lRnX61+KeACnkezzfCcnGgM7cLo8nD+6UZrejaWw==
+gitlanding@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/gitlanding/-/gitlanding-0.5.3.tgz#b18d2438ee29c9b6df8c8b596523910e9c7784e9"
+  integrity sha512-+I8cnl0+lzJMQxkxgzGa279CebjEESdNBYJaizJk5OjGz5pUy9ji64aMlTVgjqbi4srVHRMVpD4aDEBTUeAoOg==
   dependencies:
     "@mui/icons-material" "^5.0.3"
     embla-carousel "^4.1.5"
@@ -10568,10 +10568,10 @@ react-app-rewired@^2.1.8:
   dependencies:
     semver "^5.6.0"
 
-react-art-gallery@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/react-art-gallery/-/react-art-gallery-0.0.8.tgz#eaff5a1bd7227115e179c806e5531b56d70f7f3d"
-  integrity sha512-xh6MYSHw6iPD0fpisFHeuxQTrz+DdSycaBTB2taNeglkyKfH5F4Ajg0i3YuDu84evlGPFw/dklexv9mNhN98Jg==
+react-art-gallery@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/react-art-gallery/-/react-art-gallery-0.0.9.tgz#6d9e617c897fbcfab608d396db6cb7c2bd7f4f28"
+  integrity sha512-4mDCZ7ceDY7FTODwW2sgce2Umxa6cJ60mY8oqskiKB1X2w9boffHLNe+a/aMD83qE7UhBKuvyBNzyuD9an+5tQ==
   dependencies:
     "@emotion/react" "^11.4.1"
     powerhooks "^0.11.0"

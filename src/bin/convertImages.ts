@@ -9,3 +9,11 @@ convertImages({
 	"convertTo": "webp",
 	"overrideIfConvertedImagesExit": true
 });
+
+convertImages({
+	"acceptedFileExtensions": [".jpeg"],
+	"pathToAssets": join(__dirname, "..", "user", "assets", "news"),
+	"pathToConvertedImages": join(__dirname, "..", "user", "assets", "webp"),
+	"convertTo": "webp",
+	"overrideIfConvertedImagesExit": true
+})

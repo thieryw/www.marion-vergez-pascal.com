@@ -6,6 +6,7 @@ import type { Link } from "../tools/link";
 import { GlIllustration } from "gitlanding/GlIllustration";
 import { Button } from "../components/Button";
 import ReactMarkdown from "react-markdown";
+import { ImageSource } from "gitlanding/tools/ImageSource";
 
 
 export type ArticleProps = {
@@ -23,6 +24,7 @@ export type ArticleProps = {
 	}
 	heading?: ReactNode;
 	imageUrl: string;
+	imageSources?: ImageSource[];
 	title?: ReactNode;
 	paragraph: string;
 	button?: {
@@ -35,18 +37,19 @@ export type ArticleProps = {
 
 export const Article = memo((props: ArticleProps) => {
 
-	const { 
-		button, 
-		heading, 
-		imageUrl, 
-		paragraph, 
-		title, 
-		className, 
-		imagePosition, 
-		classes: classesProp, 
+	const {
+		button,
+		heading,
+		imageUrl,
+		paragraph,
+		title,
+		className,
+		imagePosition,
+		imageSources,
+		classes: classesProp,
 		customButton,
 		imageAltAttribute
-	 } = props;
+	} = props;
 
 	const { classes, cx } = useStyles({
 		"imagePosition": imagePosition ?? "left"
@@ -69,6 +72,7 @@ export const Article = memo((props: ArticleProps) => {
 				<GlIllustration
 					type="image"
 					url={imageUrl}
+					imageSources={imageSources}
 					hasShadow={true}
 					className={cx(classes.image, classesProp?.image)}
 					alt={imageAltAttribute}

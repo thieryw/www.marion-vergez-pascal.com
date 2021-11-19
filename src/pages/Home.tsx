@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
-import { memo } from "react";
+import { memo, useMemo } from "react";
 import { makeStyles, Text } from "../theme";
 import heroPng from "../assets/img/home/hero.png";
 import { breakpointsValues } from "../theme";
@@ -9,8 +9,6 @@ import { GlIllustration } from "gitlanding/GlIllustration";
 import { routes } from "../router";
 import decorativeMp4 from "../assets/video/home/decoration.mp4";
 import { Article } from "../components/Article";
-import contactImageUrl from "../assets/img/home/contact.jpeg";
-import bioImageUrl from "../assets/img/home/marion-nabil.jpeg";
 import MuiLink from "@mui/material/Link";
 import { Background } from "../components/Background";
 import mediaBackgroundImageUrl from "../assets/img/home/marion-soliste.jpeg";
@@ -23,16 +21,20 @@ import heroSmallPng from "../assets/img/home/hero-small.png";
 import { scrollToTopOnLinkClick } from "../tools/scrollToTopOnLinkClick";
 import { useCallbackFactory } from "powerhooks/useCallbackFactory";
 import { scrollableDivId } from "gitlanding/GlTemplate";
+import contactImageUrl from "../assets/img/home/contact.jpeg";
+import bioImageUrl from "../assets/img/home/marion-nabil.jpeg";
+import contactImageWebp from "../assets/webp/home/contact.webp"
+import bioImageWebp from "../assets/webp/home/marion-nabil.webp"
+import type { ImageSource } from "gitlanding/tools/ImageSource";
 
 
 export const Home = memo(() => {
 
-	const { classes, cx, theme } = useStyles();
 	const { t } = useTranslation("Home");
 
 	const onClickFactory = useCallbackFactory((
-		[onClick]: [()=> void | undefined]
-	)=>{
+		[onClick]: [() => void | undefined]
+	) => {
 
 		scrollToTopOnLinkClick({
 			scrollableDivId,
@@ -41,6 +43,22 @@ export const Home = memo(() => {
 
 	})
 
+	const imageSources: ImageSource[][] = useMemo(()=>{
+		return [[bioImageWebp, bioImageUrl], [contactImageWebp, contactImageUrl]].map(sources => [
+			{
+				"srcSet": sources[0],
+				"type": "image/webp",
+				"key": sources[0]
+			},
+			{
+				"srcSet": sources[1],
+				"type": "image/jpeg",
+				"key": sources[1]
+			}
+		])
+	}, [])
+
+	const { classes, cx, theme } = useStyles();
 
 	return <div className={classes.root}>
 		<section className={classes.heroSection}>
@@ -67,6 +85,7 @@ export const Home = memo(() => {
 			title={t("newsTitle")}
 			paragraph={t("newsParagraph")}
 			imageUrl={news.imageUrl}
+			imageSources={news.imageSources}
 			button={{
 				"href": news.buttonHref ?? routes.futureEvents().link.href,
 				"onClick": news.buttonHref !== undefined ? routes.futureEvents().link.onClick : undefined,
@@ -91,6 +110,7 @@ export const Home = memo(() => {
 				"onClick": onClickFactory(routes.biography().link.onClick)
 			}}
 			imageUrl={bioImageUrl}
+			imageSources={imageSources[0]}
 
 		/>
 		<section className={classes.mediaSection}>
@@ -111,9 +131,9 @@ export const Home = memo(() => {
 					className={classes.iframe}
 					videoUrl="https://www.youtube-nocookie.com/embed/kIdTp7VaLV4"
 				/>
-				<Button 
+				<Button
 					className={classes.button}
-					variant="outlined" 
+					variant="outlined"
 					color="secondary"
 					href={routes.media().link.href}
 					onClick={onClickFactory(routes.media().link.onClick)}
@@ -134,6 +154,7 @@ export const Home = memo(() => {
 			}}
 			imageAltAttribute="contact"
 			imageUrl={contactImageUrl}
+			imageSources={imageSources[1]}
 			title={<Text className={classes.bioTitle} typo="section heading">{t("contactTitle")}<span> !</span></Text>}
 			paragraph={t("contactParagraph")}
 			imagePosition="right"

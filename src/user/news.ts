@@ -1,14 +1,17 @@
 import newsImage from "./assets/news/news.jpeg";
+import newsImageWebp from "./assets/webp/news.webp";
+import type { ImageSource } from "gitlanding/tools/ImageSource";
 
 type NewsProps = {
-		title: string;
-		paragraph: string;
+	title: string;
+	paragraph: string;
 };
 
 export const news: {
 	fr: NewsProps;
 	en?: NewsProps;
 	imageUrl: string;
+	imageSources?: ImageSource[];
 	buttonHref?: string;
 } = {
 
@@ -42,5 +45,18 @@ Tout est bien qui finit bien ?..
 
 		`,
 	},
-	"imageUrl": newsImage
+	"imageUrl": newsImage,
+	"imageSources": [
+		{
+			"srcSet": newsImageWebp,
+			"type": "image/webp",
+			"key": newsImageWebp
+		},
+		{
+			"srcSet": newsImage,
+			"type": "image/jpeg",
+			"key": newsImage
+		}
+	]
+
 }

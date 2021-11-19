@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-redeclare */
 import { memo, useMemo } from "react";
 import { ArtGallery } from "react-art-gallery";
-import { files } from "../generatedWebpExports";
-import { files as imgFiles } from "../generatedImgExports";
+import { files as webpFiles } from "../generatedWebpExports";
+import { files as jpegFiles } from "../generatedImgExports";
 import { Background } from "../components/Background";
 import { makeStyles, breakpointsValues, Text } from "../theme";
 import { useTranslation } from "../i18n/useTranslation";
@@ -10,31 +10,30 @@ import { PageHeading } from "../components/PageHeading";
 import { GlSlider } from "gitlanding";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 import { Button } from "../components/Button";
-import type { ArtGalleryProps } from "react-art-gallery";
-import bannerJpeg  from "../assets/img/media-banner.jpg"
-
+import bannerJpeg from "../assets/img/media-banner.jpg"
+import type { ImageSource } from "react-art-gallery/utils/ImageSource";
 
 
 export const Media = memo(() => {
-	const { classes } = useStyles();
 
 	const { t } = useTranslation("Media");
 
-	const imageSources: ArtGalleryProps["thumbNailImageSources"] = useMemo(() => {
+	const imageSources: ImageSource[][] = useMemo(() => {
 
-		return files.files.map(({ url }, index) => {
-			return [
+		return webpFiles.files.map(({ url }, index) => [
 				{
 					"srcSet": url,
-					"type": "image/webp"
+					"type": "image/webp",
 				},
 				{
-					"srcSet": imgFiles.files[index].url,
+					"srcSet": jpegFiles.files[index].url,
 					"type": "image/jpeg"
 				}
 			]
-		})
-	}, [])
+		);
+	}, []);
+
+	const { classes } = useStyles();
 
 	return <div className={classes.root}>
 		<section className={classes.banner}>
@@ -96,15 +95,13 @@ export const Media = memo(() => {
 			<ArtGallery
 				thumbNailImageSources={imageSources}
 				lightBoxImageSources={imageSources}
-				thumbNailImages={files.files}
-				lightBoxImages={files.files}
+				thumbNailImages={jpegFiles.files}
+				lightBoxImages={jpegFiles.files}
 				imageAverageHeight={250}
 				hideImageNames={true}
 			/>
 			<Text className={classes.gallerySubtext} typo="object heading"><em>{t("photoCredit")}</em></Text>
-
 		</section>
-
 	</div >
 
 });
