@@ -219,6 +219,70 @@ Du 18 au 31 mars 2022 | Théâtre de l’Athénée Louis-Jouvet
 				`,
 			},
 			"linkHref": "https://lesfrivolitesparisiennes.com/spectacle/la-haut/",
+		},
+
+		{
+			"fr": {
+				"date": "VENDREDI 11 & SAMEDI 12 MARS, 20h30",
+				"title": "Mezzo solo du Requiem de Mozart ",
+				"description": `Avec Clémence Danvy, Mathys Lagier, et Adrien Fournaison
+Chœur et orchestre en formation philharmonique du COGE (Choeur et orchestre des Grandes Écoles)
+Direction :  Alizė Léhon
+				`,
+			},
+			"linkHref": "https://mgecoge.org/la-saison",
+		},
+		{
+			"fr": {
+				"date": "MERCREDI 13, JEUDI 14 et VENDREDI 15 AVRIL",
+				"title": "Le Parlement des Reines",
+				"description": `Spectacle de Emmanuelle Cordoliani.
+Atelier lyrique du CNSM de Paris.
+Direction musicale : Yann Molénat.
+Salle Fleuret du Conservatoire National Supérieur de Paris.
+				`,
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "SAMEDI 14 & DIMANCHE 15 MAI, 16 H & 17 H",
+				"title": "Concert récital pour les tout-petits et leurs parents",
+				"description": `Dans le cadre des concerts pour mélomanes en culottes courtes du Palais Royal.
+
+Lycée Buffon
+				`,
+			},
+			"linkHref": "https://le-palaisroyal.com/concert/melomanes-en-culotte-courte",
+		},
+		{
+			"fr": {
+				"date": "VENDREDI 3 JUIN, 19 H",
+				"title": "Pas si bête",
+				"description": `D'après Le souriceau stupide, op.56 de Dmitri Chostakovitch.
+
+Projet pédagogique 
+
+Choeurs et oeuvres de musique russe Dramaturgie, conception et mise en scène Plein jour.
+Direction musicale Franck Krawczyk.
+Théâtre des Bouffes du Nord.
+				`,
+			},
+			"linkHref": "https://www.bouffesdunord.com/fr/la-saison/pas-si-bete",
+		},
+		{
+			"fr": {
+				"date": "JEUDI 11 JUIN, 20 H 30",
+				"title": "Mezzo-solo de la Missa Solemnis K.139 (messe de l'orphelinat) de Mozart ",
+				"description": `Orchestre symphonique kimbanguiste de Kinshasa.
+Choeur de l'Orchestre de Paris.
+Choeur de jeunes de l'Orchestre de Paris.
+Armand Diangienda W., direction.
+Grande salle Pierre Boulez de la Philharmonie.
+				`
+				
+			},
+			"linkHref": "https://philharmoniedeparis.fr/fr/activite/concert-symphonique/22808-orchestre-symphonique-kimbanguiste-de-kinshasa"
 		}
 
 	]

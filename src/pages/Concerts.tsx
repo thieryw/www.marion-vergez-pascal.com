@@ -7,6 +7,8 @@ import bannerJpeg from "../assets/img/concerts/concert-banner.jpeg";
 import { useTranslation } from "../i18n/useTranslation";
 import { concerts } from "../user/concerts";
 import { EventCardVersion2 } from "../components/EventCardVersion2"
+import { Text } from "../theme";
+import { Divider } from "../components/Divider";
 
 
 
@@ -42,7 +44,7 @@ export const Concerts = memo(() => {
 			<section className={classes.concerts}>
 
 				{
-					concerts.map((concert, index) =>
+					concerts.filter((concerts, index) => index > 8).map((concert, index) =>
 						<EventCardVersion2
 							className={classes.eventCard}
 							classes={{
@@ -55,6 +57,37 @@ export const Concerts = memo(() => {
 							buttonLabel="EN SAVOIR PLUS"
 							key={index}
 						/>
+					)
+				}
+
+			</section>
+
+
+			<section className={classes.concerts}>
+				<div className={classes.archiveTitleWrapper}>
+					<Text className={classes.archiveTitle} typo="section heading">{t("archivesTitle")}</Text>
+					<Divider 
+						height={1}
+						width={8}
+						color="gold"
+					/>
+				</div>
+
+				{
+					concerts.filter((concert, index) => index <= 8).map((concert, index) => {
+						return <EventCardVersion2
+							className={classes.eventCard}
+							classes={{
+								"button": classes.button
+							}}
+							{...concert.fr}
+							link={{
+								"href": concert.linkHref
+							}}
+							buttonLabel="EN SAVOIR PLUS"
+							key={index}
+						/>
+					}
 					)
 				}
 
@@ -105,7 +138,20 @@ const useStyles = makeStyles()(
 			":hover": {
 				"color": theme.isDarkModeEnabled ? "white" : undefined
 			}
+		},
+		"archiveTitle": {
+			"fontSize": "3rem",
+			"lineHeight": "3rem",
+			"textAlign": "center",
+			"marginBottom": theme.spacing(5)
+		},
+		"archiveTitleWrapper": {
+			...theme.spacing.topBottom("padding", `${theme.spacing(7)}px`),
+			"display": "flex",
+			"flexDirection": "column",
+			"alignItems": "center"
 		}
+
 	})
 )
 
@@ -114,5 +160,6 @@ export declare namespace Concerts {
 	export type I18nScheme = {
 		concertsTitle: undefined;
 		concertsSubtitle: undefined;
+		archivesTitle: undefined
 	};
 };

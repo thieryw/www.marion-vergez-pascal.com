@@ -141,7 +141,8 @@ programme tremplin pour jeunes ensembles vocaux à la **Cité de la Voix de Véz
         },
         "Concerts": {
             "concertsTitle": "concerts",
-            "concertsSubtitle": "PROCHAINS CONCERTS"
+            "concertsSubtitle": "PROCHAINS CONCERTS",
+            "archivesTitle": "ARCHIVES"
         },
     },
 
@@ -243,7 +244,8 @@ programme tremplin pour jeunes ensembles vocaux à la **Cité de la Voix de Véz
         },
         "Concerts": {
             "concertsTitle": "concerts",
-            "concertsSubtitle": "PROCHAINS CONCERTS"
+            "concertsSubtitle": "PROCHAINS CONCERTS",
+            "archivesTitle": "ARCHIVES"
         }
 
     }
