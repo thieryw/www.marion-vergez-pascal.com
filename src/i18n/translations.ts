@@ -5,7 +5,7 @@ import type { Language } from "./Language";
 import { Home } from "../pages/Home";
 import { App, AppHeader } from "../App"
 import { AppFooter } from "../AppFooter";
-import { news } from "../user/news";
+//import { news } from "../user/news";
 import { Biography } from "../pages/Biography";
 import { Media } from "../pages/Media";
 import { Concerts } from "../pages/Concerts";
@@ -37,8 +37,10 @@ export type Translations = {
 export const translations = id<Record<Language, Translations>>({
     "en": {
         "Home": {
-            "newsParagraph": news.en?.paragraph ?? news.fr.paragraph,
-            "newsTitle": news.en?.title ?? news.fr.title,
+            "review1": "Chez les mezzo-sopranos, Marion Vergez-Pascal montre un timbre large et rond dans ses interprétations d’Annio et de Constance, inquiète pour son époux. Une vraie puissance se dégage même dans les ensembles, où elle tire son épingle du jeu en gardant un timbre clair et en usant de ses résonateurs.",
+            "review2": "L’écrin accoustique et le décor romantique du lieu répondent tout à fait au programme qui distille airs et ensembles extraits d’opéras du XIXe siècle français . Gounod, Bizet, Offenbach mais aussi Messager (...) sont à la fête  par les voix du ténor Kévin Amiel, ardemment lancé (...), du baryton basse efficace Adrien Fournaison, et de la mezzo de bel envol Marion Vergez-Pascal.",
+            "reviewSignature1": "Ôlyrix critique du spectacle L’affaire Clemenza à la Seine Musicale en juin 2021",
+            "reviewSignature2": "Scènes Magazine critique du spectacle Deux hommes et une femme, Novembre 2021",
             "newsHeading": "ACTUALITÉS",
             "newsButtonLabel": "Voir Plus",
             "bioTitle": "Qui suis-je",
@@ -148,8 +150,10 @@ programme tremplin pour jeunes ensembles vocaux à la **Cité de la Voix de Véz
 
     "fr": {
         "Home": {
-            "newsParagraph": news.fr.paragraph,
-            "newsTitle": news.fr.title,
+            "review1": "Chez les mezzo-sopranos, Marion Vergez-Pascal montre un timbre large et rond dans ses interprétations d’Annio et de Constance, inquiète pour son époux. Une vraie puissance se dégage même dans les ensembles, où elle tire son épingle du jeu en gardant un timbre clair et en usant de ses résonateurs.",
+            "review2": "L’écrin accoustique et le décor romantique du lieu répondent tout à fait au programme qui distille airs et ensembles extraits d’opéras du XIXe siècle français . Gounod, Bizet, Offenbach mais aussi Messager (...) sont à la fête  par les voix du ténor Kévin Amiel, ardemment lancé (...), du baryton basse efficace Adrien Fournaison, et de la mezzo de bel envol Marion Vergez-Pascal.",
+            "reviewSignature1": "Ôlyrix critique du spectacle L’affaire Clemenza à la Seine Musicale en juin 2021",
+            "reviewSignature2": "Scènes Magazine critique du spectacle Deux hommes et une femme, Novembre 2021",
             "newsHeading": "ACTUALITÉS",
             "newsButtonLabel": "Voir Plus",
             "bioTitle": "Qui suis-je",

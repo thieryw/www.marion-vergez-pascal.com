@@ -7,7 +7,7 @@ import { Background } from "../components/Background";
 import { makeStyles, breakpointsValues, Text } from "../theme";
 import { useTranslation } from "../i18n/useTranslation";
 import { PageHeading } from "../components/PageHeading";
-import { GlSlider } from "gitlanding";
+import { GlSlider } from "gitlanding/GlSlider";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 import { Button } from "../components/Button";
 import bannerJpeg from "../assets/img/media-banner.jpg"

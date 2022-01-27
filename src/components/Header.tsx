@@ -293,19 +293,9 @@ const { Link } = (() => {
 		}
 	};
 
-	const useStyles = makeStyles()(
+	const useStyles = makeStyles<void, "underline">()(
 
-		(theme, ...[, createRef]) => {
-			const underline = {
-				"ref": createRef(),
-				"width": 0,
-				"position": "relative",
-				"left": theme.windowInnerWidth >= breakpointsValues.md ? "-5%" : "25%",
-				"top": theme.spacing(1),
-				"height": 1,
-				"backgroundColor": theme.colors.useCases.typography.textPrimary,
-				"transition": "width 200ms"
-			} as const;
+		(theme, params, classes) => {
 
 			return {
 				"root": {
@@ -316,7 +306,7 @@ const { Link } = (() => {
 					"&: hover": {
 						"cursor": "pointer"
 					},
-					[`&:hover .${underline.ref}`]: {
+					[`&:hover .${classes.underline}`]: {
 						"width": "110%",
 						...(theme.windowInnerWidth < breakpointsValues.md ? {
 							"width": "50%",
@@ -328,7 +318,15 @@ const { Link } = (() => {
 
 					})
 				},
-				underline,
+				"underline": {
+					"width": 0,
+					"position": "relative",
+					"left": theme.windowInnerWidth >= breakpointsValues.md ? "-5%" : "25%",
+					"top": theme.spacing(1),
+					"height": 1,
+					"backgroundColor": theme.colors.useCases.typography.textPrimary,
+					"transition": "width 200ms"
+				},
 				"text": {
 					...theme.spacing.rightLeft("padding", `${theme.spacing(2)}px`),
 					...theme.typography.variants.navigation.style

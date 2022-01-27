@@ -26,6 +26,9 @@ import bioImageUrl from "../assets/img/home/marion-nabil.jpeg";
 import contactImageWebp from "../assets/webp/home/contact.webp"
 import bioImageWebp from "../assets/webp/home/marion-nabil.webp"
 import type { ImageSource } from "gitlanding/tools/ImageSource";
+//import { GlSlider, GlReviewSlide } from "gitlanding";
+import { GlSlider } from "gitlanding/GlSlider";
+import { GlReviewSlide } from "gitlanding/GlReviewSlide";
 
 
 export const Home = memo(() => {
@@ -43,7 +46,7 @@ export const Home = memo(() => {
 
 	})
 
-	const imageSources: ImageSource[][] = useMemo(()=>{
+	const imageSources: ImageSource[][] = useMemo(() => {
 		return [[bioImageWebp, bioImageUrl], [contactImageWebp, contactImageUrl]].map(sources => [
 			{
 				"srcSet": sources[0],
@@ -82,15 +85,24 @@ export const Home = memo(() => {
 				<Text className={classes.newsHeading} typo="subtitle">{t("newsHeading")}<span>...</span></Text>
 				<Divider width={9} height={1} />
 			</div>}
-			title={t("newsTitle")}
-			paragraph={t("newsParagraph")}
+			//title={t("newsTitle")}
+			//paragraph={t("newsParagraph")}
+			paragraph={
+				<GlSlider
+					autoPlayTimeInterval={4}
+					slides={[
+						<GlReviewSlide descriptionMd={t("review1")} signature={t("reviewSignature1")} />,
+						<GlReviewSlide descriptionMd={t("review2")} signature={t("reviewSignature2")} />
+					]}
+				/>
+			}
 			imageUrl={news.imageUrl}
 			imageSources={news.imageSources}
-			button={{
+			/*button={{
 				"href": news.buttonHref ?? routes.futureEvents().link.href,
 				"onClick": news.buttonHref !== undefined ? routes.futureEvents().link.onClick : undefined,
 				"label": t("newsButtonLabel")
-			}}
+			}}*/
 			imagePosition="right"
 		/>
 		<div>
@@ -419,8 +431,6 @@ const { HeroTitle } = (() => {
 
 export declare namespace Home {
 	export type I18nScheme = {
-		newsTitle: undefined;
-		newsParagraph: undefined;
 		newsHeading: undefined;
 		newsButtonLabel: undefined;
 		bioTitle: undefined;
@@ -430,6 +440,10 @@ export declare namespace Home {
 		contactHeading: undefined;
 		contactParagraph: undefined;
 		mediaButton: undefined;
+		review1: undefined;
+		review2: undefined;
+		reviewSignature1: undefined;
+		reviewSignature2: undefined;
 
 	};
 }

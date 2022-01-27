@@ -1,7 +1,7 @@
 import { memo, useMemo } from "react";
 import { useRoute, routes } from "./router";
 import { Home } from "./pages/Home";
-import { GlTemplate } from "gitlanding";
+import { GlTemplate } from "gitlanding/GlTemplate";
 import { Header } from "./components/Header";
 import type { HeaderProps } from "./components/Header";
 import { useTranslation } from "./i18n/useTranslation";

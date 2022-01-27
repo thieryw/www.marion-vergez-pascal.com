@@ -5,8 +5,8 @@ import { Divider } from "./Divider";
 import type { Link } from "../tools/link";
 import { GlIllustration } from "gitlanding/GlIllustration";
 import { Button } from "../components/Button";
-import ReactMarkdown from "react-markdown";
 import { ImageSource } from "gitlanding/tools/ImageSource";
+import Markdown from "react-markdown";
 
 
 export type ArticleProps = {
@@ -26,7 +26,7 @@ export type ArticleProps = {
 	imageUrl: string;
 	imageSources?: ImageSource[];
 	title?: ReactNode;
-	paragraph: string;
+	paragraph: ReactNode;
 	button?: {
 		label: string;
 	} & Link;
@@ -91,10 +91,16 @@ export const Article = memo((props: ArticleProps) => {
 						<Divider className={classes.textDivider} color="#e1bf59" width={6} height={2} />
 					</>
 				}
+				{
+					typeof paragraph === "string" ?
+						<Markdown className={cx(classes.paragraph, classesProp?.paragraph)}>
+							{paragraph}
+						</Markdown> :
+						<div className={cx(classes.paragraphReactNode, classesProp?.paragraph)}>
+							{paragraph}
+						</div>
+				}
 
-				<ReactMarkdown className={cx(classes.paragraph, classesProp?.paragraph)}>
-					{paragraph}
-				</ReactMarkdown>
 				{
 					button !== undefined &&
 					<div>
@@ -200,8 +206,9 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 			"color": theme.colors.useCases.typography.textSecondary,
 			"marginBottom": theme.spacing(5),
 			...theme.typography.variants["body 1"].style
-
-
+		},
+		"paragraphReactNode": {
+			"marginBottom": theme.spacing(5),
 		},
 		"textDivider": {
 			...theme.spacing.topBottom("margin", `${theme.spacing(4)}px`)
