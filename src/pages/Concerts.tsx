@@ -44,7 +44,7 @@ export const Concerts = memo(() => {
 			<section className={classes.concerts}>
 
 				{
-					concerts.filter((concerts, index) => index > 8).map((concert, index) =>
+					concerts.filter((_concerts, index) => index > 10).map((concert, index) =>
 						<EventCardVersion2
 							className={classes.eventCard}
 							classes={{
@@ -74,7 +74,7 @@ export const Concerts = memo(() => {
 				</div>
 
 				{
-					concerts.filter((concert, index) => index <= 8).map((concert, index) => {
+					concerts.filter((_concert, index) => index <= 10).map((concert, index) => {
 						return <EventCardVersion2
 							className={classes.eventCard}
 							classes={{
