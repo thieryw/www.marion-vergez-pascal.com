@@ -272,6 +272,15 @@ Théâtre des Bouffes du Nord.
 		},
 		{
 			"fr": {
+				"date": "JEUDI 9 JUIN, 19 H",
+				"title": "Au fil de l'eau",
+				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, 
+				harpe, et casques.`,
+			},
+			"linkHref": "https://www.unidivers.fr/event/au-fil-de-leau-abbeville-somme-2022-06-09/amp/"
+		},
+		{
+			"fr": {
 				"date": "JEUDI 11 JUIN, 20 H 30",
 				"title": "Mezzo-solo de la Missa Solemnis K.139 (messe de l'orphelinat) de Mozart ",
 				"description": `Orchestre symphonique kimbanguiste de Kinshasa.
@@ -283,6 +292,24 @@ Grande salle Pierre Boulez de la Philharmonie.
 				
 			},
 			"linkHref": "https://philharmoniedeparis.fr/fr/activite/concert-symphonique/22808-orchestre-symphonique-kimbanguiste-de-kinshasa"
+		},
+		{
+			"fr": {
+				"date": "27 AU 31 JUILLET",
+				"title": "Au fil de l'eau",
+				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, 
+				harpe, et casques. Dans le cadre du Grand Est’ival (Meuse).
+				`
+			},
+			"linkHref": "https://grandestival.fr/"
+		},
+		{
+			"fr": {
+				"date": "16 AU 18 SEPTEMBRE",
+				"title": "Au fil de l'eau",
+				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, harpe, et casques à Obernai`
+			},
+			"linkHref": ""
 		}
 
 	]
