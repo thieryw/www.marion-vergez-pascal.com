@@ -295,6 +295,59 @@ Grande salle Pierre Boulez de la Philharmonie.
 		},
 		{
 			"fr": {
+				"date": "Samedi 18 Juin à 20h",
+				"title": "Requiem de Mozart ( Temple de L’Oratoire du Louvre )",
+				"description": `Mezzo-soprano solo; 
+Choeur et orchestre de l’Oratoire du Louvre ;
+Alexandre Korovitch, direction.
+				`,
+			},
+			"linkHref": "https://www.fnacspectacles.com/place-spectacle/ticket-evenement/musique-sacree-requiem-de-mozart-man31590-lt.htm"
+		},
+		{
+			"fr": {
+				"date": "Dimanche 19 Juin à 17h",
+				"title": "Concert à Notre Dame de Bethune",
+				"description": `Maitrise de Notre-Dame de Paris;
+Direction Henri Chalet
+				`,
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "Lundi 20 Juin à 20h",
+				"title": "Récital de mélodies françaises",
+				"description": `Temple de Neuilly-sur-Seine.
+Simon Adda Reyss, piano.
+				`,
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "Lundi 23 Juin à 21h",
+				"title": "Château Rosa Bonheur, Thomery",
+				"description": `Récital  « Rosa Bonheur, dame nature »Soirée d'ouverture du festival Emmenez-moi (en partenariat avec l'ONF).
+Bastien Rimondi, ténor.
+Thomas Taquet, pianiste.
+				`,
+			},
+			"linkHref": "https://www.seineetmarnevivreengrand.fr/actualites/festival-emmenez-moi-du-24-juin-au-10-juillet-2022/"
+		},
+		{
+			"fr": {
+				"date": "18, 20 & 25 JUIN, 16 H 00",
+				"title": "Mini-concerts autour des Fables de Lafontaine",
+				"description": `Saint-Saëns, Aboulker, Offenbach, et bien d’autres ... 
+Avec les musiciens de l’Orchestre de Chambre de Paris
+
+				`,
+			},
+			"linkHref": "https://www.orchestredechambredeparis.com/action/mini-concerts-dans-les-centres-dhebergement-durgence/"
+		},
+		{
+			"fr": {
 				"date": "27 AU 31 JUILLET",
 				"title": "Au fil de l'eau",
 				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, 
