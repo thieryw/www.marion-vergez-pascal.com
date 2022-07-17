@@ -11,153 +11,6 @@ export const concerts: {
 	linkHref: string;
 }[] = [
 
-
-		{
-			"fr": {
-				"title": "Récital avec piano",
-
-				"description": `Théâtre des Sablons de Neuilly sur Seine
-
-Avec Simon Adda-Reyss.
-Victor Hugo, le romantisme en musique
-				`,
-
-				"date": `17 OCTOBRE 2021,
-
-16 h 00
-			`,
-			},
-
-			"linkHref": ""
-		},
-
-
-		{
-			"fr": {
-				"title": "Récital avec orgue et trompette",
-
-				"description": `Église Notre Dame des Saints-Anges, Mitry-Mory
-
-Avec Domenico Séverin & Alejandro Sandler. Programme baroque.
-Inauguration de l’orgue Haerpfer-Herman.
-				`,
-
-				"date": `14 NOVEMBRE 2021,
-
-16 h 00
-			`,
-			},
-			"linkHref": "https://www.unidivers.fr/event/inauguration-de-lorgue-renove-mitry-le-neuf-eglise-notre-dame-des-saints-anges-2021-11-14/"
-		},
-
-
-
-		{
-			"fr": {
-				"title": "Récital lyrique Deux hommes et une femme",
-
-				"description": `Salle Historique du premier Conservatoire de Paris
-				
-Concert Coup de foudre avec orchestre.
-Avec Mathys Lagier et Adrien Fournaison Orchestre du Palais Royal, direction J.P Sarcos.
-
-				`,
-				"date": `17 NOVEMBRE 2021,
-
-15 h 00
-			`,
-
-			},
-			"linkHref": "https://le-palaisroyal.com/concert/deux-hommes-et-une-femme/"
-		},
-
-
-
-		{
-			"fr": {
-				"title": "Récital lyrique Deux hommes et une femme",
-				"description": `Salle Historique du premier Conservatoire de Paris
-
-Avec Kévin Amiel et Adrien Fournaison.
-Orchestre du Palais Royal, direction J.P Sarcos.
-				`,
-				"date": `17 NOVEMBRE 2021,
-
-20 h 30
-			`,
-			},
-			"linkHref": "https://le-palaisroyal.com/concert/deux-hommes-et-une-femme/"
-		},
-
-		{
-			"fr": {
-				"title": "Récital lyrique Deux hommes et une femme",
-				"description": `Concert Coup de foudre avec orchestre
-
-Avec Mathys Lagier et Adrien Fournaison Orchestre du Palais Royal, 
-direction J.P Sarcos Salle Historique du premier Conservatoire de Paris
-
-				`,
-				"date": `18 NOVEMBRE 2021,
-
-15 h 00
-			`,
-			},
-			"linkHref": ""
-		},
-
-		{
-			"fr": {
-				"title": "Récital lyrique Deux hommes et une femme",
-				"description": `Salle Historique du premier Conservatoire de Paris
-
-Avec Kévin Amiel et Adrien Fournaison.
-Orchestre du Palais Royal, direction J.P Sarcos.
-				`,
-				"date": `18 NOVEMBRE 2021,
-
-20 h 30
-			`,
-			},
-			"linkHref": "https://le-palaisroyal.com/concert/deux-hommes-et-une-femme/"
-		},
-
-
-
-		{
-			"fr": {
-				"title": "Concert de la classe d’ensemble du CNSM",
-				"description": `Salle d’art lyrique du CNSM de Paris
-
-Concert Mozart sur la trilogie de Da Ponte Orchestre du CNSM, direction A. Altinoglu.
-				`,
-				"date": `3 DECEMBRE 2021,
-
-19 h 00
-			`,
-			},
-			"linkHref": "https://www.conservatoiredeparis.fr/fr/saison-20202021/concert-de-la-classe-de-direction-dorchestre-dalain-altinoglu-complet"
-		},
-
-
-
-		{
-			"fr": {
-				"title": "Concert Gastronomique",
-				"description": `Théâtre de Gray
-
-Concert autour de la gastronomie Ayaka Uenomachi & Adrienne Dubois.
-				`,
-				"date": `5 DECEMBRE 2021,
-
-11 h 00
-			`,
-			},
-			"linkHref": "https://festival-voixla.fr/programme/jeunes-talents/"
-		},
-
-
-
 		{
 			"fr": {
 				"title": " Récital lyrique Deux hommes et une femme",
@@ -289,7 +142,7 @@ Choeur de jeunes de l'Orchestre de Paris.
 Armand Diangienda W., direction.
 Grande salle Pierre Boulez de la Philharmonie.
 				`
-				
+
 			},
 			"linkHref": "https://philharmoniedeparis.fr/fr/activite/concert-symphonique/22808-orchestre-symphonique-kimbanguiste-de-kinshasa"
 		},
@@ -348,6 +201,23 @@ Avec les musiciens de l’Orchestre de Chambre de Paris
 		},
 		{
 			"fr": {
+				"title": "Festival des Chapelles",
+				"date": "26 à Sabran et 27 juillet à Goudargues 21h",
+				"description": `« Mignonne allons voir si la rose » 
+Programme a capella avec le Quatuor Bonelli 
+
+Fanny Soyer, Soprano
+
+Marco Van Baaren, ténor
+
+Adrien Fournaison, baryton
+				`
+
+			},
+			"linkHref": "https://festivaldeschapelles.com/programme-2022/"
+		},
+		{
+			"fr": {
 				"date": "27 AU 31 JUILLET",
 				"title": "Au fil de l'eau",
 				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, 
@@ -358,9 +228,166 @@ Avec les musiciens de l’Orchestre de Chambre de Paris
 		},
 		{
 			"fr": {
+				"date": "27 août au 10 Septembre",
+				"title": "Académie Ravel de St-Jean de Luz",
+				"description": "Masterclasses publiques quotidiennes avec Karine Deshayes, Jean-Philippe Lafont et Sabien Vatin"
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "31 août 2022 à 21h",
+				"title": "Festival Paséo",
+				"description": "Église St Esprit de Bayonne"
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "2 septembre 2022 à 21h",
+				"title": "centre social Sagardian de St Jean de Luz",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "3 septembre 2022 à 12h",
+				"title": "Gymnase Urdazuri",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "4 septembre 2022, à 12h, 15h & 18h",
+				"title": "Villa Arnagz d’Arcangues",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "5 septembre 2022 à 21h",
+				"title": "Église St Esprit du Festival Paséo de Biarritz",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "7 septembre 2022 à 21h",
+				"title": "Église St Esprit",
+				"description": "Festival du Paséo de Biarritz"
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "10 septembre de 14h à 17h",
+				"title": "Concert et remise des prix",
+				"description": "Chapiteau Hariet Baita de St Jean de Luz"
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
 				"date": "16 AU 18 SEPTEMBRE",
 				"title": "Au fil de l'eau",
 				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, harpe, et casques à Obernai`
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "19 novembre 2022",
+				"title": "Concert autour de la vie de Rosa Bonheur",
+				"description": `château de Fontainebleau
+
+Kaëlig Boché, ténor
+
+Thomas Tacquet Pianiste
+
+Shanee Krön comédienne`
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "Samedi 3. Décembre 20h30 & Dimanche 4 décembre 16h00",
+				"title": "Le Messie de Haendel",
+				"description": `Mezzo-soprano solo
+
+Chœur et orchestre de St Germain en Laye
+
+Direction Marc Korovitch 
+				`
+
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "Mardi 13 décembre 20h30",
+				"title": "L’isola Disabitata de Haydn, Costanza",
+				"description": `Théâtre Traversière (Paris 12ème)
+
+Lisa Chaïb, Silvia
+
+Jordan Mouiassia, Gernando
+
+Olivier Cesarini, Enrico
+
+Vincent Laissy, direction musicale 
+
+Le studi’opera
+				`
+			},
+			"linkHref": ""
+		},
+		{
+			"fr": {
+				"date": "7 Mars 14h30, les 8 Mars 10 Mars & 11 Mars à 20h",
+				"title": "Didon et Enée de Purcell. Rôle de l’Echanteress",
+				"description": `Direction : Leonardo Garcia Alarcón;
+Mise en scène : Marc Lainé;
+Orchestre du Conservatoire de Paris;
+Coproduction Conservatoire National de Paris et Philarmonie de Paris 
+				`
+
+			},
+			"linkHref": "https://philharmoniedeparis.fr/fr/activite/opera/23989-henry-purcell-didon-et-enee"
+		},
+		{
+			"fr": {
+				"date": "27,28 à 20h et 29 avril 2023 à 18h",
+				"title": " Mezzo-soprano du Requiem de Mozart",
+				"description": `Chœur et Orchestre de Pau Pays de Béarn (Oppb)
+				
+Armelle Khourdoïan, Soprano\n
+Marion Vergez-Pascal, Alto\n
+Pierre-Antoine Chaumien, Ténor\n
+Matthieu Lécroart, Baryton\n
+Pascale Verdier, Chœur OPPB\n
+Direction : Fayçal Karoui 
+				`
+
+			},
+			"linkHref": "https://www.oppb.fr/armelle-khourdoian-avril-2023/"
+		},
+		{
+			"fr": {
+				"date": "22 Juin 2022",
+				"title": "Au fil de l'eau",
+				"description": `Opéra de Reims
+
+Annabelle Jarre, harpe
+
+Thomas N’guyen, composition et direction musicale 
+
+Collectif Io	
+				`
+
 			},
 			"linkHref": ""
 		}
