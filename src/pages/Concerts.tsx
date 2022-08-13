@@ -5,10 +5,12 @@ import { Background } from "../components/Background"
 import { PageHeading } from "../components/PageHeading";
 import bannerJpeg from "../assets/img/concerts/concert-banner.jpeg";
 import { useTranslation } from "../i18n/useTranslation";
+import { useLanguage } from "../i18n/useLanguage";
 import { concerts } from "../user/concerts";
 import { EventCardVersion2 } from "../components/EventCardVersion2"
 import { Text } from "../theme";
 import { Divider } from "../components/Divider";
+import { archives } from "../user/archives";
 
 
 
@@ -16,6 +18,7 @@ export const Concerts = memo(() => {
 
 	const { classes, cx } = useStyles();
 	const { t } = useTranslation("Concerts");
+	const { language } = useLanguage();
 
 
 	return (
@@ -41,57 +44,59 @@ export const Concerts = memo(() => {
 				/>
 			</div>
 
-			<section className={classes.concerts}>
 
-				{
-					concerts.filter((_concerts, index) => index > 14).map((concert, index) =>
-						<EventCardVersion2
-							className={classes.eventCard}
-							classes={{
-								"button": classes.button
-							}}
-							{...concert.fr}
-							link={{
-								"href": concert.linkHref
-							}}
-							buttonLabel="EN SAVOIR PLUS"
-							key={index}
-						/>
-					)
-				}
-
-			</section>
-
-
-			<section className={classes.concerts}>
-				<div className={classes.archiveTitleWrapper}>
-					<Text className={classes.archiveTitle} typo="section heading">{t("archivesTitle")}</Text>
-					<Divider 
-						height={1}
-						width={8}
-						color="gold"
-					/>
-				</div>
-
-				{
-					concerts.filter((_concert, index) => index <= 14).map((concert, index) => {
-						return <EventCardVersion2
-							className={classes.eventCard}
-							classes={{
-								"button": classes.button
-							}}
-							{...concert.fr}
-							link={{
-								"href": concert.linkHref
-							}}
-							buttonLabel="EN SAVOIR PLUS"
-							key={index}
-						/>
+			{
+				[
+					{
+						"concerts": concerts,
+						"type": "concerts" as const
+					},
+					{
+						"concerts": archives,
+						"type": "archives" as const
 					}
-					)
-				}
 
-			</section>
+				].map(({concerts, type}) => {
+
+					return <section className={classes.concerts}>
+						{
+							type === "archives" &&
+							<div className={classes.archiveTitleWrapper}>
+								<Text className={classes.archiveTitle} typo="section heading">{t("archivesTitle")}</Text>
+								<Divider
+									height={1}
+									width={8}
+									color="gold"
+								/>
+							</div>
+
+						}
+						{concerts.map(concert =>
+							<EventCardVersion2
+								className={classes.eventCard}
+								classes={{
+									"button": classes.button
+								}}
+								{...(() => {
+									if (language === "en" && concert.en !== undefined) {
+										return concert.en
+									}
+
+									return concert.fr
+								})()}
+								link={{
+									"href": concert.linkHref
+								}}
+								buttonLabel="EN SAVOIR PLUS"
+								key={concert.fr.title}
+							/>
+						)}
+
+					</section>
+
+
+				})
+			}
 
 		</div>
 	)
