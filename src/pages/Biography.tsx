@@ -3,15 +3,16 @@ import { memo } from "react";
 import { makeStyles, breakpointsValues, Text } from "../theme";
 import {Background} from "../components/Background";
 import bannerImgUrl from "../assets/img/bio/bio-banner.jpeg";
-import {useTranslation} from "../i18n/useTranslation";
 import { PageHeading } from "../components/PageHeading";
 import { Divider } from "../components/Divider";
 import ReactMarkdown from "react-markdown";
+import { declareComponentKeys } from "i18nifty/declareComponentKeys";
+import { useTranslation } from "../i18n";
 
 
 export const Biography = memo(() => {
 
-	const { t } = useTranslation("Biography");
+	const { t } = useTranslation({ Biography });
 	const { classes, theme } = useStyles();
 
 
@@ -42,37 +43,37 @@ export const Biography = memo(() => {
 				</section>
 
 				<section className={classes.interpretationsAndBio}>
-						<Text typo="section heading">
-							{t("interpretation")}
-						</Text>
-						<Divider
-							className={classes.interpretationDivider}
-							height={1}
-							width={8}
-							color={theme.colors.palette.gold}
-						/>
+					<Text typo="section heading">
+						{t("interpretation")}
+					</Text>
+					<Divider
+						className={classes.interpretationDivider}
+						height={1}
+						width={8}
+						color={theme.colors.palette.gold}
+					/>
 
-						<ul className={classes.listWrapper}>
-							{
-								[
-									t("carmen"),
-									t("ottavia"),
-									t("gounod"),
-									t("figaro"),
-									t("smeton"),
-									t("ravel"),
-									t("offenbach"),
-									t("mignon"),
-									t("viviane"),
-									t("massenet")
-								].map(text => <li key={text} className={classes.listElement}>
-									<span className={classes.dot} >.</span>
-									<Text className={classes.interpretationText} typo="body 2">
-										{text}
-									</Text>
-								</li>)
-							}
-						</ul>
+					<ul className={classes.listWrapper}>
+						{
+							[
+								t("carmen"),
+								t("ottavia"),
+								t("gounod"),
+								t("figaro"),
+								t("smeton"),
+								t("ravel"),
+								t("offenbach"),
+								t("mignon"),
+								t("viviane"),
+								t("massenet")
+							].map(text => <li key={text} className={classes.listElement}>
+								<span className={classes.dot} >.</span>
+								<Text className={classes.interpretationText} typo="body 2">
+									{text}
+								</Text>
+							</li>)
+						}
+					</ul>
 				</section>
 
 			</div>
@@ -89,8 +90,7 @@ export const Biography = memo(() => {
 const useStyles = makeStyles()(
 	theme => ({
 		"root": {
-			"paddingTop": "0px !important"
-
+			"paddingTop": 0
 		},
 		"banner": {
 			"height": theme.windowInnerWidth >= breakpointsValues["lg+"] ? "90vh" : "70vh",
@@ -178,21 +178,22 @@ const useStyles = makeStyles()(
 	})
 )
 
-export declare namespace Biography {
-	export type I18nScheme = {
-		bioTitle: undefined;
-		bioSubtitle: undefined;
-		bioParagraph: undefined;
-		interpretation: undefined;
-		carmen: undefined
-		ottavia: undefined
-		gounod: undefined
-		figaro: undefined
-		smeton: undefined
-		ravel: undefined
-		offenbach: undefined
-		mignon: undefined
-		viviane: undefined
-		massenet: undefined
-	};
-};
+export const { i18n } = declareComponentKeys<
+	| "bioTitle"
+	| "bioSubtitle"
+	| "bioParagraph"
+	| "interpretation"
+	| "carmen"
+	| "ottavia"
+	| "gounod"
+	| "figaro"
+	| "smeton"
+	| "ravel"
+	| "offenbach"
+	| "mignon"
+	| "viviane"
+	| "massenet"
+>()({
+	Biography
+})
+

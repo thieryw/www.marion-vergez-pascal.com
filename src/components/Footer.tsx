@@ -1,13 +1,13 @@
-import { memo} from "react";
+import { memo, useMemo } from "react";
 import type { ReactNode } from "react";
 import MuiLink from "@mui/material/Link";
 import { GlLogo } from "gitlanding/utils/GlLogo";
 import { makeStyles } from "../theme";
 import { breakpointsValues } from "../theme";
 import type { Link } from "../tools/link";
-import { scrollableDivId } from "gitlanding/GlTemplate";
 import { useCallbackFactory } from "powerhooks/useCallbackFactory";
-import { scrollToTopOnLinkClick } from "../tools/scrollToTopOnLinkClick";
+import { getScrollableParent } from "powerhooks/getScrollableParent";
+import { useStateRef } from "powerhooks/useStateRef";
 
 
 export type FooterProps = {
@@ -29,14 +29,37 @@ export const Footer = memo((props: FooterProps) => {
 	const { bottomDiv, links, socialMediaLinks, title } = props;
 	const { classes } = useStyles();
 
+	const ref = useStateRef(null);
+
+	const scrollableParent = useMemo(()=>{
+
+		if(!ref.current){
+			return;
+		};
+
+		return getScrollableParent({
+			"doReturnElementIfScrollable": true,
+			"element": ref.current
+		})
+
+	}, [ref])
+
 
 	const onClickFactory = useCallbackFactory(async (
 		[onClick]: [(() => void) | undefined]
 	) => {
-		scrollToTopOnLinkClick({
-			scrollableDivId,
-			onClick
+		if(scrollableParent === undefined || onClick === undefined){
+			return;
+		}
+
+		onClick();
+
+		scrollableParent.scrollTo({
+			"top": 0,
+			"behavior": "auto"
 		})
+
+
 	});
 
 
@@ -44,7 +67,7 @@ export const Footer = memo((props: FooterProps) => {
 
 
 
-	return <footer className={classes.root}>
+	return <footer ref={ref} className={classes.root}>
 		<div className={classes.upperDivWrapper}>
 			<div className={classes.title}>{title}</div>
 			<div>
@@ -105,7 +128,7 @@ const useStyles = makeStyles()(
 		},
 		"muiLink": {
 			"color": theme.colors.useCases.typography.textSecondary,
-			"textDecoration": "none",
+			"textDecoration": "none !important",
 			...theme.spacing.topBottom("margin", `${theme.spacing(2)}px`),
 			"transition": "transform 400ms",
 			":hover": {

@@ -2,7 +2,7 @@
 import { memo, useMemo } from "react";
 import { Footer } from "./components/Footer";
 import type { FooterProps } from "./components/Footer";
-import { useTranslation } from "./i18n/useTranslation";
+import { useTranslation } from "./i18n";
 import { routes } from "./router";
 import instagramIconUrl from "./assets/svg/instagram.svg";
 import facebookIconUrl from "./assets/svg/facebook.svg";
@@ -11,36 +11,36 @@ import {Text} from "./theme";
 import MuiLink from "@mui/material/Link";
 import { makeStyles } from "./theme";
 import { breakpointsValues } from "./theme";
+import { declareComponentKeys } from "i18nifty/declareComponentKeys";
 
 
 
 export const AppFooter = memo(() => {
 
-	const { t: headerTr } = useTranslation("App");
-	const { t } = useTranslation("AppFooter");
+	const { t } = useTranslation({ AppFooter });
 
 
 	const links = useMemo((): FooterProps["links"] => {
 		return [
 			{
 				...routes.home().link,
-				"label": headerTr("home")
+				"label": t("home")
 			},
 			{
 				...routes.biography().link,
-				"label": headerTr("biography")
+				"label": t("biography")
 			},
 			{
 				...routes.futureEvents().link,
-				"label": headerTr("futureEvents")
+				"label": t("futureEvents")
 			},
 			{
 				...routes.media().link,
-				"label": headerTr("media")
+				"label": t("media")
 			},
 		]
 
-	}, [headerTr])
+	}, [t])
 
 	const socialMediaLinks = useMemo((): FooterProps["socialMediaLinks"] => {
 		return [
@@ -99,7 +99,7 @@ const useStyles = makeStyles()(
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"flexDirection": "column",
 				"alignItems": "center"
-			}: {})
+			} : {})
 		},
 		"bottomDivElement": {
 			"color": theme.colors.useCases.typography.textSecondary,
@@ -123,15 +123,28 @@ const useStyles = makeStyles()(
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"fontSize": "1rem"
 
-			}: {})
+			} : {})
 		},
 		"title": {
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"fontSize": "1.4rem"
 
-			}: {})
+			} : {})
 
 		}
 
 	})
 )
+
+export const { i18n } = declareComponentKeys<
+	| "home"
+	| "media"
+	| "futureEvents"
+	| "biography"
+	| "copyRight"
+	| "author"
+	| "legal"
+
+>()({
+	AppFooter
+})

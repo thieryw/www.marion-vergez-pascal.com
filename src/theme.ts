@@ -28,7 +28,7 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 				},
 				"my title": {
 					"htmlComponent": "h1",
-					"fontWeight": "bold",
+					"fontWeight": 100,
 					"fontSizeRem": 2,
 					"lineHeightRem": 2,
 					"fontFamily": "'Cinzel Decorative', cursive"
@@ -49,7 +49,8 @@ export const { ThemeProvider, useTheme: defaultUseTheme } = createThemeProvider(
 					"fontWeight": "bold",
 					"fontSizeRem": 1,
 					"lineHeightRem": 2,
-					"fontFamily": "'Open Sans', cursive"
+					"fontFamily": "'Open Sans', cursive",
+					"border": "solid red 2px"
 
 				}
 			},

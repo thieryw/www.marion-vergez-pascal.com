@@ -1,21 +1,21 @@
 import { memo, useState, useEffect } from "react";
-import type {ReactNode} from "react";
-import {makeStyles} from "../theme";
-import {Text} from "../theme";
-import {breakpointsValues} from "gitlanding/theme"
+import type { ReactNode } from "react";
+import { makeStyles } from "../theme";
+import { Text } from "../theme";
+import { breakpointsValues } from "gitlanding/theme"
 import UnfoldIcon from '@mui/icons-material/FormatLineSpacing';
-import {useDomRect} from "powerhooks/useDomRect";
-import {useConstCallback} from "powerhooks";
-import {useClickAway} from "powerhooks";
-import {GlDarkModeSwitch} from "gitlanding/utils/GlDarkModeSwitch";
-import {scrollableDivId} from "gitlanding/GlTemplate";
-import {Evt} from "evt";
+import { useDomRect } from "powerhooks/useDomRect";
+import { useConstCallback } from "powerhooks";
+import { useClickAway } from "powerhooks";
+import { GlDarkModeSwitch } from "gitlanding/utils/GlDarkModeSwitch";
+import { Evt } from "evt";
+import { getScrollableParent } from "powerhooks/getScrollableParent";
 
 export type HeaderProps = {
 	links: {
 		label: string;
 		href: string;
-		onClick?: ()=> void;
+		onClick?: () => void;
 	}[];
 	title?: ReactNode;
 	className?: string
@@ -38,26 +38,139 @@ export type HeaderProps = {
 	}
 }
 
+
+
+
+
+export const Header = memo((props: HeaderProps) => {
+	const { links, title, className, classes: classesProp } = props;
+
+	const [isMenuUnfolded, setIsMenuUnfolded] = useState(false);
+	const [isMenuVisible, setIsMenuVisible] = useState(true);
+
+
+
+	const { domRect: {
+		height: headerHeight
+	}, ref: headerRef } = useDomRect();
+
+	const {
+		domRect: {
+			height: linksHeight
+		},
+		ref: linksRef
+
+
+	} = useDomRect();
+
+	const { classes, cx } = useStyles({
+		headerHeight,
+		isMenuUnfolded,
+		linksHeight,
+		isMenuVisible
+
+	});
+
+	const { ref } = useClickAway({
+		"onClickAway": () => {
+			if (!isMenuUnfolded) {
+				return;
+			}
+			setIsMenuUnfolded(false);
+		}
+	})
+
+
+	const toggleMenu = useConstCallback(() => {
+		setIsMenuUnfolded(!isMenuUnfolded)
+	});
+
+	useEffect(() => {
+
+		const ctx = Evt.newCtx();
+		const scrollableElement = getScrollableParent({
+			"doReturnElementIfScrollable": true,
+			"element": ref.current
+		});
+		if (scrollableElement === null) {
+			return;
+		}
+		Evt.from(ctx, scrollableElement, "scroll").attach((e) => {
+			if (headerHeight >= scrollableElement.scrollTop) {
+				setIsMenuVisible(true);
+			}
+			if (headerHeight < scrollableElement.scrollTop) {
+				setIsMenuVisible(false);
+			}
+		})
+
+	}, [headerHeight, ref])
+
+	return <header className={cx(classes.root, className)} ref={headerRef} >
+		<div ref={ref} className={cx(classes.headerInner, classesProp?.headerInner)}>
+			<div className={classesProp?.title}>{title}</div>
+
+			<div>
+				<Links
+					className={cx(classes.links, classesProp?.links)}
+					links={links}
+					classes={{
+						"link": classesProp?.link,
+						"linkWrapper": classesProp?.linkWrapper,
+						"linkUnderline": classesProp?.linkUnderline
+					}}
+				/>
+
+				<div className={cx(classes.unfoldIcon, classesProp?.unFoldIcon)} onClick={toggleMenu}>
+					<UnfoldIcon />
+				</div>
+			</div>
+
+			<div className={cx(classes.smallDeviceLinksWrapper, classesProp?.smallDeviceLinksWrapper)}>
+				<div className={cx(classes.smallDeviceLinksInnerWrapper, classesProp?.smallDeviceLinksInnerWrapper)} ref={linksRef}>
+					<Links
+						links={links}
+						className={cx(classes.smallDeviceLinks, classesProp?.smallDeviceLinks)}
+						classes={{
+							"link": classesProp?.smallDeviceLink,
+							"linkWrapper": classesProp?.smallDeviceLinkWrapper,
+							"linkUnderline": classesProp?.smallDeviceLinkUnderline
+						}}
+					/>
+
+				</div>
+			</div>
+
+			<div className={cx(classes.darkModeSwitch, classesProp?.darkModeSwitchWrapper)}>
+				<GlDarkModeSwitch className={classesProp?.darkModeSwitch} />
+			</div>
+		</div>
+
+	</header>
+})
+
 const useStyles = makeStyles<{
 	headerHeight: number;
 	isMenuUnfolded: boolean;
 	linksHeight: number;
 	isMenuVisible: boolean;
 }>()(
-	(theme, {headerHeight, isMenuUnfolded, linksHeight, isMenuVisible}) => ({
+	(theme, { headerHeight, isMenuUnfolded, linksHeight, isMenuVisible }) => ({
 		"root": {
-			...theme.spacing.rightLeft("padding", `${theme.paddingRightLeft}px`),
+			"padding": theme.spacing({
+				"rightLeft": `${theme.paddingRightLeft}px`,
+				"topBottom": `${theme.spacing(3)}px`
+			}),
 			"position": "relative",
 			"top": !isMenuVisible ? -(headerHeight + 50) : 0,
-			"transition": "top 300ms"
-
-
+			"transition": "top 300ms",
 		},
+
 		"headerInner": {
 			"display": theme.windowInnerWidth >= breakpointsValues.md ? "grid" : "flex",
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"justifyContent": "space-between",
-			}: {
+			} : {
 				"gridTemplateColumns": "repeat(3, 1fr)"
 			}),
 			"alignItems": "center",
@@ -69,10 +182,11 @@ const useStyles = makeStyles<{
 		"unfoldIcon": {
 			"display": "none",
 			"pointerEvents": "none",
+			"color": theme.colors.useCases.typography.textPrimary,
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"display": "block",
 				"pointerEvents": "unset"
-			}: {}),
+			} : {}),
 		},
 		"smallDeviceLinksWrapper": {
 			"position": "absolute",
@@ -95,7 +209,7 @@ const useStyles = makeStyles<{
 				"height": isMenuUnfolded && isMenuVisible ? linksHeight : 0,
 				"opacity": 0.94,
 				"pointerEvents": "unset"
-			}: {})  
+			} : {})
 		},
 
 		"smallDeviceLinksInnerWrapper": {
@@ -108,7 +222,7 @@ const useStyles = makeStyles<{
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"opacity": 1,
 				"pointerEvents": "unset"
-			}: {})  
+			} : {})
 		},
 
 		"darkModeSwitch": {
@@ -117,110 +231,6 @@ const useStyles = makeStyles<{
 		}
 	})
 )
-
-
-
-export const Header = memo((props: HeaderProps)=>{
-	const {links, title, className, classes: classesProp} = props;
-
-	const [isMenuUnfolded, setIsMenuUnfolded] = useState(false);
-	const [isMenuVisible, setIsMenuVisible] = useState(true);
-
-
-
-	const {domRect: {
-		height: headerHeight
-	}, ref: headerRef} = useDomRect();
-
-	const {
-		domRect: {
-			height: linksHeight
-		},
-		ref: linksRef
-		
-
-	} = useDomRect();
-
-	const {classes, cx} = useStyles({
-		headerHeight,
-		isMenuUnfolded,
-		linksHeight,
-		isMenuVisible
-
-	});
-
-	const { rootRef } = useClickAway(()=>{
-		if(!isMenuUnfolded){
-			return;
-		}
-		setIsMenuUnfolded(false);
-		
-	})
-
-	const toggleMenu = useConstCallback(()=>{
-		setIsMenuUnfolded(!isMenuUnfolded)
-	});
-
-	useEffect(() => {
-
-		const ctx = Evt.newCtx();
-		const scrollableElement = window.document.getElementById(scrollableDivId);
-		if(scrollableElement === null){
-			return;
-		}
-		Evt.from(ctx, scrollableElement, "scroll").attach((e) => {
-			if (headerHeight >= scrollableElement.scrollTop) {
-				setIsMenuVisible(true);
-			}
-			if(headerHeight < scrollableElement.scrollTop){
-				setIsMenuVisible(false);
-			}
-		})
-
-	}, [headerHeight])
-
-	return <header className={cx(classes.root, className)} ref={headerRef} >
-		<div ref={rootRef} className={cx(classes.headerInner, classesProp?.headerInner)}>
-			<div className={classesProp?.title}>{title}</div>
-
-			<div>
-				<Links
-					className={cx(classes.links, classesProp?.links)}
-					links={links}
-					classes={{
-						"link": classesProp?.link,
-						"linkWrapper": classesProp?.linkWrapper,
-						"linkUnderline": classesProp?.linkUnderline
-					}}
-				/>
-
-				<div onClick={toggleMenu}>
-					<UnfoldIcon className={cx(classes.unfoldIcon, classesProp?.unFoldIcon)} />
-				</div>
-			</div>
-
-			<div className={cx(classes.smallDeviceLinksWrapper, classesProp?.smallDeviceLinksWrapper)}>
-				<div className={cx(classes.smallDeviceLinksInnerWrapper, classesProp?.smallDeviceLinksInnerWrapper)} ref={linksRef}>
-					<Links
-						links={links}
-						className={cx(classes.smallDeviceLinks, classesProp?.smallDeviceLinks)}
-						classes={{
-							"link": classesProp?.smallDeviceLink,
-							"linkWrapper": classesProp?.smallDeviceLinkWrapper,
-							"linkUnderline": classesProp?.smallDeviceLinkUnderline
-						}}
-					/>
-
-				</div>
-			</div>
-
-			<div className={cx(classes.darkModeSwitch, classesProp?.darkModeSwitchWrapper)}>
-				<GlDarkModeSwitch className={classesProp?.darkModeSwitch}/>
-			</div>
-		</div>
-
-	</header>
-})
 
 const { Links } = (() => {
 
@@ -248,8 +258,6 @@ const { Links } = (() => {
 			},
 			"linkWrapper": {
 				"display": "flex",
-				//"justifyContent": "center"
-				"cursor": "pointer"
 
 			}
 		})
@@ -293,19 +301,44 @@ const { Link } = (() => {
 		}
 	};
 
+
+
+	const Link = memo((props: LinkProps) => {
+		const { href, label, onClick, className, classes: classesProp } = props;
+		const { classes, cx } = useStyles()
+
+		return <div
+			className={cx(classes.root, className)}
+		>
+			<a
+				href={href}
+				onClick={onClick ?? undefined}
+				className={classes.link}
+			>
+				<Text
+					typo="navigation"
+					className={cx(classes.text, classesProp?.link)}
+				>
+					{label}
+				</Text>
+
+			</a>
+			<div className={cx(classes.underline, classesProp?.underline)}></div>
+		</div>
+
+	})
+
 	const useStyles = makeStyles<void, "underline">()(
 
-		(theme, params, classes) => {
+		(theme, _params, classes) => {
 
 			return {
 				"root": {
 					"display": "flex",
 					"flexDirection": "column",
 					"position": "relative",
-					...theme.spacing.rightLeft("margin", `${theme.spacing(3)}px`),
-					"&: hover": {
-						"cursor": "pointer"
-					},
+					"cursor": "none",
+					...theme.spacing.rightLeft("margin", `${theme.spacing(4)}px`),
 					[`&:hover .${classes.underline}`]: {
 						"width": "110%",
 						...(theme.windowInnerWidth < breakpointsValues.md ? {
@@ -318,42 +351,30 @@ const { Link } = (() => {
 
 					})
 				},
+				"link": {
+					"textDecoration": "none"
+
+				},
 				"underline": {
 					"width": 0,
 					"position": "relative",
-					"left": theme.windowInnerWidth >= breakpointsValues.md ? "-5%" : "25%",
+					"left": theme.windowInnerWidth >= breakpointsValues.md ? "-5%" : "5%",
 					"top": theme.spacing(1),
 					"height": 1,
 					"backgroundColor": theme.colors.useCases.typography.textPrimary,
-					"transition": "width 200ms"
+					"transition": "width 200ms",
+					...(theme.windowInnerWidth < breakpointsValues.md ? {
+						"alignSelf": "flex-start"
+
+					}: {})
 				},
 				"text": {
 					...theme.spacing.rightLeft("padding", `${theme.spacing(2)}px`),
-					...theme.typography.variants.navigation.style
-
+					...theme.typography.variants.navigation.style,
 				}
 			}
 		}
 	)
-
-
-	const Link = memo((props: LinkProps) => {
-		const { href, label, onClick, className, classes: classesProp } = props;
-		const { classes, cx } = useStyles()
-
-		return <div
-			onClick={onClick ?? (() => window.location.href = href)}
-			className={cx(classes.root, className)}
-		><Text
-			typo="label 1"
-			className={cx(classes.text, classesProp?.link)}
-		>
-				{label}
-			</Text>
-			<div className={cx(classes.underline, classesProp?.underline)}></div>
-		</div>
-
-	})
 
 	return { Link }
 

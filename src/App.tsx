@@ -4,7 +4,7 @@ import { Home } from "./pages/Home";
 import { GlTemplate } from "gitlanding/GlTemplate";
 import { Header } from "./components/Header";
 import type { HeaderProps } from "./components/Header";
-import { useTranslation } from "./i18n/useTranslation";
+import { useTranslation } from "./i18n";
 import { ThemeProvider } from "./theme";
 import { AppFooter } from "./AppFooter";
 import { Biography } from "./pages/Biography";
@@ -13,14 +13,14 @@ import { Concerts } from "./pages/Concerts";
 import { Legal } from "./pages/Legal";
 import { makeStyles } from "./theme";
 import { ReturnType } from "tsafe";
-
+import { declareComponentKeys } from "i18nifty/declareComponentKeys";
 
 
 export const App = memo(() => {
 
 	const route = useRoute();
 
-	const { t } = useTranslation("App")
+	const { t } = useTranslation({ App })
 
 	const headerLinks = useMemo((): HeaderProps["links"] => {
 		return [
@@ -43,42 +43,47 @@ export const App = memo(() => {
 		]
 	}, [t]);
 
-
 	const { classes } = useStyles({
 		route
 	});
 
-
-
-
 	return (
-		<GlTemplate
-			classes={{
-				"headerWrapper": classes.headerWrapper
-			}}
-			ThemeProvider={ThemeProvider}
-			footer={<AppFooter />}
-			header={<Header classes={{
-				"link": classes.link,
-				"linkUnderline": classes.linkUnderline,
-				"unFoldIcon": classes.unfoldIcon,
-				"darkModeSwitch": classes.darkModeSwitch
-			}} links={headerLinks} />}
-		>
-			{route.name === "home" && <Home />}
-			{route.name === "biography" && <Biography />}
-			{route.name === "futureEvents" && <Concerts />}
-			{route.name === "media" && <Media />}
-			{route.name === "legal" && <Legal />}
+		<ThemeProvider>
+			<GlTemplate
+				classes={{
+					"headerWrapper": classes.headerWrapper,
+				}}
+				footer={<AppFooter />}
+				header={<Header classes={{
+					"link": classes.link,
+					"linkUnderline": classes.linkUnderline,
+					"unFoldIcon": classes.unfoldIcon,
+					"darkModeSwitch": classes.darkModeSwitch
+				}} links={headerLinks} />}
+				body={<div className={classes.bodyWrapper}>
+					{route.name === "home" && <Home />}
+					{route.name === "biography" && <Biography />}
+					{route.name === "futureEvents" && <Concerts />}
+					{route.name === "media" && <Media />}
+					{route.name === "legal" && <Legal />}
 
-		</GlTemplate>
+				</div>}
+				headerOptions={{
+					"position": "top of page",
+					"isRetracted": false
+				}}
+			/>
+		</ThemeProvider>
 	)
 });
 
-const useStyles = makeStyles<{route: ReturnType<typeof useRoute>}>()(
-	(theme, {route}) => ({
+const useStyles = makeStyles<{ route: ReturnType<typeof useRoute> }>()(
+	(theme, { route }) => ({
 		"headerWrapper": {
 			"background": "none",
+			"position": "fixed",
+			"zIndex": 2,
+			"width": "100%"
 		},
 		"link": {
 			"color": route.name === "home" ? theme.colors.palette.light.light : undefined,
@@ -87,23 +92,26 @@ const useStyles = makeStyles<{route: ReturnType<typeof useRoute>}>()(
 			"backgroundColor": route.name === "home" ? theme.colors.palette.light.light : undefined,
 		},
 		"unfoldIcon": {
-				"fill": route.name === "home" ? theme.colors.palette.light.light : undefined
+			"color": route.name === "home" ? theme.colors.palette.light.light : undefined
 		},
 		"darkModeSwitch": {
 			"& svg": {
 				"fill": route.name === "home" ? theme.colors.palette.light.light : undefined
 
 			}
+		},
+		"bodyWrapper": {
+			...theme.spacing.rightLeft("padding", `${theme.paddingRightLeft}px`)
 		}
-
 	})
 )
 
-export declare namespace AppHeader {
-	export type I18nScheme = {
-		home: undefined,
-		media: undefined,
-		futureEvents: undefined,
-		biography: undefined
-	}
-}
+export const { i18n } = declareComponentKeys<
+	| "home"
+	| "media"
+	| "futureEvents"
+	| "biography"
+
+>()({
+	App
+})

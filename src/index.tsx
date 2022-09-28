@@ -1,17 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {App} from "./App";
-import {RouteProvider} from "./router";
-import {I18nProvider} from "./i18n/I18nProvider";
+import { createRoot } from "react-dom/client";
+import { App } from "./App";
+import { RouteProvider } from "./router";
 
-ReactDOM.render(
+
+createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouteProvider>
-      <I18nProvider>
-        <App />
-      </I18nProvider>
+      <App />
     </RouteProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
+  </React.StrictMode>
+)

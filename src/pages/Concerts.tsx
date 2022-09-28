@@ -4,21 +4,22 @@ import { makeStyles, breakpointsValues } from "../theme";
 import { Background } from "../components/Background"
 import { PageHeading } from "../components/PageHeading";
 import bannerJpeg from "../assets/img/concerts/concert-banner.jpeg";
-import { useTranslation } from "../i18n/useTranslation";
-import { useLanguage } from "../i18n/useLanguage";
+import { useTranslation } from "../i18n";
+import { useLang } from "../i18n";
 import { concerts } from "../user/concerts";
 import { EventCardVersion2 } from "../components/EventCardVersion2"
 import { Text } from "../theme";
 import { Divider } from "../components/Divider";
 import { archives } from "../user/archives";
+import { declareComponentKeys } from "i18nifty/declareComponentKeys";
 
 
 
 export const Concerts = memo(() => {
 
 	const { classes, cx } = useStyles();
-	const { t } = useTranslation("Concerts");
-	const { language } = useLanguage();
+	const { t } = useTranslation({ Concerts });
+	const { lang } = useLang();
 
 
 	return (
@@ -56,7 +57,7 @@ export const Concerts = memo(() => {
 						"type": "archives" as const
 					}
 
-				].map(({concerts, type}) => {
+				].map(({ concerts, type }) => {
 
 					return <section className={classes.concerts}>
 						{
@@ -77,13 +78,9 @@ export const Concerts = memo(() => {
 								classes={{
 									"button": classes.button
 								}}
-								{...(() => {
-									if (language === "en" && concert.en !== undefined) {
-										return concert.en
-									}
-
-									return concert.fr
-								})()}
+								{
+									...concert[lang]
+								}
 								link={{
 									"href": concert.linkHref
 								}}
@@ -107,7 +104,7 @@ export const Concerts = memo(() => {
 const useStyles = makeStyles()(
 	theme => ({
 		"root": {
-			"paddingTop": "0px !important"
+			"paddingTop": 0
 		},
 
 		"banner": {
@@ -160,11 +157,10 @@ const useStyles = makeStyles()(
 	})
 )
 
-
-export declare namespace Concerts {
-	export type I18nScheme = {
-		concertsTitle: undefined;
-		concertsSubtitle: undefined;
-		archivesTitle: undefined
-	};
-};
+export const { i18n } = declareComponentKeys<
+	| "concertsTitle"
+	| "concertsSubtitle"
+	| "archivesTitle"
+>()({
+	Concerts
+})

@@ -5,31 +5,32 @@ import { files as webpFiles } from "../generatedWebpExports";
 import { files as jpegFiles } from "../generatedImgExports";
 import { Background } from "../components/Background";
 import { makeStyles, breakpointsValues, Text } from "../theme";
-import { useTranslation } from "../i18n/useTranslation";
+import { useTranslation } from "../i18n";
 import { PageHeading } from "../components/PageHeading";
 import { GlSlider } from "gitlanding/GlSlider";
 import { YouTubeIframe } from "../components/YouTubeIframe";
 import { Button } from "../components/Button";
 import bannerJpeg from "../assets/img/media-banner.jpg"
 import type { ImageSource } from "react-art-gallery/utils/ImageSource";
+import { declareComponentKeys } from "i18nifty";
 
 
 export const Media = memo(() => {
 
-	const { t } = useTranslation("Media");
+	const { t } = useTranslation({ Media });
 
 	const imageSources: ImageSource[][] = useMemo(() => {
 
 		return webpFiles.files.map(({ url }, index) => [
-				{
-					"srcSet": url,
-					"type": "image/webp",
-				},
-				{
-					"srcSet": jpegFiles.files[index].url,
-					"type": "image/jpeg"
-				}
-			]
+			{
+				"srcSet": url,
+				"type": "image/webp",
+			},
+			{
+				"srcSet": jpegFiles.files[index].url,
+				"type": "image/jpeg"
+			}
+		]
 		);
 	}, []);
 
@@ -109,7 +110,7 @@ export const Media = memo(() => {
 const useStyles = makeStyles()(
 	theme => ({
 		"root": {
-			"paddingTop": "0px !important"
+			"paddingTop": 0
 
 		},
 		"banner": {
@@ -185,15 +186,15 @@ const useStyles = makeStyles()(
 		}
 
 	})
-)
+);
 
-export declare namespace Media {
-	export type I18nScheme = {
-		pageTitle: undefined;
-		pageSubTitle: undefined;
-		galleryTitle: undefined;
-		gallerySubtitle: undefined;
-		youtubeButton: undefined;
-		photoCredit: undefined;
-	}
-}
+export const { i18n } = declareComponentKeys<
+	| "pageTitle"
+	| "pageSubTitle"
+	| "galleryTitle"
+	| "gallerySubtitle"
+	| "youtubeButton"
+	| "photoCredit"
+>()({
+	Media
+});

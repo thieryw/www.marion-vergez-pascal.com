@@ -1,8 +1,8 @@
-import {convertImages} from "react-art-gallery/utils/convertImages";
-import {join} from "path";
+import { imageConverter } from "./imageConverter";
+import { join } from "path";
 
 
-convertImages({
+imageConverter({
 	"acceptedFileExtensions": [".jpeg", ".png"],
 	"pathToAssets": join(__dirname, "..", "assets", "img"),
 	"pathToConvertedImages": join(__dirname, "..", "assets", "webp"),
@@ -10,10 +10,11 @@ convertImages({
 	"overrideIfConvertedImagesExit": true
 });
 
-convertImages({
+imageConverter({
 	"acceptedFileExtensions": [".jpeg"],
 	"pathToAssets": join(__dirname, "..", "user", "assets", "news"),
 	"pathToConvertedImages": join(__dirname, "..", "user", "assets", "webp"),
 	"convertTo": "webp",
 	"overrideIfConvertedImagesExit": true
 })
+

@@ -3,9 +3,9 @@ import { memo, useMemo } from "react";
 import { makeStyles, Text } from "../theme";
 import heroPng from "../assets/img/home/hero.png";
 import { breakpointsValues } from "../theme";
-import { useTranslation } from "../i18n/useTranslation";
+import { useTranslation } from "../i18n";
 import { news } from "../user/news";
-import { GlIllustration } from "gitlanding/GlIllustration";
+import { GlVideo } from "gitlanding/utils/GlVideo";
 import { routes } from "../router";
 import decorativeMp4 from "../assets/video/home/decoration.mp4";
 import { Article } from "../components/Article";
@@ -18,30 +18,52 @@ import { YouTubeIframe } from "../components/YouTubeIframe";
 import { CustomLink } from "../components/CustomLink";
 import { motion } from "framer-motion";
 import heroSmallPng from "../assets/img/home/hero-small.png";
-import { scrollToTopOnLinkClick } from "../tools/scrollToTopOnLinkClick";
 import { useCallbackFactory } from "powerhooks/useCallbackFactory";
-import { scrollableDivId } from "gitlanding/GlTemplate";
 import contactImageUrl from "../assets/img/home/contact.jpeg";
 import bioImageUrl from "../assets/img/home/marion-nabil.jpeg";
 import contactImageWebp from "../assets/webp/home/contact.webp"
 import bioImageWebp from "../assets/webp/home/marion-nabil.webp"
-import type { ImageSource } from "gitlanding/tools/ImageSource";
+import type { ImageSource } from "../tools/ImageSource";
 //import { GlSlider, GlReviewSlide } from "gitlanding";
 import { GlSlider } from "gitlanding/GlSlider";
 import { GlReviewSlide } from "gitlanding/GlReviewSlide";
+import { getScrollableParent } from "powerhooks/getScrollableParent";
+import { useStateRef } from "powerhooks/useStateRef";
+import { declareComponentKeys } from "i18nifty/declareComponentKeys";
+
 
 
 export const Home = memo(() => {
 
-	const { t } = useTranslation("Home");
+	const { t } = useTranslation({ Home });
+
+	const ref = useStateRef(null);
+
+	const scrollableParent = useMemo(() => {
+		if (!ref.current) {
+			return;
+		}
+
+		return getScrollableParent({
+			"doReturnElementIfScrollable": true,
+			"element": ref.current
+		})
+
+	}, [ref])
 
 	const onClickFactory = useCallbackFactory((
 		[onClick]: [() => void | undefined]
 	) => {
 
-		scrollToTopOnLinkClick({
-			scrollableDivId,
-			onClick
+		if (scrollableParent === undefined) {
+			return;
+		}
+
+		onClick();
+
+		scrollableParent.scrollTo({
+			"top": 0,
+			"behavior": "auto"
 		})
 
 	})
@@ -61,9 +83,9 @@ export const Home = memo(() => {
 		])
 	}, [])
 
-	const { classes, cx, theme } = useStyles();
+	const { classes, cx, theme, css } = useStyles();
 
-	return <div className={classes.root}>
+	return <div ref={ref} className={classes.root}>
 		<section className={classes.heroSection}>
 			<div className={classes.hero}>
 				<div className={classes.heroTitleLarge}>
@@ -81,15 +103,22 @@ export const Home = memo(() => {
 				"button": classes.button
 			}}
 			imageAltAttribute="news"
-			heading={<div className={classes.newsHeaderWrapper}>
+			/*heading={<div className={classes.newsHeaderWrapper}>
 				<Text className={classes.newsHeading} typo="subtitle">{t("newsHeading")}<span>...</span></Text>
 				<Divider width={9} height={1} />
-			</div>}
+			</div>}*/
+			heading={`${t("newsHeading")}`}
 			//title={t("newsTitle")}
 			//paragraph={t("newsParagraph")}
 			paragraph={
 				<GlSlider
 					autoPlayTimeInterval={4}
+					classes={{
+						"root": css({
+							"paddingLeft": 0,
+							"paddingRight": 0
+						})
+					}}
 					slides={[
 						<GlReviewSlide descriptionMd={t("review1")} signature={t("reviewSignature1")} />,
 						<GlReviewSlide descriptionMd={t("review2")} signature={t("reviewSignature2")} />
@@ -98,15 +127,14 @@ export const Home = memo(() => {
 			}
 			imageUrl={news.imageUrl}
 			imageSources={news.imageSources}
-			/*button={{
-				"href": news.buttonHref ?? routes.futureEvents().link.href,
-				"onClick": news.buttonHref !== undefined ? routes.futureEvents().link.onClick : undefined,
-				"label": t("newsButtonLabel")
-			}}*/
 			imagePosition="right"
 		/>
-		<div>
-			<GlIllustration type="image" url={decorativeMp4} />
+		<div style={{"position": "relative"}}>
+			<GlVideo className={css({"width": "100%"})} sources={[
+				{
+					"src": decorativeMp4
+				}
+			]} />
 		</div>
 		<Article
 			classes={{
@@ -194,8 +222,7 @@ export const Home = memo(() => {
 const useStyles = makeStyles()(
 	(theme) => ({
 		"root": {
-			"paddingTop": "0px !important",
-			...theme.spacing.rightLeft("padding", `${theme.paddingRightLeft}px`)
+			"paddingTop": 0,
 		},
 		"heroSection": {
 			"position": "relative",
@@ -204,7 +231,7 @@ const useStyles = makeStyles()(
 			"left": -theme.paddingRightLeft,
 			"display": "flex",
 			"flexDirection": "column",
-			"backgroundColor": "#030224"
+			"backgroundColor": "#030224",
 
 
 		},
@@ -250,21 +277,10 @@ const useStyles = makeStyles()(
 
 		},
 
-		"newsHeaderWrapper": {
-			"display": "flex",
-			"flexDirection": "column",
-			"alignItems": "center",
-			"marginBottom": theme.spacing(8),
-			"& span": {
-				"color": theme.colors.palette.flamingoPink
-
-			}
+		"pinkDots": {
+			"color": theme.colors.palette.flamingoPink
 		},
 
-		"newsHeading": {
-			"marginBottom": theme.spacing(5)
-
-		},
 
 		"bioTitle": {
 			"& span": {
@@ -275,7 +291,7 @@ const useStyles = makeStyles()(
 
 		"sectionImage": {
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
-				"maxWidth": 500,
+				"maxWidth": 500
 			} : {})
 
 		},
@@ -393,7 +409,6 @@ const { HeroTitle } = (() => {
 
 			},
 			"title": {
-				"fontWeight": 100,
 				"color": theme.colors.palette.flamingoPink,
 				"textAlign": "center",
 				"fontSize": (() => {
@@ -416,7 +431,7 @@ const { HeroTitle } = (() => {
 				"fontWeight": 100,
 				"letterSpacing": theme.spacing(2),
 				"textAlign": "center",
-				"color": "#F7BCF7",
+				"color": theme.colors.palette.flamingoPink,
 				...(theme.windowInnerWidth < breakpointsValues.lg ? {
 					"fontSize": "1rem"
 				} : {})
@@ -429,23 +444,24 @@ const { HeroTitle } = (() => {
 })()
 
 
-export declare namespace Home {
-	export type I18nScheme = {
-		newsHeading: undefined;
-		newsButtonLabel: undefined;
-		bioTitle: undefined;
-		bioParagraph: undefined;
-		bioButtonLabel: undefined;
-		contactTitle: undefined;
-		contactHeading: undefined;
-		contactParagraph: undefined;
-		mediaButton: undefined;
-		review1: undefined;
-		review2: undefined;
-		reviewSignature1: undefined;
-		reviewSignature2: undefined;
+export const { i18n } = declareComponentKeys<
+	| "newsHeading"
+	| "newsButtonLabel"
+	| "bioTitle"
+	| "bioParagraph"
+	| "bioButtonLabel"
+	| "contactTitle"
+	| "contactHeading"
+	| "contactParagraph"
+	| "mediaButton"
+	| "review1"
+	| "review2"
+	| "reviewSignature1"
+	| "reviewSignature2"
+>()({
+	Home
+})
 
-	};
-}
+
 
 

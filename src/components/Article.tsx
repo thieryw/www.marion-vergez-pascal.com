@@ -3,10 +3,10 @@ import type { ReactNode } from "react";
 import { makeStyles, breakpointsValues, Text } from "../theme"
 import { Divider } from "./Divider";
 import type { Link } from "../tools/link";
-import { GlIllustration } from "gitlanding/GlIllustration";
 import { Button } from "../components/Button";
-import { ImageSource } from "gitlanding/tools/ImageSource";
 import Markdown from "react-markdown";
+import type { ImageSource } from "../tools/ImageSource";
+import { GlImage } from "gitlanding/utils/GlImage";
 
 
 export type ArticleProps = {
@@ -63,16 +63,15 @@ export const Article = memo((props: ArticleProps) => {
 				typeof heading === "string" ?
 				<div className={classes.headerWrapper}>
 					<Text className={cx(classes.heading, classesProp?.heading)} typo="subtitle">{heading}</Text>
-					<Divider width={9} height={1} />
+					<Divider className={classes.headingUnderline} width={9} height={1} />
 				</div> :
 				heading
 		}
 		<div className={cx(classes.textAndImageWrapper, classesProp?.textAndImageWrapper)}>
 			<div className={cx(classes.imageWrapper, classesProp?.imageWrapper)}>
-				<GlIllustration
-					type="image"
-					url={imageUrl}
-					imageSources={imageSources}
+				<GlImage
+					src={imageUrl}
+					sources={imageSources}
 					hasShadow={true}
 					className={cx(classes.image, classesProp?.image)}
 					alt={imageAltAttribute}
@@ -137,12 +136,16 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 			"display": "flex",
 			"flexDirection": "column",
 			"alignItems": "center",
-			...theme.spacing.topBottom("padding", `${theme.spacing(8)}px`)
+			...theme.spacing.topBottom("padding", `${theme.spacing(8)}px`),
+			"position": "relative"
 
 		},
 		"heading": {
 			"fontWeight": 100,
-			"marginBottom": theme.spacing(5)
+		},
+		"headingUnderline": {
+			"marginTop": theme.spacing(5),
+
 		},
 		"headerWrapper": {
 			"display": "flex",
@@ -177,8 +180,8 @@ const useStyles = makeStyles<{ imagePosition: "left" | "right" }>()(
 			...(theme.windowInnerWidth >= breakpointsValues.md ? {
 				"minWidth": 400,
 			} : {
-				"maxWidth": 500,
 				"minWidth": "unset",
+				"width": "100%"
 			}),
 
 

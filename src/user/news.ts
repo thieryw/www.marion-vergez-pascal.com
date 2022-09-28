@@ -1,6 +1,6 @@
 import newsImage from "./assets/news/news.jpeg";
 import newsImageWebp from "./assets/webp/news.webp";
-import type { ImageSource } from "gitlanding/tools/ImageSource";
+import { ImageSource } from "../tools/ImageSource";
 
 type NewsProps = {
 	title: string;
