@@ -1,9 +1,9 @@
 import { memo } from "react";
 import { makeStyles, breakpointsValues } from "../theme";
 import ReactMarkdown from "react-markdown";
-import { Button } from "../components/Button";
+import { Button } from "./Button";
 
-export type EventCardPropsVersion2 = {
+export type EventCardProps = {
 	className?: string;
 	classes?: {
 		dateWrapper?: string;
@@ -16,21 +16,22 @@ export type EventCardPropsVersion2 = {
 	date?: string;
 	title: string;
 	description: string;
-	buttonLabel: string;
-	link: {
+	buttonLabel?: string;
+	link?: {
 		href: string;
 		onClick?: () => void;
 	};
 
 };
 
-export const EventCardVersion2 = memo((props: EventCardPropsVersion2) => {
+export const EventCard = memo((props: EventCardProps) => {
 
 	const { buttonLabel, date, link, description, title, className, classes: classesProp } = props;
 
 
 	const {classes, cx} = useStyles({
-		"hasDate": date !== undefined
+		"hasDate": date !== undefined,
+		"hasLink": link !== undefined
 	});
 
 
@@ -50,15 +51,18 @@ export const EventCardVersion2 = memo((props: EventCardPropsVersion2) => {
 			<ReactMarkdown className={cx(classes.description, classesProp?.description)}>{description}</ReactMarkdown>
 		</div>
 
-		<Button className={cx(classes.button, classesProp?.button)} {...link}>{buttonLabel}</Button>
+		{ 
+			<Button className={cx(classes.button, classesProp?.button)} {...link}>{buttonLabel ?? "See More"}</Button>
+		}
+
 
 
 	</div>
 
 });
 
-const useStyles = makeStyles<{hasDate: boolean}>()(
-	(theme, {hasDate}) => ({
+const useStyles = makeStyles<{ hasDate: boolean; hasLink: boolean }>()(
+	(theme, { hasDate, hasLink }) => ({
 		"root": {
 			"display": "flex",
 			"justifyContent": "space-between",
@@ -68,7 +72,7 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 				"flexDirection": "column",
 				"alignItems": "center"
 
-			}: {})
+			} : {})
 		},
 		"dateWrapper": {
 			"padding": theme.spacing(3),
@@ -76,14 +80,14 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 			...(theme.windowInnerWidth < breakpointsValues.lg ? {
 				"width": 200
 
-			}: {}),
+			} : {}),
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"width": 500
-			}: {}),
+			} : {}),
 			...(theme.windowInnerWidth < breakpointsValues.sm ? {
 				"width": 300
 
-			}: {}),
+			} : {}),
 			"backgroundColor": theme.colors.useCases.surfaces.surface2,
 			"display": "flex",
 			"justifyContent": "center",
@@ -101,14 +105,14 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 			...(() => {
 
 				const value = theme.spacing(3)
-				if(hasDate){
-					return { 
+				if (hasDate) {
+					return {
 						...theme.spacing.rightLeft("margin", `${value}px`),
 						"width": 600,
 						...(theme.windowInnerWidth < breakpointsValues["lg+"] ? {
 							"width": 350
 
-						}: {})
+						} : {})
 					}
 				}
 
@@ -118,7 +122,7 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 					"width": 800,
 					...(theme.windowInnerWidth < breakpointsValues["lg+"] ? {
 						"width": 600
-					}: {})
+					} : {})
 				}
 
 			})(),
@@ -126,26 +130,26 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"width": 500,
 				"textAlign": "center",
-				...(()=>{
+				...(() => {
 
 					const value = theme.spacing(4);
 					return {
 						"marginTop": hasDate ? value : undefined,
-						"marginBottom": value,
+						"marginBottom": hasLink ? value : 0,
 
 					}
 
 				})()
 
 
-			}: {
+			} : {
 
 			}),
 
 			...(theme.windowInnerWidth < breakpointsValues.sm ? {
 				"width": 300
 
-			}: {
+			} : {
 
 			})
 
@@ -160,7 +164,11 @@ const useStyles = makeStyles<{hasDate: boolean}>()(
 		},
 		"button": {
 			"alignSelf": "center",
-
+			"opacity": hasLink ? undefined : 0,
+			"pointerEvents": hasLink ? undefined : "none",
+			...(theme.windowInnerWidth < breakpointsValues.md && !hasLink ? {
+				"display": "none"
+			} : {})
 		}
 
 	})

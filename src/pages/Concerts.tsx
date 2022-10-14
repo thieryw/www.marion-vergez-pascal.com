@@ -7,7 +7,7 @@ import bannerJpeg from "../assets/img/concerts/concert-banner.jpeg";
 import { useTranslation } from "../i18n";
 import { useLang } from "../i18n";
 import { concerts } from "../user/concerts";
-import { EventCardVersion2 } from "../components/EventCardVersion2"
+import { EventCard } from "../components/EventCard"
 import { Text } from "../theme";
 import { Divider } from "../components/Divider";
 import { archives } from "../user/archives";
@@ -73,7 +73,7 @@ export const Concerts = memo(() => {
 
 						}
 						{concerts.map(concert =>
-							<EventCardVersion2
+							<EventCard
 								className={classes.eventCard}
 								classes={{
 									"button": classes.button
@@ -81,9 +81,7 @@ export const Concerts = memo(() => {
 								{
 									...concert[lang]
 								}
-								link={{
-									"href": concert.linkHref
-								}}
+								link={concert.linkHref !== undefined ? {"href": concert.linkHref} : undefined}
 								buttonLabel="EN SAVOIR PLUS"
 								key={concert.fr.title}
 							/>
