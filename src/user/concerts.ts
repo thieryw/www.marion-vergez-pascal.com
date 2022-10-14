@@ -1,5 +1,5 @@
-import type { EventCardPropsVersion2 } from "../components/EventCardVersion2";
-export type ConcertProps = Omit<EventCardPropsVersion2, 
+import type { EventCardProps } from "../components/EventCard";
+export type ConcertProps = Omit<EventCardProps, 
 	"className" |
 	"buttonLabel" |
 	"link"
@@ -8,80 +8,9 @@ export type ConcertProps = Omit<EventCardPropsVersion2,
 export const concerts: {
 	fr: ConcertProps;
 	en?: ConcertProps;
-	linkHref: string;
+	linkHref?: string;
 }[] = [
-		{
-			"fr": {
-				"date": "27 août au 10 Septembre",
-				"title": "Académie Ravel de St-Jean de Luz",
-				"description": "Masterclasses publiques quotidiennes avec Karine Deshayes, Jean-Philippe Lafont et Sabien Vatin"
-			},
-			"linkHref": ""
-		},
-		{
-			"fr": {
-				"date": "31 août 2022 à 21h",
-				"title": "Festival Paséo",
-				"description": "Église St Esprit de Bayonne"
-			},
-			"linkHref": "https://festivalravel.fr/academie/"
-		},
-		{
-			"fr": {
-				"date": "2 septembre 2022 à 21h",
-				"title": "centre social Sagardian de St Jean de Luz",
-				"description": ""
-			},
-			"linkHref": "https://festivalravel.fr/academie/"
-		},
-		{
-			"fr": {
-				"date": "3 septembre 2022 à 12h",
-				"title": "Gymnase Urdazuri",
-				"description": ""
-			},
-			"linkHref": "https://festivalravel.fr/academie/"
-		},
-		{
-			"fr": {
-				"date": "4 septembre 2022, à 12h, 15h & 18h",
-				"title": "Villa Arnagz d’Arcangues",
-				"description": ""
-			},
-			"linkHref": "https://festivalravel.fr/academie/"
-		},
-		{
-			"fr": {
-				"date": "5 septembre 2022 à 21h",
-				"title": "Église St Esprit du Festival Paséo de Biarritz",
-				"description": ""
-			},
-			"linkHref": "https://festivalravel.fr/academie/"
-		},
-		{
-			"fr": {
-				"date": "7 septembre 2022 à 21h",
-				"title": "Église St Esprit",
-				"description": "Festival du Paséo de Biarritz"
-			},
-			"linkHref": "https://festivalravel.fr/academie/"
-		},
-		{
-			"fr": {
-				"date": "10 septembre de 14h à 17h",
-				"title": "Concert et remise des prix",
-				"description": "Chapiteau Hariet Baita de St Jean de Luz"
-			},
-			"linkHref": "https://festivalravel.fr/academie/"
-		},
-		{
-			"fr": {
-				"date": "16 AU 18 SEPTEMBRE",
-				"title": "Au fil de l'eau",
-				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, harpe, et casques à Obernai`
-			},
-			"linkHref": ""
-		},
+
 		{
 			"fr": {
 				"date": "Samedi 5 novembre à 19h00",
@@ -135,7 +64,7 @@ Thomas Tacquet Pianiste
 
 Shanee Krön comédienne`
 			},
-			"linkHref": ""
+			
 		},
 		{
 			"fr": {
@@ -145,15 +74,39 @@ Shanee Krön comédienne`
 
 Chœur et orchestre de St Germain en Laye
 
-Direction Marc Korovitch 
+Direction Alexandre Korovitch 
 				`
 
 			},
-			"linkHref": ""
+			
 		},
 		{
 			"fr": {
-				"date": "Mardi 13 décembre 20h30",
+				"date": "Jeudi 8 décembre à 21 h à l'église Saint-Eustache",
+				"title": "Alto solo du Requiem de Mozart",
+				"description": `Avec le choeur et l’orchestre de l’académie du Palais Royal.
+
+Direction Jean-Philippe Sarcos.
+				`
+
+			},
+			
+		},
+		{
+			"fr": {
+				"date": "Dimanche 11 Décembre 2022 à 15 h à l'église Saint-François-de-Sales",
+				"title": "Alto solo du Requiem de Mozart",
+				"description": `Avec le choeur et l’orchestre de l’académie du Palais Royal.
+
+Direction Jean-Philippe Sarcos.
+				`
+
+			},
+			
+		},
+		{
+			"fr": {
+				"date": "Mardi 13 décembre 2022 à 20h30",
 				"title": "L’isola Disabitata de Haydn, Costanza",
 				"description": `Théâtre Traversière (Paris 12ème)
 
@@ -168,15 +121,41 @@ Vincent Laissy, direction musicale
 Le studi’opera
 				`
 			},
-			"linkHref": ""
+			
+		},
+		{
+			"fr": {
+				"date": "Vendredi 16 Décembre 2022 à 21 h à l'église de la Madeleine",
+				"title": "Alto solo du Requiem de Mozart",
+				"description": `Avec le choeur et l’orchestre de l’académie du Palais Royal.
+
+Direction Jean-Philippe Sarcos.
+				`
+
+			},
+			
+		},
+		{
+			"fr": {
+				"date": "Samedi 7 Janvier 2023, 20h00",
+				"title": "Récital lyrique avec Margaux Poguet et Ayano Kamei au piano",
+				"description": `Salle du concert des Carmes de La Rochefoucault, 
+dans le cadre des concerts en diffusion de l’académie Ravel
+				`
+
+			},
+			
 		},
 		{
 			"fr": {
 				"date": "7 Mars 14h30, les 8 Mars 10 Mars & 11 Mars à 20h",
-				"title": "Didon et Enée de Purcell. Rôle de l’Echanteress",
+				"title": "Didon et Enée de Purcell. Rôle de l’Enchanteresse",
 				"description": `Direction : Leonardo Garcia Alarcón;
+
 Mise en scène : Marc Lainé;
+
 Orchestre du Conservatoire de Paris;
+
 Coproduction Conservatoire National de Paris et Philarmonie de Paris 
 				`
 
@@ -214,7 +193,7 @@ Collectif Io
 				`
 
 			},
-			"linkHref": ""
+			
 		},
 
 	]

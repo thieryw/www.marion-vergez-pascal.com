@@ -4,7 +4,7 @@ import type { ConcertProps } from "./concerts";
 export const archives: {
     fr: ConcertProps;
     en?: ConcertProps;
-    linkHref: string;
+    linkHref?: string;
 
 
 }[] = [
@@ -92,7 +92,7 @@ Direction musicale : Yann Molénat.
 Salle Fleuret du Conservatoire National Supérieur de Paris.
 				`,
 			},
-			"linkHref": ""
+			
 		},
 		{
 			"fr": {
@@ -162,7 +162,7 @@ Alexandre Korovitch, direction.
 Direction Henri Chalet
 				`,
 			},
-			"linkHref": ""
+			
 		},
 		{
 			"fr": {
@@ -172,7 +172,7 @@ Direction Henri Chalet
 Simon Adda Reyss, piano.
 				`,
 			},
-			"linkHref": ""
+			
 		},
 		{
 			"fr": {
@@ -222,5 +222,77 @@ Adrien Fournaison, baryton
 				`
 			},
 			"linkHref": "https://grandestival.fr/"
+		},
+		{
+			"fr": {
+				"date": "27 août au 10 Septembre",
+				"title": "Académie Ravel de St-Jean de Luz",
+				"description": "Masterclasses publiques quotidiennes avec Karine Deshayes, Jean-Philippe Lafont et Sabien Vatin"
+			},
+			
+		},
+		{
+			"fr": {
+				"date": "31 août 2022 à 21h",
+				"title": "Festival Paséo",
+				"description": "Église St Esprit de Bayonne"
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "2 septembre 2022 à 21h",
+				"title": "centre social Sagardian de St Jean de Luz",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "3 septembre 2022 à 12h",
+				"title": "Gymnase Urdazuri",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "4 septembre 2022, à 12h, 15h & 18h",
+				"title": "Villa Arnagz d’Arcangues",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "5 septembre 2022 à 21h",
+				"title": "Église St Esprit du Festival Paséo de Biarritz",
+				"description": ""
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "7 septembre 2022 à 21h",
+				"title": "Église St Esprit",
+				"description": "Festival du Paséo de Biarritz"
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "10 septembre de 14h à 17h",
+				"title": "Concert et remise des prix",
+				"description": "Chapiteau Hariet Baita de St Jean de Luz"
+			},
+			"linkHref": "https://festivalravel.fr/academie/"
+		},
+		{
+			"fr": {
+				"date": "16 AU 18 SEPTEMBRE",
+				"title": "Au fil de l'eau",
+				"description": `Création sonore de Thomas N’guyen pour mezzo-soprano, harpe, et casques à Obernai`
+			},
+			
 		},
 ]
