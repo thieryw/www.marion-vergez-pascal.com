@@ -114,6 +114,10 @@ Contes d’Hoffmann d’Offenbach dans une série de concerts Jeunes Chanteurs e
 Marion fait partie du **Quatuor Bonelli**, ensemble professionnel créé en 2016, 
 et qui défend le répertoire a cappella. Le Quatuor Bonelli a bénéficié d’un 
 programme tremplin pour jeunes ensembles vocaux à la **Cité de la Voix de Vézelay** en juillet 2021.
+
+En août / septembre 2022, Marion a été lauréate de l’académie Ravel 
+( masterclasses avec  Jean-Philippe Lafont, Karine Deshayes, et Sabine Vatin) 
+et a obtenu une bourse du fond de dotation Dany Pouchucq.
             `,
 
 				"interpretation": "Airs étudiés / interprétés en concert ou auditions",
