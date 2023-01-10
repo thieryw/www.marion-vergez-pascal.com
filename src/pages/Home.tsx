@@ -121,7 +121,8 @@ export const Home = memo(() => {
 					}}
 					slides={[
 						<GlReviewSlide descriptionMd={t("review1")} signature={t("reviewSignature1")} />,
-						<GlReviewSlide descriptionMd={t("review2")} signature={t("reviewSignature2")} />
+						<GlReviewSlide descriptionMd={t("review2")} signature={t("reviewSignature2")} />,
+						<GlReviewSlide descriptionMd={t("review3")} signature={t("reviewSignature3")} />
 					]}
 				/>
 			}
@@ -456,8 +457,10 @@ export const { i18n } = declareComponentKeys<
 	| "mediaButton"
 	| "review1"
 	| "review2"
+	| "review3"
 	| "reviewSignature1"
 	| "reviewSignature2"
+	| "reviewSignature3"
 >()({
 	Home
 })

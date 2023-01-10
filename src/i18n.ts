@@ -36,8 +36,10 @@ export const {
 			"Home": {
 				"review1": "Chez les mezzo-sopranos, Marion Vergez-Pascal montre un timbre large et rond dans ses interprétations d’Annio et de Constance, inquiète pour son époux. Une vraie puissance se dégage même dans les ensembles, où elle tire son épingle du jeu en gardant un timbre clair et en usant de ses résonateurs.",
 				"review2": "L’écrin accoustique et le décor romantique du lieu répondent tout à fait au programme qui distille airs et ensembles extraits d’opéras du XIXe siècle français . Gounod, Bizet, Offenbach mais aussi Messager (...) sont à la fête  par les voix du ténor Kévin Amiel, ardemment lancé (...), du baryton basse efficace Adrien Fournaison, et de la mezzo de bel envol Marion Vergez-Pascal.",
+				"review3": " Sur scène enfin, les solistes rivalisent d'enthousiasme et constituent de belles découvertes : la plénitude vocale de Marion Vergez-Pascal s'accorde parfaitement au timbre clair et à l'expressivité du ténor Jordan Mouaïssia […]. Encore mal connue, L'isola disabitata ainsi servie n'a pas manqué de convaincre !",
 				"reviewSignature1": "Ôlyrix critique du spectacle L’affaire Clemenza à la Seine Musicale en juin 2021",
 				"reviewSignature2": "Scènes Magazine critique du spectacle Deux hommes et une femme, Novembre 2021",
+				"reviewSignature3": "Olyrix, critique du spectacle L'isola disabitata - Paris (Théâtre Traversière) le 13/12/2022",
 				"newsHeading": "ACTUALITÉS",
 				"newsButtonLabel": "Voir Plus",
 				"bioTitle": "Qui suis-je",
@@ -118,6 +120,9 @@ programme tremplin pour jeunes ensembles vocaux à la **Cité de la Voix de Véz
 En août / septembre 2022, Marion a été lauréate de l’académie Ravel 
 ( masterclasses avec  Jean-Philippe Lafont, Karine Deshayes, et Sabine Vatin) 
 et a obtenu une bourse du fond de dotation Dany Pouchucq.
+
+En Novembre 2022, Marion a remporté le premier prix de la compétition 
+internationale Triomphe de l’Art à Bruxelles.
             `,
 
 				"interpretation": "Airs étudiés / interprétés en concert ou auditions",

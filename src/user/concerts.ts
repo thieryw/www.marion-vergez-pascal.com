@@ -13,141 +13,6 @@ export const concerts: {
 
 		{
 			"fr": {
-				"date": "Samedi 5 novembre à 19h00",
-				"title": "Concert au Stephen Vernon Studio de Dublin (Royal Irish Academy of Music)",
-				"description": `Open your Eyes ; (Iain Burnside - RIAM) en coproduction avec le CNSM de Paris, la Royal Irish Academy of Music, la Guildhall School of Music and Drama of London, et le Schloss Leopoldskron of Salzburg.
-Programme de mélodies et lieder (Chausson, Mahler et Schubert) 
-				`
-
-			},
-			"linkHref": "https://www.riam.ie/news/iain-burnside-open-your-eyes-and-tell-me-what-you-see"
-		},
-		{
-			"fr": {
-				"date": "Samedi 7 novembre à 18h00",
-				"title": "Concert au Milton Court Concert Hall (Guildhall School of Music and Drama)",
-				"description": `Open your Eyes ; (Iain Burnside - RIAM) en coproduction avec le CNSM de Paris, la Royal Irish Academy of Music, la Guildhall School of Music and Drama of London, et le Schloss Leopoldskron of Salzburg.
-Programme de mélodies et lieder (Chausson, Mahler et Schubert) 
-				`
-			},
-			"linkHref": "https://www.riam.ie/news/iain-burnside-open-your-eyes-and-tell-me-what-you-see"
-		},
-		{
-			"fr": {
-				"date": "Samedi 9 novembre (heure à déterminer)",
-				"title": "Concert à l’ambassade d’Irlande à Paris",
-				"description": `Open your Eyes ; (Iain Burnside - RIAM) en coproduction avec le CNSM de Paris, la Royal Irish Academy of Music, la Guildhall School of Music and Drama of London, et le Schloss Leopoldskron of Salzburg.
-Programme de mélodies et lieder (Chausson, Mahler et Schubert) 
-				`
-			},
-			"linkHref": "https://www.riam.ie/news/iain-burnside-open-your-eyes-and-tell-me-what-you-see"
-		},
-		{
-			"fr": {
-				"date": "Samedi 11 novembre à 19h30",
-				"title": "Concert au Schloss Leopoldskron, Salzburg",
-				"description": `Open your Eyes ; (Iain Burnside - RIAM) en coproduction avec le CNSM de Paris, la Royal Irish Academy of Music, la Guildhall School of Music and Drama of London, et le Schloss Leopoldskron of Salzburg.
-Programme de mélodies et lieder (Chausson, Mahler et Schubert) 
-				`
-			},
-			"linkHref": "https://www.riam.ie/news/iain-burnside-open-your-eyes-and-tell-me-what-you-see"
-		},
-		{
-			"fr": {
-				"date": "19 novembre 2022",
-				"title": "Concert autour de la vie de Rosa Bonheur",
-				"description": `château de Fontainebleau
-
-Kaëlig Boché, ténor
-
-Thomas Tacquet Pianiste
-
-Shanee Krön comédienne`
-			},
-			
-		},
-		{
-			"fr": {
-				"date": "Samedi 3. Décembre 20h30 & Dimanche 4 décembre 16h00",
-				"title": "Le Messie de Haendel",
-				"description": `Mezzo-soprano solo
-
-Chœur et orchestre de St Germain en Laye
-
-Direction Alexandre Korovitch 
-				`
-
-			},
-			
-		},
-		{
-			"fr": {
-				"date": "Jeudi 8 décembre à 21 h à l'église Saint-Eustache",
-				"title": "Alto solo du Requiem de Mozart",
-				"description": `Avec le choeur et l’orchestre de l’académie du Palais Royal.
-
-Direction Jean-Philippe Sarcos.
-				`
-
-			},
-			
-		},
-		{
-			"fr": {
-				"date": "Dimanche 11 Décembre 2022 à 15 h à l'église Saint-François-de-Sales",
-				"title": "Alto solo du Requiem de Mozart",
-				"description": `Avec le choeur et l’orchestre de l’académie du Palais Royal.
-
-Direction Jean-Philippe Sarcos.
-				`
-
-			},
-			
-		},
-		{
-			"fr": {
-				"date": "Mardi 13 décembre 2022 à 20h30",
-				"title": "L’isola Disabitata de Haydn, Costanza",
-				"description": `Théâtre Traversière (Paris 12ème)
-
-Lisa Chaïb, Silvia
-
-Jordan Mouiassia, Gernando
-
-Olivier Cesarini, Enrico
-
-Vincent Laissy, direction musicale 
-
-Le studi’opera
-				`
-			},
-			
-		},
-		{
-			"fr": {
-				"date": "Vendredi 16 Décembre 2022 à 21 h à l'église de la Madeleine",
-				"title": "Alto solo du Requiem de Mozart",
-				"description": `Avec le choeur et l’orchestre de l’académie du Palais Royal.
-
-Direction Jean-Philippe Sarcos.
-				`
-
-			},
-			
-		},
-		{
-			"fr": {
-				"date": "Samedi 7 Janvier 2023, 20h00",
-				"title": "Récital lyrique avec Margaux Poguet et Ayano Kamei au piano",
-				"description": `Salle du concert des Carmes de La Rochefoucault, 
-dans le cadre des concerts en diffusion de l’académie Ravel
-				`
-
-			},
-			
-		},
-		{
-			"fr": {
 				"date": "7 Mars 14h30, les 8 Mars 10 Mars & 11 Mars à 20h",
 				"title": "Didon et Enée de Purcell. Rôle de l’Enchanteresse",
 				"description": `Direction : Leonardo Garcia Alarcón;
@@ -194,6 +59,41 @@ Collectif Io
 
 			},
 			
+		},
+		{
+			"fr": {
+				"date": "Jeudi 2 Février 20 h 00",
+				"title": "Cathédrale St Louis des Invalides",
+				"description": `Concert du gouverneur militaire de Paris.
+
+Mezzo-Soprano solo du Dixit Dominus Haendel.
+
+Ensemble vocal de l’Ecole polytechnique.
+Orchestre des Troupes de Marine (dir. Grégoire Michaud)
+
+				`
+
+			},
+			"linkHref": "https://www.helloasso.com/associations/association-pour-le-developpement-des-uvres-d-entraide-dans-l-armee-ado/evenements/concert-du-gouverneur-militaire-de-paris-2-fevrier-2023"
+		},
+		{
+			"fr": {
+				"title": `Samedi 3 Juin 2023 à 20h00 Espace St Jean de Melun.
+
+Dimanche 18 Juin 2023 à 17h00 Collégiale  de Provins.
+
+Samedi 24 juin à 16h30 Cathédrale  de Sens.
+
+				`,
+				"description": `Mezzo-soprano solo du Stabat Mater de Dvořák
+				
+Soprano : Armelle Debos.
+
+Chœur Marc-Antoine Charpentier, la Chorale du Montois et du Provinois et l’Orchestre Symphonique en Résonnance (dir. Frédéric Baudry)
+				`
+
+			},
+			"linkHref": "https://culturetvous.fr/informations-transversales/agenda/stabat-mater-danton-dvorak-4603"
 		},
 
 	]
