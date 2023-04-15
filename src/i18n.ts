@@ -37,9 +37,11 @@ export const {
 				"review1": "Chez les mezzo-sopranos, Marion Vergez-Pascal montre un timbre large et rond dans ses interprétations d’Annio et de Constance, inquiète pour son époux. Une vraie puissance se dégage même dans les ensembles, où elle tire son épingle du jeu en gardant un timbre clair et en usant de ses résonateurs.",
 				"review2": "L’écrin accoustique et le décor romantique du lieu répondent tout à fait au programme qui distille airs et ensembles extraits d’opéras du XIXe siècle français . Gounod, Bizet, Offenbach mais aussi Messager (...) sont à la fête  par les voix du ténor Kévin Amiel, ardemment lancé (...), du baryton basse efficace Adrien Fournaison, et de la mezzo de bel envol Marion Vergez-Pascal.",
 				"review3": " Sur scène enfin, les solistes rivalisent d'enthousiasme et constituent de belles découvertes : la plénitude vocale de Marion Vergez-Pascal s'accorde parfaitement au timbre clair et à l'expressivité du ténor Jordan Mouaïssia […]. Encore mal connue, L'isola disabitata ainsi servie n'a pas manqué de convaincre !",
+				"review4": "(…) Le tableau des sorcières à l’acte II était particulièrement réussi et on oubliait facilement leur grotte tant le désir de nuire de ces Sœurs du Destin, deux grands échalas au costume d’alguazil, était perceptible dans l’ombre du dortoir. La grande réussite de cette production, c’est son plateau vocal et sa distribution, l’énergie ou l’émotion que García Alarcón insuffle à cet ensemble, aussi bien dans le Prologue que dans l’opéra, et l’engagement total de ces jeunes acteurs issus des classes du CNSM. Je ne puis les citer tous mais je distinguerai Marion Vergez-Pascal, mezzo-soprano, Éole et Enchanteresse (…)",
 				"reviewSignature1": "Ôlyrix critique du spectacle L’affaire Clemenza à la Seine Musicale en juin 2021",
 				"reviewSignature2": "Scènes Magazine critique du spectacle Deux hommes et une femme, Novembre 2021",
 				"reviewSignature3": "Olyrix, critique du spectacle L'isola disabitata - Paris (Théâtre Traversière) le 13/12/2022",
+				"reviewSignature4": "Première Loge Opera , à propos de Didon et Enée de Purcell au Conservatoire de Paris en mars 2023",
 				"newsHeading": "ACTUALITÉS",
 				"newsButtonLabel": "Voir Plus",
 				"bioTitle": "Qui suis-je",
@@ -123,6 +125,15 @@ et a obtenu une bourse du fond de dotation Dany Pouchucq.
 
 En Novembre 2022, Marion a remporté le premier prix de la compétition 
 internationale Triomphe de l’Art à Bruxelles.
+
+Elle débutera en septembre 2023 une collaboration avec l’Opéra Comique 
+dans le cadre de l’académie Favart et participera à cet titre à de 
+nombreux concerts et petits formats de l’académie. 
+En parallèle, elle enregistrera son premier CD de 
+mélodies espagnoles avec le Label Mirare et avec le 
+soutien du mécène Patrick Petit.
+Marion est soutenue par la fondation Meyer, 
+et est lauréate de la bourse « C’est vous l’avenir ! » de la Société Générale.
             `,
 
 				"interpretation": "Airs étudiés / interprétés en concert ou auditions",
@@ -152,7 +163,7 @@ internationale Triomphe de l’Art à Bruxelles.
 
 			},
 			"Concerts": {
-				"concertsTitle": "concerts",
+				"concertsTitle": "CONCERTS",
 				"concertsSubtitle": "PROCHAINS CONCERTS",
 				"archivesTitle": "ARCHIVES"
 			},

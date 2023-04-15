@@ -100,7 +100,8 @@ export const Home = memo(() => {
 		<Article
 			classes={{
 				"image": classes.sectionImage,
-				"button": classes.button
+				"button": classes.button,
+				"paragraph": classes.slider
 			}}
 			imageAltAttribute="news"
 			/*heading={<div className={classes.newsHeaderWrapper}>
@@ -117,12 +118,13 @@ export const Home = memo(() => {
 						"root": css({
 							"paddingLeft": 0,
 							"paddingRight": 0
-						})
+						}),
 					}}
 					slides={[
-						<GlReviewSlide descriptionMd={t("review1")} signature={t("reviewSignature1")} />,
+						<GlReviewSlide descriptionMd={t("review4")} signature={t("reviewSignature4")} />,
+						<GlReviewSlide descriptionMd={t("review3")} signature={t("reviewSignature3")} />,
 						<GlReviewSlide descriptionMd={t("review2")} signature={t("reviewSignature2")} />,
-						<GlReviewSlide descriptionMd={t("review3")} signature={t("reviewSignature3")} />
+						<GlReviewSlide descriptionMd={t("review1")} signature={t("reviewSignature1")} />
 					]}
 				/>
 			}
@@ -319,6 +321,17 @@ const useStyles = makeStyles()(
 
 
 		},
+		"slider": {
+			...theme.windowInnerWidth < breakpointsValues.md ? {
+			} : {
+				"maxWidth": "33vw"
+			},
+			...theme.windowInnerWidth < breakpointsValues.sm ? {
+				"maxWidth": "90vw"
+
+			} : {}
+
+		},
 
 		"contactSocialMedia": {
 			"display": "flex",
@@ -458,9 +471,11 @@ export const { i18n } = declareComponentKeys<
 	| "review1"
 	| "review2"
 	| "review3"
+	| "review4"
 	| "reviewSignature1"
 	| "reviewSignature2"
 	| "reviewSignature3"
+	| "reviewSignature4"
 >()({
 	Home
 })
