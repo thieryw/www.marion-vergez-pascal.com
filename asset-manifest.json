@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.js": "/static/js/main.fd748641.js",
+    "main.js": "/static/js/main.04042e57.js",
     "static/media/decoration.mp4": "/static/media/decoration.d853bbbd7ce930ffbcdd.mp4",
     "static/media/0.94-.jpeg": "/static/media/0.94-.a83904901f5feb1074eb.jpeg",
     "static/media/0.96-.jpeg": "/static/media/0.96-.0ba716069652a77faa60.jpeg",
+    "static/media/0.86-.jpeg": "/static/media/0.86-.b32ec4c328518e502a55.jpeg",
     "static/media/0.92-.jpeg": "/static/media/0.92-.50d662fa11cecaab70aa.jpeg",
+    "static/media/0.82-.jpeg": "/static/media/0.82-.9b811c65318746142bbd.jpeg",
+    "static/media/0.84-.jpeg": "/static/media/0.84-.8c6c41ece187a0449e03.jpeg",
+    "static/media/0.83-.jpeg": "/static/media/0.83-.6e7586ebfbcee685b959.jpeg",
     "static/media/9-bonnelie.jpeg": "/static/media/9-bonnelie.df38f25560772225737a.jpeg",
     "static/media/9-bonnelie.webp": "/static/media/9-bonnelie.72b86ff0cb55d3902f22.webp",
     "static/media/0.96-.webp": "/static/media/0.96-.5c1fa7f9920e4a4c9d43.webp",
@@ -21,9 +25,12 @@
     "static/media/0.94-.webp": "/static/media/0.94-.266f4a8aff6828052dd9.webp",
     "static/media/hero.png": "/static/media/hero.1fd000c7514e7e66b4d0.png",
     "static/media/12-.jpeg": "/static/media/12-.cb6a3d76866a0b465dcd.jpeg",
+    "static/media/0.86-.webp": "/static/media/0.86-.c0c2d4cbc8cbda161893.webp",
+    "static/media/0.82-.webp": "/static/media/0.82-.00ed2852e911a70989d1.webp",
+    "static/media/0.84-.webp": "/static/media/0.84-.b04f5ac254f7117c4ba6.webp",
     "static/media/0.87-.jpeg": "/static/media/0.87-.92165069d486a6c78599.jpeg",
     "static/media/8-news.jpeg": "/static/media/8-news.24ddba06872cc6f3c674.jpeg",
-    "static/media/news.jpeg": "/static/media/news.24ddba06872cc6f3c674.jpeg",
+    "static/media/0.83-.webp": "/static/media/0.83-.8173ea09d5669dd88421.webp",
     "static/media/0.93-.webp": "/static/media/0.93-.6ab1c5160135c398bbce.webp",
     "static/media/0.98-.jpeg": "/static/media/0.98-.44e027d86d1ec7c00103.jpeg",
     "static/media/hero-small.png": "/static/media/hero-small.45b2140b17d9f307fb36.png",
@@ -50,6 +57,7 @@
     "static/media/7-marion-soliste.webp": "/static/media/7-marion-soliste.5faa3577cf3252346952.webp",
     "static/media/14-.webp": "/static/media/14-.6acb8bb422e500aa2b7d.webp",
     "static/media/0.87-.webp": "/static/media/0.87-.7b8ad9f7c2e210492a1e.webp",
+    "static/media/news.jpeg": "/static/media/news.42725a417463f1141d95.jpeg",
     "static/media/15-.jpeg": "/static/media/15-.3de7279855b6f9a31acd.jpeg",
     "static/media/0.91-.webp": "/static/media/0.91-.565810d31f945f24a271.webp",
     "static/media/0.89-.webp": "/static/media/0.89-.b046a837d2fdeab45317.webp",
@@ -60,6 +68,8 @@
     "static/media/11-.webp": "/static/media/11-.684f961ff5e38dd6cc11.webp",
     "static/media/media-banner.jpg": "/static/media/media-banner.1fef0e570d4c982a8d47.jpg",
     "static/media/5-bio-banner.webp": "/static/media/5-bio-banner.4a997a6bd6727c4ee76c.webp",
+    "static/media/news.webp": "/static/media/news.37c89d8068e717cf12af.webp",
+    "static/media/0.85-.jpeg": "/static/media/0.85-.ddf3d3257688dafd7f01.jpeg",
     "static/media/0.95-.webp": "/static/media/0.95-.153386ba772480186b28.webp",
     "static/media/19-.webp": "/static/media/19-.e546c53863c174beafee.webp",
     "static/media/2.5-bio-portrait.webp": "/static/media/2.5-bio-portrait.f7e14ed08ef8bb979ccc.webp",
@@ -68,7 +78,6 @@
     "static/media/concert-banner.jpeg": "/static/media/concert-banner.fea7d3b91407aca1ce59.jpeg",
     "static/media/17-.jpeg": "/static/media/17-.13ef37ea5aad4b2fabfa.jpeg",
     "static/media/8-news.webp": "/static/media/8-news.ea21e51692229d9f9c18.webp",
-    "static/media/news.webp": "/static/media/news.ea21e51692229d9f9c18.webp",
     "static/media/0.90-.webp": "/static/media/0.90-.ae01d329e4ec716b9a3d.webp",
     "static/media/4-hero.jpeg": "/static/media/4-hero.c54060acf71132a10c62.jpeg",
     "static/media/18-.jpeg": "/static/media/18-.4900370e2a09a15394be.jpeg",
@@ -78,6 +87,7 @@
     "static/media/1-profil-marion.jpeg": "/static/media/1-profil-marion.d93dff25cebb898fc75f.jpeg",
     "static/media/3-contact.webp": "/static/media/3-contact.7e3ad41a57a18d06c3c4.webp",
     "static/media/contact.webp": "/static/media/contact.7e3ad41a57a18d06c3c4.webp",
+    "static/media/0.85-.webp": "/static/media/0.85-.eff7e296c8987ed0c598.webp",
     "static/media/6-marion-nabil.webp": "/static/media/6-marion-nabil.2d84919e62a050482f28.webp",
     "static/media/marion-nabil.webp": "/static/media/marion-nabil.2d84919e62a050482f28.webp",
     "static/media/17-.webp": "/static/media/17-.d1623f1f32b64a981c41.webp",
@@ -90,9 +100,9 @@
     "static/media/cancel.svg": "/static/media/cancel.da5c42223be72e07b42078ba244d26c0.svg",
     "static/media/next.svg": "/static/media/next.2dc7a76f28f4feac65e5d1d0b70e240b.svg",
     "static/media/facebook.svg": "/static/media/facebook.d1accecba2e811e519317b824c285acb.svg",
-    "main.fd748641.js.map": "/static/js/main.fd748641.js.map"
+    "main.04042e57.js.map": "/static/js/main.04042e57.js.map"
   },
   "entrypoints": [
-    "static/js/main.fd748641.js"
+    "static/js/main.04042e57.js"
   ]
 }
