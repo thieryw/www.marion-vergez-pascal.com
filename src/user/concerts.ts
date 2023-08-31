@@ -13,90 +13,12 @@ export const concerts: {
 
 		{
 			"fr": {
-				"date": "27,28 à 20h et 29 avril 2023 à 18h",
-				"title": " Mezzo-soprano du Requiem de Mozart",
-				"description": `Chœur et Orchestre de Pau Pays de Béarn (Oppb)
-				
-Armelle Khourdoïan, Soprano\n
-Marion Vergez-Pascal, Alto\n
-Pierre-Antoine Chaumien, Ténor\n
-Matthieu Lécroart, Baryton\n
-Pascale Verdier, Chœur OPPB\n
-Direction : Fayçal Karoui 
-				`
-
+				"date": "1 septembre 2023",
+				"title": "Nuits d'été de Berlioz, avec Karine Deshayes",
+				"description": "Festival Ravel, Orchestre OPPB direction Fayçal Karoui, théâtre de Bayonne"
 			},
-			"linkHref": "https://www.oppb.fr/armelle-khourdoian-avril-2023/"
-		},
-		{
-			"fr": {
-				"date": "22 Juin 2023",
-				"title": "Au fil de l'eau",
-				"description": `Opéra de Reims
+			"linkHref": "https://festivalravel.fr/evenements/orchestre-de-pau-pays-de-bearn-karine-deshayes-mezzo-soprano-marion-vergez-pascal-mezzo-soprano-faycal-karoui-direction/"
 
-Annabelle Jarre, harpe
-
-Thomas N’guyen, composition et direction musicale 
-
-Collectif Io	
-				`
-
-			},
-			
-		},
-		{
-			"fr": {
-				"title": `Samedi 3 Juin 2023 à 20h00 Espace St Jean de Melun.
-
-Dimanche 18 Juin 2023 à 17h00 Collégiale  de Provins.
-
-Samedi 24 juin à 16h30 Cathédrale  de Sens.
-
-				`,
-				"description": `Mezzo-soprano solo du Stabat Mater de Dvořák
-				
-Soprano : Armelle Debos.
-
-Chœur Marc-Antoine Charpentier, la Chorale du Montois et du Provinois et l’Orchestre Symphonique en Résonnance (dir. Frédéric Baudry)
-				`
-
-			},
-			"linkHref": "https://culturetvous.fr/informations-transversales/agenda/stabat-mater-danton-dvorak-4603"
-		},
-		{
-			"fr": {
-				"date": "15 Juillet 2023",
-				"title": "Récital lyrique « Il était une fois l’opéra »",
-				"description": `Avec Ayano Kamei, pianiste et Margaux Poguet, Soprano 
-
-Festival Lyrique de Soustons / Opéra des Landes 
-En partenariat avec le Festival Ravel 
-				`
-
-			},
-		},
-		{
-			"fr": {
-				"date": "29 Octobre 2023",
-				"title": "Récital lyrique « Il était une fois l’opéra »",
-				"description": `Avec Ayano Kamei, pianiste et Margaux Poguet, Soprano 
-
-Concert « Au fil des Saisons »
-Musique en Périgord 
-En partenariat avec le Festival Ravel 
-				`
-
-			},
-		},
-		{
-			"fr": {
-				"date": "22 Decembre 2023",
-				"title": "Récital Lyrique Génération Opéra",
-				"description": `Avec Rodolphe Lospied, pianiste et Yara Kasti, soprano
-
-Théâtre d’Aubagne
-				`
-			},
 		},
 		{
 			"fr": {
@@ -140,16 +62,16 @@ Collaboration avec le Palazetto Bru Zane
 		},
 		{
 			"fr": {
-				"date": "28 & 29 novembre 2023 à 19h00 et 20h30",
-				"title": "L’Amour à la française",
-				"description": `Récital Lyrique hors les murs de l’académie de l’Opéra Comique 
-Grande Nef du Musée d’Orsay 
+				"date": "29 Octobre 2023",
+				"title": "Récital lyrique « Il était une fois l’opéra »",
+				"description": `Avec Ayano Kamei, pianiste et Margaux Poguet, Soprano 
 
-Direction musicale et préparation des solistes Hervé Niquet • Mise en scène Héloïse Sérazin
-Collaboration avec le Palazetto Bru Zane
+Concert « Au fil des Saisons »
+Musique en Périgord 
+En partenariat avec le Festival Ravel 
 				`
+
 			},
-			"linkHref": "https://www.opera-comique.com/fr/spectacles/l-amour-a-la-francaise-au-musee-d-orsay"
 		},
 		{
 			"fr": {
@@ -165,12 +87,54 @@ Foyer Favart
 		},
 		{
 			"fr": {
+				"date": "28 & 29 novembre 2023 à 19h00 et 20h30",
+				"title": "L’Amour à la française",
+				"description": `Récital Lyrique hors les murs de l’académie de l’Opéra Comique 
+Grande Nef du Musée d’Orsay 
+
+Direction musicale et préparation des solistes Hervé Niquet • Mise en scène Héloïse Sérazin
+Collaboration avec le Palazetto Bru Zane
+				`
+			},
+			"linkHref": "https://www.opera-comique.com/fr/spectacles/l-amour-a-la-francaise-au-musee-d-orsay"
+		},
+		{
+			"fr": {
+				"date": "2 décembre 2023",
+				"title": "L’arrière-Pays, Opéra de Reims. Au fil de l’Eau",
+				"description": `Mélodies pour mezzo soprano, harpe et dispositif électro-acoustique (dir.musicale et création Thomas Nguyen)
+Annabelle Jarre, harpiste`
+			},
+			"linkHref": "https://www.operadereims.com/spectacle/larriere-pays/"
+		},
+		{
+			"fr": {
+				"date": "22 Decembre 2023",
+				"title": "Récital Lyrique Génération Opéra",
+				"description": `Avec Rodolphe Lospied, pianiste et Yara Kasti, soprano
+
+Théâtre d’Aubagne
+				`
+			},
+		},
+		{
+			"fr": {
 				"date": "12 décembre 2023 à 19h00",
 				"title": "Récital d’Hiver",
 				"description": `Les Saisons de l’Académie. Opéra Comique. Foyer Favart 
 				`
 			},
 			"linkHref": "https://www.opera-comique.com/fr/spectacles/les-saisons-de-l-academie"
+		},
+		{
+			"fr": {
+				"date": "10 février  2024",
+				"title": "Belboul, Massenet / Modaresifar, Création mondiale ",
+				"description": `Opéra de Reims.
+Rôle de Zaï-za (pupille d’Ali Bazar).
+Les Frivolités Parisiennes, mise en scène et conception Alexandra Lacroix`
+			},
+			"linkHref": "https://lesfrivolitesparisiennes.com/spectacle/ladorable-belboul/"
 		},
 		{
 			"fr": {
@@ -191,6 +155,13 @@ Théâtre du Capitole de Toulouse
 				`
 			},
 			"linkHref": "https://www.opera-comique.com/fr/spectacles/les-saisons-de-l-academie"
+		},
+		{
+			"fr": {
+				"date": "MARS 2024",
+				"title": "Cover Stéphanie D’Oustrac, l’Heure Espagnole Ravel (rôle de Concepcion)",
+				"description": "Opéra Comique, Louis Langrée, mise en scène Guillaume Gallienne",
+			},
 		},
 		{
 			"fr": {
@@ -238,6 +209,18 @@ Salle Bizet, Opéra Comique
 				`
 			},
 			"linkHref": "https://www.opera-comique.com/fr/spectacles/les-saisons-de-l-academie"
+		},
+		{
+			"fr": {
+				"date": "Juin 2024",
+				"title": "L’impressionnisme et musique",
+				"description": `Musiques d’Emmanuel Chabrier et André Messager.
+				Auditorium du Musée d’Orsay.
+				Orchestre des Frivolités Parisiennes`
+			},
+			"linkHref": "https://lesfrivolitesparisiennes.com/spectacle/1874-impressionnisme-et-musique/"
+
+
 		},
 		{
 			"fr": {

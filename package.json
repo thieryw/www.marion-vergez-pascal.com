@@ -21,7 +21,7 @@
     "@mui/material": "^5.10.6",
     "@emotion/styled": "^11.10.4",
     "@emotion/react": "^11.10.4",
-    "react-art-gallery": "^0.0.10",
+    "react-art-gallery": "^0.0.13",
     "framer-motion": "^7.3.6",
     "react-markdown": "^8.0.3",
     "sharp": "^0.31.0"

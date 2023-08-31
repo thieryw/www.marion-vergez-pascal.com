@@ -107,10 +107,20 @@ export const Media = memo(() => {
 				subtitle={t("gallerySubtitle")}
 			/>
 			<ArtGallery
-				thumbNailImageSources={imageSources}
-				lightBoxImageSources={imageSources}
-				thumbNailImages={jpegFiles.files}
-				lightBoxImages={jpegFiles.files}
+				images={webpFiles.files.map((webp, index) => {
+					return {
+						"lightBox": {
+							"alt": "gallery Image",
+							"src": webp.url,
+							"sources": imageSources[index]
+						},
+						"thumbNail": {
+							"alt": "gallery Image",
+							"src": webp.url,
+							"sources": imageSources[index]
+						}
+					}
+				})}
 				imageAverageHeight={250}
 				hideImageNames={true}
 			/>

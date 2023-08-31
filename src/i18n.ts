@@ -76,64 +76,23 @@ export const {
 			"Biography": {
 				"bioTitle": "BIOGRAPHIE",
 				"bioSubtitle": "MON HISTOIRE",
-				"bioParagraph": `Originaire du Béarn, Marion découvre le chant à 11 ans dans une maîtrise d’enfants en Pays Basque, 
-puis intègre le chœur d’enfants du **Conservatoire de Pau** sous la direction de Pascale Verdier 
-et de Fayçal Karoui. À 14 ans elle entre à la **Maîtrise de Radio- France** et chante pendant 3 ans 
-dans diverses productions Radio-France sous la baguette de Sofi Jeannin, Kurt Masur, Daniele Gatti. 
-Après des études de lettres (**hypokhâgne/ khâgne classique**), elle rentre au **Département Supérieur 
-pour Jeunes Chanteurs** du CRR de Paris en 2014 où elle travaille avec Florence Guignolet. Au sein du Jeune Chœur, 
-elle chante dans diverses productions prestigieuses, au Châtelet, à la Philharmonie, etc... Elle intègre en 2017 
-le Département Vocal du **Conservatoire d’Amsterdam**, dans la classe de Don Marrazo. En 2018, 
-elle rentre au **Conservatoire National Supérieur Musique et de Danse de Paris** dans la classe de Frédéric Gindraux. 
-Elle bénéficie des conseils d’Anne Le Bozec. Lors de Masterclasses, elle a pu bénéficier des conseils de Nelly Miriciaiu, 
-Regina Verner, Margreet Honig ou encore Roberto Benzi.
+				"bioParagraph": `En Novembre 2022, Marion a remporté le premier prix de la compétition internationale Triomphe de l’Art à Bruxelles.
+Elle débutera en septembre 2023 une collaboration avec l’Opéra Comique dans le cadre de l’académie Favart et participera à ce titre à de nombreux concerts, récitals, masterclasses de l’académie. 
+Elle est également artiste en résidence à La Chapelle Musicale Reine Elisabeth pour la saison 23/24.
+Elle enregistrera son premier CD de mélodies espagnoles avec le Label Mirare et avec le soutien du mécène Patrick Petit en septembre 2023. 
+Marion est révélation lyrique de l’Adami pour la saison 23/24.
 
-En septembre 2019, elle est sélectionnée comme Jeune Talent pour la prestigieuse académie de Bel Canto 
-de la **IVC Competition en Hollande à S’Hertogenbosch**. Pour l’année 2020, elle est lauréate de l’académie 
-des **Frivolités Parisiennes** et en 2021, elle fait partie du programme **Jeunes Talents du Palais Royal** 
-(mécénat Crédit Agricole Île de France) et réalise à ce titre une série de mini-clips vidéos autour du 
-répertoire lyrique français au Petit Palais ( « **Retrouvailles au Petit Palais** » ).
+Originaire du Béarn, Marion découvre le chant à 11 ans dans une maîtrise d’enfants en Pays Basque, puis intègre le chœur d’enfants du Conservatoire de Pau sous la direction de Pascale Verdier. À 14 ans elle entre à la Maîtrise de Radio- France et chante pendant 3 ans dans diverses productions Radio-France sous la baguette de Sofi Jeannin, Kurt Masur, Daniele Gatti. Après des études de lettres (hypokhâgne/ khâgne classique), elle rentre au Département Supérieur pour Jeunes Chanteurs du CRR de Paris en 2014 où elle travaille avec Florence Guignolet. 
+En juin 2023, elle passe son prix (mention TB à l’unanimité ) au Conservatoire National Supérieur Musique et de Danse de Paris (classe de Frédéric Gindraux). Elle bénéficie des conseils et de l’enseignement d’Anne Le Bozec, Olivier Reboul, Susan Manoff . Lors de Masterclasses, elle a pu bénéficier des conseils de Nelly Miriciaiu, Regina Verner, Margreet Honig ou encore Roberto Benzi.
 
-En juin 2021, elle chante avec sa pianiste Cécile Sagnier pour **Jeunes Talents**, dans un programme autour des fables de La Fontaine à Château-Thierry intitulé « Fables, Contes et autres Légendes ».
-Leur duo, le **duo Incarnat**, a vocation à défendre le répertoire du lied et de la mélodie, avec fougue et passion.
-Elle incarne également Annio dans un spectacle de Franck Krawszyk librement inspiré de la Clémence 
-de Titus de Mozart à la **Seine Musicale**. En juillet elle chante également dans une série de concerts 
-dans un programme lyrique français intitulé « **Deux hommes et une femme** » avec l’orchestre du 
-**Palais Royal** (direction J. P Sarcos) aux côtés de Kévin Amiel et Adrien Fournaison. 
-Elle redonnera ce programme avec orchestre en novembre 2021 à Paris.
+Marion est lauréate des Frivolités Parisiennes, du programme Jeunes Talents du Palais Royal (mécénat Crédit Agricole Île de France) et réalise à ce titre une série de mini-clips vidéos autour du répertoire lyrique français au Petit Palais ( « Retrouvailles au Petit Palais » ). Elle est également lauréate de l’Académie Ravel de Saint Jean de Luz, et est mécénée par la Fondation Société Générale « C’est vous l’avenir ! » et par l’Adami. 
 
-Sensible à la transmission et l’accessibilité de l’opéra pour tous, 
-Marion a chanté dans le cadre des mini- concerts de **l’Orchestre de chambre de Paris** 
-dans des centres d’hébergements ou des hôpitaux, et a participé aux spectacles 
-« Tchek » (rôle de Zefka dans une adaptation du Journal d’un Disparu de Janaček) et 
-« Help ! » (Clorinde dans une adaptation du Combat de Tancrède de Monteverdi) au 
-**Théâtre des Bouffes du Nord** avec la Compagnie Plein jour, dans un programme éducatif 
-promouvant l’opéra pour tous. Cet automne, Marion chantera en récital avec Simon Adda-Reyss, 
-au **théâtre des Sablons de Neuilly** un programme autour de Victor Hugo. 
-Elle sera Sterling dans « Là- Haut » de Maurice Yvain avec la compagnie 
-des **Frivolités Parisiennes** au **théâtre de l’Athénée** en février 2022 
-(dir. Nicolas Chesneau, mise en scène Pascal Neyron), et sera Nicklausse dans les 
-Contes d’Hoffmann d’Offenbach dans une série de concerts Jeunes Chanteurs en collaboration avec **l’opéra de Nancy** (Nancy Opéra Passion).
+Elle a chanté le rôle d’Annio dans L’Affaire Clemenza (spectacle de Franck Krawszyk librement inspiré de la Clémence de Titus de Mozart) à la Seine Musicale, ainsi que le rôle de Costanza dans l’Isola Disabitata de Haydn dans une production du Studi’Opera ( direction Vincent Laissy). 
+En février 2024,  elle chantera le rôle de Zaï-Za, dans L’Adorable Belboul de Massenet à l’opéra de Reims avec les Frivolités Parisiennes (mise en scène Alexandra Lacroix). En février / mars 24, elle sera doublure de répétition de Stéphanie D’Oustrac dans l’Heure Espagnole de Ravel (rôle de Concepcion) sous la direction de Louis Langrée, mise en scène Guillaume Gallienne.
 
-Marion fait partie du **Quatuor Bonelli**, ensemble professionnel créé en 2016, 
-et qui défend le répertoire a cappella. Le Quatuor Bonelli a bénéficié d’un 
-programme tremplin pour jeunes ensembles vocaux à la **Cité de la Voix de Vézelay** en juillet 2021.
+Elle chantera également en récital avec l’Orchestre de Pau Pays de Béarn (direction Fayçal Karoui) dans les Nuits d’été de Berlioz, aux côtés de Karine Deshayes dans le cadre du Festival Ravel de St Jean de Luz (septembre 23). En mars 24, elle chantera pour la Journée Mozart en récital au Capitole de Toulouse en récital avec Anne Le Bozec. 
 
-En août / septembre 2022, Marion a été lauréate de l’académie Ravel 
-( masterclasses avec  Jean-Philippe Lafont, Karine Deshayes, et Sabine Vatin) 
-et a obtenu une bourse du fond de dotation Dany Pouchucq.
-
-En Novembre 2022, Marion a remporté le premier prix de la compétition 
-internationale Triomphe de l’Art à Bruxelles.
-
-Elle débutera en septembre 2023 une collaboration avec l’Opéra Comique 
-dans le cadre de l’académie Favart et participera à cet titre à de 
-nombreux concerts et petits formats de l’académie. 
-En parallèle, elle enregistrera son premier CD de 
-mélodies espagnoles avec le Label Mirare et avec le 
-soutien du mécène Patrick Petit.
-Marion est soutenue par la fondation Meyer, 
-et est lauréate de la bourse « C’est vous l’avenir ! » de la Société Générale.
+Sensible à la transmission et l’accessibilité de l’opéra pour tous, Marion a chanté dans le cadre des mini-concerts de l’Orchestre de chambre de Paris dans des centres d’hébergements ou des hôpitaux, et a participé aux spectacles « Tchek » (rôle de Zefka dans une adaptation du Journal d’un Disparu de Janaček) et « Help ! » (Clorinde dans une adaptation du Combat de Tancrède de Monteverdi) au Théâtre des Bouffes du Nord avec la Compagnie Plein jour, dans un programme éducatif promouvant l’opéra pour tous.
             `,
 
 				"interpretation": "Airs étudiés / interprétés en concert ou auditions",
