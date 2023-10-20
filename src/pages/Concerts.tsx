@@ -6,11 +6,11 @@ import { PageHeading } from "../components/PageHeading";
 import bannerJpeg from "../assets/img/concerts/concert-banner.jpeg";
 import { useTranslation } from "../i18n";
 import { useLang } from "../i18n";
-import { concerts } from "../user/concerts";
+import { data as concerts } from "../user/concerts";
 import { EventCard } from "../components/EventCard"
 import { Text } from "../theme";
 import { Divider } from "../components/Divider";
-import { archives } from "../user/archives";
+import { data as archives } from "../user/archives";
 import { declareComponentKeys } from "i18nifty/declareComponentKeys";
 
 
