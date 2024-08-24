@@ -121,6 +121,7 @@ export const Home = memo(() => {
 						}),
 					}}
 					slides={[
+						<GlReviewSlide descriptionMd={t("review5")} />,
 						<GlReviewSlide descriptionMd={t("review4")} signature={t("reviewSignature4")} />,
 						<GlReviewSlide descriptionMd={t("review3")} signature={t("reviewSignature3")} />,
 						<GlReviewSlide descriptionMd={t("review2")} signature={t("reviewSignature2")} />,
@@ -172,7 +173,7 @@ export const Home = memo(() => {
 				</div>
 				<YouTubeIframe
 					className={classes.iframe}
-					videoUrl="https://www.youtube-nocookie.com/embed/kIdTp7VaLV4"
+					videoUrl="https://www.youtube.com/embed/86LyG4O7lmQ?si=CTqLaAXWzqYqAvbI"
 				/>
 				<Button
 					className={classes.button}
@@ -472,10 +473,12 @@ export const { i18n } = declareComponentKeys<
 	| "review2"
 	| "review3"
 	| "review4"
+	| "review5"
 	| "reviewSignature1"
 	| "reviewSignature2"
 	| "reviewSignature3"
 	| "reviewSignature4"
+
 >()({
 	Home
 })

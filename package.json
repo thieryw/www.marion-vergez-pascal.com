@@ -47,7 +47,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build && hack-gh-pages src/router.ts",
     "eject": "react-scripts eject",
-    "postinstall": "yarn convertImages && ts-node --skip-project src/bin/generateImageUrlExports.ts && yarn yamlToObject",
+    "postinstall": "yarn convertImages && ts-node --skip-project src/bin/generateImageUrlExports.ts",
     "linkInHouseDep": "ts-node --skip-project src/bin/linkInHouseDep.ts",
     "convertImages": "ts-node --skip-project src/bin/convertImages.ts",
     "convertConcerts": "ts-node --skip-project src/bin/convertToYaml.ts",

@@ -8,6 +8,7 @@ import { Divider } from "../components/Divider";
 import ReactMarkdown from "react-markdown";
 import { declareComponentKeys } from "i18nifty/declareComponentKeys";
 import { useTranslation } from "../i18n";
+import { studiedPieces } from "../user/studiedPieces";
 
 
 export const Biography = memo(() => {
@@ -55,18 +56,7 @@ export const Biography = memo(() => {
 
 					<ul className={classes.listWrapper}>
 						{
-							[
-								t("carmen"),
-								t("ottavia"),
-								t("gounod"),
-								t("figaro"),
-								t("smeton"),
-								t("ravel"),
-								t("offenbach"),
-								t("mignon"),
-								t("viviane"),
-								t("massenet")
-							].map(text => <li key={text} className={classes.listElement}>
+							studiedPieces.map(text => <li key={text} className={classes.listElement}>
 								<span className={classes.dot} >.</span>
 								<Text className={classes.interpretationText} typo="body 2">
 									{text}
@@ -183,16 +173,6 @@ export const { i18n } = declareComponentKeys<
 	| "bioSubtitle"
 	| "bioParagraph"
 	| "interpretation"
-	| "carmen"
-	| "ottavia"
-	| "gounod"
-	| "figaro"
-	| "smeton"
-	| "ravel"
-	| "offenbach"
-	| "mignon"
-	| "viviane"
-	| "massenet"
 >()({
 	Biography
 })

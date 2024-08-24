@@ -38,6 +38,7 @@ export const {
 				"review2": "L’écrin accoustique et le décor romantique du lieu répondent tout à fait au programme qui distille airs et ensembles extraits d’opéras du XIXe siècle français . Gounod, Bizet, Offenbach mais aussi Messager (...) sont à la fête  par les voix du ténor Kévin Amiel, ardemment lancé (...), du baryton basse efficace Adrien Fournaison, et de la mezzo de bel envol Marion Vergez-Pascal.",
 				"review3": " Sur scène enfin, les solistes rivalisent d'enthousiasme et constituent de belles découvertes : la plénitude vocale de Marion Vergez-Pascal s'accorde parfaitement au timbre clair et à l'expressivité du ténor Jordan Mouaïssia […]. Encore mal connue, L'isola disabitata ainsi servie n'a pas manqué de convaincre !",
 				"review4": "(…) Le tableau des sorcières à l’acte II était particulièrement réussi et on oubliait facilement leur grotte tant le désir de nuire de ces Sœurs du Destin, deux grands échalas au costume d’alguazil, était perceptible dans l’ombre du dortoir. La grande réussite de cette production, c’est son plateau vocal et sa distribution, l’énergie ou l’émotion que García Alarcón insuffle à cet ensemble, aussi bien dans le Prologue que dans l’opéra, et l’engagement total de ces jeunes acteurs issus des classes du CNSM. Je ne puis les citer tous mais je distinguerai Marion Vergez-Pascal, mezzo-soprano, Éole et Enchanteresse (…)",
+				"review5": "Marion Vergez-Pascal, que nous n’avions personnellement jamais entendue, est une révélation : la voix, chaude, veloutée, possède de très belles couleurs, notamment dans le médium. Le style est très soigné et l’interprétation habitée. Nous l’avons trouvée particulièrement émouvante dans l’air de Berlioz (« Premiers transports… ») et surtout dans l’air final du Romeo de Bellini, chanté dans son intégralité (avec le long et beau récitatif qui le précède), avec une grande sensibilité. » Première loge Opéra, à prooos de ROMEO ET JULIETTE, une tragédie en musique dans le Grand Amphithéâtre de La Sorbonne",
 				"reviewSignature1": "Ôlyrix critique du spectacle L’affaire Clemenza à la Seine Musicale en juin 2021",
 				"reviewSignature2": "Scènes Magazine critique du spectacle Deux hommes et une femme, Novembre 2021",
 				"reviewSignature3": "Olyrix, critique du spectacle L'isola disabitata - Paris (Théâtre Traversière) le 13/12/2022",
@@ -87,25 +88,22 @@ En juin 2023, elle passe son prix (mention TB à l’unanimité ) au Conservatoi
 
 Marion est lauréate des Frivolités Parisiennes, du programme Jeunes Talents du Palais Royal (mécénat Crédit Agricole Île de France) et réalise à ce titre une série de mini-clips vidéos autour du répertoire lyrique français au Petit Palais ( « Retrouvailles au Petit Palais » ). Elle est également lauréate de l’Académie Ravel de Saint Jean de Luz, et est mécénée par la Fondation Société Générale « C’est vous l’avenir ! » et par l’Adami. 
 
-Elle a chanté le rôle d’Annio dans L’Affaire Clemenza (spectacle de Franck Krawszyk librement inspiré de la Clémence de Titus de Mozart) à la Seine Musicale, ainsi que le rôle de Costanza dans l’Isola Disabitata de Haydn dans une production du Studi’Opera ( direction Vincent Laissy). 
-En février 2024,  elle chantera le rôle de Zaï-Za, dans L’Adorable Belboul de Massenet à l’opéra de Reims avec les Frivolités Parisiennes (mise en scène Alexandra Lacroix). En février / mars 24, elle sera doublure de répétition de Stéphanie D’Oustrac dans l’Heure Espagnole de Ravel (rôle de Concepcion) sous la direction de Louis Langrée, mise en scène Guillaume Gallienne.
+Elle a chanté le rôle d’Annio dans L’Affaire Clemenza (spectacle de Franck Krawszyk librement inspiré de la Clémence de Titus de Mozart) à la Seine Musicale.
 
-Elle chantera également en récital avec l’Orchestre de Pau Pays de Béarn (direction Fayçal Karoui) dans les Nuits d’été de Berlioz, aux côtés de Karine Deshayes dans le cadre du Festival Ravel de St Jean de Luz (septembre 23). En mars 24, elle chantera pour la Journée Mozart en récital au Capitole de Toulouse en récital avec Anne Le Bozec. 
+Pour la saison 23/24, elle était membre de l’académie Favart de l’Opéra- Comique, et parallèlement, artiste résidente de La Chapelle Musicale Reine Elizabeth à Bruxelles.
+En février 2024, elle est Zaï-Za, dans  Belboul de Massenet / Modaresifar une création à l’opéra de Reims avec les Frivolités Parisiennes (mise en scène Alexandra Lacroix).
+Sa saison 24/25 compte également un récital avec l’Orchestre de Pau Pays de Béarn (direction Fayçal Karoui) dans les Nuits d’été de Berlioz, aux côtés de Karine Deshayes dans le cadre du Festival Ravel de St Jean de Luz (septembre 23). En mars 24, elle chante un récital Mozart au Capitole de Toulouse avec Anne Le Bozec.
 
 Sensible à la transmission et l’accessibilité de l’opéra pour tous, Marion a chanté dans le cadre des mini-concerts de l’Orchestre de chambre de Paris dans des centres d’hébergements ou des hôpitaux, et a participé aux spectacles « Tchek » (rôle de Zefka dans une adaptation du Journal d’un Disparu de Janaček) et « Help ! » (Clorinde dans une adaptation du Combat de Tancrède de Monteverdi) au Théâtre des Bouffes du Nord avec la Compagnie Plein jour, dans un programme éducatif promouvant l’opéra pour tous.
+
+Elle enregistrera en 25 /26 son premier album de mélodies espagnoles avec le label Mirare. Pour la saison 2025, elle sera Lola dans Cavalleria Rusticana, de Mascagni à l’Opéra de Saint Étienne (dir. G. Grazioli), et elle est également programmée au Festival d’Aix en Provence et pour la tournée de la création de La Petite Sirène de Régis Campo (coproduction Arcal/ Opéras d’Avignon et de Massy). Elle sera également Sesto dans la Clémence de Titus de Mozart à l’opéra de Massy sous la direction de David Stern.
+
+Marion est soutenue par la fondation Meyer, la Société Générale, et le mécène Patrick Petit. Elle est révélation lyrique de l’ADAMI pour la saison 23/24. 
+Marion est membre de la 5 G d’opéra Fuoco et est représentée par l’agence Philippe Do Opéra.
+
             `,
 
 				"interpretation": "Airs étudiés / interprétés en concert ou auditions",
-				"carmen": "Carmen de Bizet, Séguedille et Habanera",
-				"ottavia": "L’Incoronazione di Poppea de Monterverdi, Ottavia (« Disprezzata Regina », « Addio Roma » )",
-				"gounod": "La damnation de Faust de Gounod, rôle de Siébel (« Faites lui mes aveux »)",
-				"figaro": "La Clemenza di T ito de Mozart, rôle d’ Annio & N ozze di Figaro, rôle de Chérubin (airs seuls)",
-				"smeton": "Anna Bolena de Donizetti, rôle de Smeton (airs seuls)",
-				"ravel": "L’heure Espagnole de Ravel, rôle de Concepcion (« Oh la pitoyable aventure »)",
-				"offenbach": "La Grande duchesse de Gérolstein (« Ah que j’aime les militaires») et La Périchole (Griserie) d’Offenbach",
-				"mignon": "Mignon de Thomas (“Me voici dans son boudoir” )",
-				"viviane": "T oi c’est moi de Simons air de Viviane (“C’est ça la vie, C’est ça l’amour”)",
-				"massenet": "Cendrillon de Massenet, rôle de Mme de La Haltière"
 
 
 

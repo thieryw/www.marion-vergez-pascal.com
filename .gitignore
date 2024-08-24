@@ -27,5 +27,3 @@ yarn-error.log*
 /src/user/assets/webp
 /src/generatedImgExports.ts
 /src/generatedWebpExports.ts
-/src/user/concerts.ts
-/src/user/archives.ts
