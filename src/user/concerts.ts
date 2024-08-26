@@ -80,13 +80,6 @@ Rôle de la sorcière / grand mère
     },
     {
         "fr": {
-            "date": "Mars / Avril 2025",
-            "title": "Les contes de Perrault de Félix Fourdrain",
-            "description": "Création Les Frivolités Parisiennes\n\t\t\t\t\nDirection Dylan Corley & mise en scène Valérie Lesort \n\t\t\t\t\nRôle d’Aurore (Cendrillon) \n\t\t\t\t\nOpéra Royal de Compiègne, opéra de Reims et théâtre de l’Athénée-Louis Jouvet \n\t\t\t\t"
-        }
-    },
-    {
-        "fr": {
             "date": "9, 11 et 13 Mars 2025",
             "title": "Cavalleria Rusticana de Mascagni à l’opéra de St Étienne",
             "description": `Rôle de Lola 
