@@ -65,6 +65,9 @@ export const Media = memo(() => {
 				}}
 				slides={[
 					<YouTubeIframe
+						videoUrl="https://www.youtube.com/embed/TR0tiGg_evc?si=MJS6FJboGXHoAGDo"
+					/>,
+					<YouTubeIframe
 						videoUrl="https://www.youtube.com/embed/XUVU8UrEaq8"
 					/>,
 					<YouTubeIframe

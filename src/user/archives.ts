@@ -1,6 +1,57 @@
 export const data = [
     {
         "fr": {
+            "date": "10 Octobre 2024 à 19 h 00",
+            "title": "Concert rencontre",
+            "description": "A Reid hall Opéra Fuoco",
+            
+        },
+        "linkHref": "https://operafuoco.fr/agenda/"
+    },
+    {
+        "fr": {
+            "date": "18 Octobre 2024 à 20 h 00",
+            "title": "Tous à  l’opéra",
+            "description": "avec Johan Farjot au théâtre Monsigny à Boulogne sur Mer",
+            
+        },
+        "linkHref": "https://www.ville-boulogne-sur-mer.fr/decouvrir-et-sortir/agenda-des-manifestations/tout-l-agenda/item/2667-tous-a-l-opera-2"
+    },
+    {
+        "fr": {
+            "date": "26 et 27 Octobre 2024",
+            "title": "Et Op!",
+            "description": `Spectacle pour enfants à l’Opéra de Reims avec les musiciens de l’orchestre de Reims
+Conception artistique, direction musicale Christophe Mirambeau.
+
+Mise en scène Pascal Neyron
+
+Scénographie Casilda Desazars
+            `,
+            
+        },
+        "linkHref": "https://operadereims.com/event/et-op-24-25-1/"
+    },
+    {
+        "fr": {
+            "date": "1er Décembre 2024",
+            "title": "Et Op!",
+            "description": "Reprise à l’opéra de Reims",
+            
+        },
+        "linkHref": "https://operadereims.com/event/et-op-24-25-1/"
+    },
+    {
+        "fr": {
+            "date": "18 Décembre 2024 à 19 h 00",
+            "title": "Opéra Fuoco",
+            "description": "Concert Apéro Massenet Opéra de Massy",
+            
+        },
+        "linkHref": "https://operafuoco.fr/apero-concert-massenet/"
+    },
+    {
+        "fr": {
             "date": "Juin 2024",
             "title": "L’impressionnisme et musique",
             "description": "Musiques d’Emmanuel Chabrier et André Messager.\n\t\t\t\tAuditorium du Musée d’Orsay.\n\t\t\t\tOrchestre des Frivolités Parisiennes"
@@ -54,7 +105,7 @@ export const data = [
         },
         "linkHref": "https://www.opera-comique.com/fr/spectacles/les-saisons-de-l-academie"
     },
-    {
+    /*{
         "fr": {
             "date": "Samedi 2 Mars 2024",
             "title": "Journée Mozart",
@@ -476,5 +527,5 @@ export const data = [
             "date": "8 JANVIER 2022,\n\n20 h 30\n\t\t\t"
         },
         "linkHref": "https://billetterie-theatre-luneville.tickandlive.com/reserver/deux-hommes-et-une-femme/7347"
-    }
+    }*/
 ];

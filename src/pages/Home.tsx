@@ -172,8 +172,7 @@ export const Home = memo(() => {
 					<Divider width={8} color={theme.colors.palette.gold} height={1} />
 				</div>
 				<YouTubeIframe
-					className={classes.iframe}
-					videoUrl="https://www.youtube.com/embed/86LyG4O7lmQ?si=CTqLaAXWzqYqAvbI"
+					videoUrl="https://www.youtube.com/embed/TR0tiGg_evc?si=MJS6FJboGXHoAGDo"
 				/>
 				<Button
 					className={classes.button}
