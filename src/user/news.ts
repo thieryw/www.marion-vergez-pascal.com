@@ -1,5 +1,5 @@
-import newsImage from "./assets/news/news.jpeg";
-import newsImageWebp from "./assets/webp/news.webp";
+import newsImage from "./assets/news/news2.jpg";
+import newsImageWebp from "./assets/webp/news2.webp";
 import { ImageSource } from "../tools/ImageSource";
 
 type NewsProps = {

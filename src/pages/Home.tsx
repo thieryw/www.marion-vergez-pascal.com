@@ -121,6 +121,13 @@ export const Home = memo(() => {
 						}),
 					}}
 					slides={[
+						<GlReviewSlide descriptionMd={t("review12")} signature={t("reviewSignature11")} />,
+						<GlReviewSlide descriptionMd={t("review11")} signature={t("reviewSignature10")} />,
+						<GlReviewSlide descriptionMd={t("review10")} signature={t("reviewSignature9")} />,
+						<GlReviewSlide descriptionMd={t("review9")} signature={t("reviewSignature8")} />,
+						<GlReviewSlide descriptionMd={t("review8")} signature={t("reviewSignature7")} />,
+						<GlReviewSlide descriptionMd={t("review7")} signature={t("reviewSignature6")} />,
+						<GlReviewSlide descriptionMd={t("review6")} signature={t("reviewSignature5")} />,
 						<GlReviewSlide descriptionMd={t("review5")} />,
 						<GlReviewSlide descriptionMd={t("review4")} signature={t("reviewSignature4")} />,
 						<GlReviewSlide descriptionMd={t("review3")} signature={t("reviewSignature3")} />,
@@ -172,7 +179,7 @@ export const Home = memo(() => {
 					<Divider width={8} color={theme.colors.palette.gold} height={1} />
 				</div>
 				<YouTubeIframe
-					videoUrl="https://www.youtube.com/embed/TR0tiGg_evc?si=MJS6FJboGXHoAGDo"
+					videoUrl="https://www.youtube.com/embed/ICXuObPzbMI?si=8KT5DgKUCp__gme7"
 				/>
 				<Button
 					className={classes.button}
@@ -382,7 +389,8 @@ const useStyles = makeStyles()(
 			"color": "black",
 			":hover": {
 				"color": theme.isDarkModeEnabled ? "white" : undefined
-			}
+			},
+			"marginTop": theme.spacing(8)
 		}
 
 	})
@@ -473,10 +481,24 @@ export const { i18n } = declareComponentKeys<
 	| "review3"
 	| "review4"
 	| "review5"
+	| "review6"
+	| "review7"
+	| "review8"
+	| "review9"
+	| "review10"
+	| "review11"
+	| "review12"
 	| "reviewSignature1"
 	| "reviewSignature2"
 	| "reviewSignature3"
 	| "reviewSignature4"
+	| "reviewSignature5"
+	| "reviewSignature6"
+	| "reviewSignature7"
+	| "reviewSignature8"
+	| "reviewSignature9"
+	| "reviewSignature10"
+	| "reviewSignature11"
 
 >()({
 	Home

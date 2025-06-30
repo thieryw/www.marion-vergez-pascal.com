@@ -9,7 +9,7 @@ generateMediaFile({
 });
 
 generateMediaFile({
-	"acceptedFileExtensions": [".jpeg", ".png"],
+	"acceptedFileExtensions": [".jpeg", ".png", ".jpg"],
 	"mediaPath": join(__dirname, "..", "assets", "img", "media"),
 	"generatedFilePath": join(__dirname, ".."),
 	"generatedFileName": "generatedImgExports"
