@@ -8,219 +8,234 @@ export const data: {
 }[] = [
         {
             "fr": {
-                "date": "Juillet 2025",
-                "title": "Festival d'Aix en Provence",
-                "description": "Plus d'infos à venir."
+                "date": "22, 25, 27, 29 septembre et 4 octobre 2026",
+                "title": "Rusalka, Dvořák",
+                "description": `Rôle de la 2nde Nymphe
+
+Capitole de Toulouse
+
+Mise en scène S. Poda, direction G. Sagripanti
+                `,
+
+            },
+            "linkHref": "https://opera.toulouse.fr/rusalka-9268878/"
+        },
+        {
+            "fr": {
+                "date": "9 octobre 2026",
+                "title": "Cantissimo, Opéra Night à Liège",
+                "description": `Wolubilis, Bruxelles
+
+Orchestre de l’Opéra Royal de Wallonie (Liège), direction Matteo dal Maso
+                `,
+
+            },
+            "linkHref": "https://www.wolubilis.be/a-voir/cantissimo/"
+        },
+        {
+            "fr": {
+                "date": "31 octobre 2026",
+                "title": "Concert Génération Opéra",
+                "description": `Alto solo — Stabat Mater de Dvořák
+
+Maison de la Culture de Clermont-Ferrand
+                `,
+
             },
             "linkHref": ""
         },
         {
             "fr": {
-                "date": "5, 9, 11 et 13 juillet 2025",
-                "title": "Louise de Charpentier",
-                "description": `Festival d’Aix en Provence 
+                "date": "13, 15 et 17 novembre 2026",
+                "title": "Carmen, Bizet",
+                "description": `Rôle de Mercedes
 
-Rôle d’Elise et de la Petite Chiffonnière 
+Opéra de Saint-Étienne
 
-Dir. Musicale Giacomo Sagripanti
-
-Mise en scène Christof Loy`
-            },
-            "linkHref": "https://festival-aix.com/programmation/opera/louise"
-
-        },
-        {
-            "fr": {
-                "date": "19 juillet 2025 à 20 h 30",
-                "title": "Didon et Enée de Purcell",
-                "description": `2nde sorcière 
-
-Festival de Sens 
-
-Les Épopées - direction S. Fuget 
-            `
-            },
-            "linkHref": "https://www.ville-sens.fr/evenements-cpt/didon-et-enee/"
-
-        },
-        {
-            "fr": {
-                "date": "29 & 30 septembre 2025",
-                "title": "Le Barbier de Séville Rossini",
-                "description": `Rôle de Berta 
-
-Opéra de Reims - Orchestre de l’opéra de Reims
-
-Dir: Sammy El Ghadab, mise en scène Christophe Mirambeau
-`
-            },
-            "linkHref": "https://operadereims.com/event/le-barbier-de-seville-25-26/"
-
-        },
-        {
-            "fr": {
-                "date": "14 et 15 octobre",
-                "title": "Et Op !",
-                "description": "Opéra de Reims"
-            },
-            "linkHref": "https://operadereims.com/event/et-op-oct-25-26/"
-
-        },
-        {
-            "fr": {
-                "date": "7 et 8 novembre",
-                "title": "La petite Sirène de Régis Campo",
-                "description": `Rôle de la sœur
-
-Théâtre le Liberté de Toulon
-
-Ensemble Télémaque Direction Raoul Lay
-
-Mise en scène Bérénice Collet
+Mise en scène G. Ricco, direction Giuseppe Grazioli
                 `,
 
             },
-            "linkHref": "https://www.operadetoulon.fr/spectacles/lyrique-la-petite-sirene/632.htm"
+            "linkHref": "https://opera.saint-etienne.fr/otse/saison-26-27/spectacles//type-lyrique/carmen/s-922/"
         },
         {
             "fr": {
-                "date": "20 novembre",
-                "title": "Concert hommage à Marius Constant",
-                "description": `Ensemble Ars Nova
+                "date": "3 décembre 2026",
+                "title": "La Clémence de Titus, Mozart",
+                "description": `Rôle de Sesto
 
-Mélodies de Debussy, Ravel
+Théâtre de Saint-Quentin-en-Yvelines
+
+Orchestre d’Opéra Fuoco, direction David Stern, mise en scène Héloïse Serazin
+                `,
+
+            },
+            "linkHref": "https://operafuoco.fr/en/la-clemence-de-titus-mozart-2/"
+        },
+        {
+            "fr": {
+                "date": "11 décembre 2026",
+                "title": "La Clémence de Titus, Mozart",
+                "description": `Théâtre Impérial de Compiègne
+
+Production Opéra Fuoco
+                `,
+
+            },
+            "linkHref": "https://www.theatresdecompiegne.com/la-clemence-de-titus-642"
+        },
+        {
+            "fr": {
+                "date": "30 et 31 décembre 2026",
+                "title": "Concerts du Nouvel An « Bulles de Champagne »",
+                "description": `Génération Opéra
+
+Théâtre Montansier
+                `,
+
+            },
+            "linkHref": ""
+        },
+        {
+            "fr": {
+                "date": "27 et 28 janvier 2027",
+                "title": "Pinocchio, Boesmans",
+                "description": `Rôle de la Chanteuse de Cabaret & du Mauvais élève
+
+Besançon
+
+La Coopérative Opéra / Miroirs étendus, mise en scène Ambre Kahan
+                `,
+
+            },
+            "linkHref": "http://www.lacoopera.com/pinocchio"
+        },
+        {
+            "fr": {
+                "date": "2 et 4 février 2027",
+                "title": "Pinocchio, Boesmans",
+                "description": `Rôle de la Chanteuse de Cabaret & du Mauvais élève
+
+Sénart
+
+Production La Coopérative Opéra
+                `,
+
+            },
+            "linkHref": "http://www.lacoopera.com/pinocchio"
+        },
+        {
+            "fr": {
+                "date": "15 au 26 mars 2027",
+                "title": "Passion selon Saint Matthieu, Bach",
+                "description": `Alto solo
+
+Opéra de Massy avec Opéra Fuoco
+
+Direction David Stern
+                `,
+
+            },
+            "linkHref": "https://opera-massy.com/fr/passion-selon-saint-matthieu.html?cmp_id=77&news_id=1303&vID=3"
+        },
+        {
+            "fr": {
+                "date": "19 et 20 mars 2027",
+                "title": "Pinocchio, Boesmans",
+                "description": `Rôle de la Chanteuse de Cabaret & du Mauvais élève
+
+Opéra de Massy
+
+Production La Coopérative Opéra
+                `,
+
+            },
+            "linkHref": "http://www.lacoopera.com/pinocchio"
+        },
+        {
+            "fr": {
+                "date": "11 avril 2027",
+                "title": "Così fan tutte, Mozart",
+                "description": `Rôle de Dorabella
+
+Opéra de Nice
+
+Production La Chapelle, direction Kira Parfeevets
+                `,
+
+            },
+            "linkHref": ""
+        },
+        {
+            "fr": {
+                "date": "20 et 22 avril 2027",
+                "title": "Don Carlo, Verdi",
+                "description": `Rôle de Tebaldo
+
+Palais Neptune / Opéra de Toulon
+
+Direction Francesco Angelico
+                `,
+
+            },
+            "linkHref": "https://www.operadetoulon.fr/spectacles/lyrique-don-carlo/692.htm"
+        },
+        {
+            "fr": {
+                "date": "9 et 14 mai 2027",
+                "title": "Tournée en Chine — Berlioz",
+                "description": `Les Nuits d’été / La Mort de Cléopâtre, Berlioz
+
+Opéra de Wuxi et Shenzhen
+
+Direction David Stern
 
 Plus d’infos à venir
                 `,
 
             },
-            "linkHref": "https://ars-nova.fr/agenda/"
+            "linkHref": ""
         },
         {
             "fr": {
-                "date": "29 Novembre",
-                "title": "Feiern wir Bizet !",
-                "description": `Extraits de Carmen
-                
-Philarmonie de Erfhürt Francfort
+                "date": "25, 27 et 29 mai 2027",
+                "title": "Le Barbier de Séville, Rossini",
+                "description": `Rôle de Berta
 
-Le Palais Royal dir. JP Sarcos
+Opéra de Massy (reprise de la production de l’Opéra de Reims)
+
+Direction Sammy El Ghadab, mise en scène Christophe Mirambeau
                 `,
 
             },
-            "linkHref": "https://le-palaisroyal.com/agenda/"
+            "linkHref": "https://opera-massy.com/fr/le-barbier-de-seville.html?cmp_id=77&news_id=1306&vID=80"
         },
         {
             "fr": {
-                "date": "10 et 11 janvier 2026",
-                "title": "Trouble in Tahiti, Bernstein",
-                "description": `Rôle de Dinah
+                "date": "8 au 12 juin 2027",
+                "title": "Bachfest Leipzig — Passion selon Saint Matthieu, Bach",
+                "description": `Alto solo
 
-Opéra de Massy
+Production Opéra Fuoco, direction David Stern
 
-Avec l’Ondif direction David Stern, mise en scène Elsa Rooke 
+Plus d’infos à venir
                 `,
 
-            },
-            "linkHref": "https://www.opera-massy.com/fr/leonard-bernstein.html?cmp_id=77&news_id=1182&vID=61"
-        },
-        {
-            "fr": {
-                "date": "20 Janvier 2026",
-                "title": "Trouble in Tahiti, Bernstein",
-                "description": `Rôle de Dinah
-
-Philharmonie de Paris
-
-Avec l’Ondif direction David Stern, mise en scène Elsa Rooke
-                `,
-
-            },
-            "linkHref": "https://philharmoniedeparis.fr/fr/activite/opera-en-concert/28226-leonard-bernstein-david-stern"
-        },
-        {
-            "fr": {
-                "date": "22 Janvier 2026",
-                "title": "Trouble in Tahiti de Bernstein",
-                "description": `rôle de Dinah 
-
-Philharmonie de Paris
-
-Orchestre d’Opera Fuoco- David Stern`
             },
             "linkHref": ""
-
         },
         {
             "fr": {
-                "date": "Du 29 janvier au 8 février 2026",
-                "title": "Louise de Gustave Charpentier",
-                "description": `Rôle d’Elise/ La Petite Chiffonnière
-                
-Opéra de Lyon
-
-Orchestre de l’opéra de Lyon, dir. Giulio Cilona, mise en scène Christof Loy
-                `,
-
-            },
-            "linkHref": "https://www.opera-lyon.com/fr/programmation/saison-2025-2026/opera/louise"
-        },
-        {
-            "fr": {
-                "date": "13 Mars 2026",
+                "date": "19 et 21 juin 2027",
                 "title": "Le Barbier de Séville, Rossini",
                 "description": `Rôle de Berta
 
-Théâtre de St Dizier
+Opéra de Clermont-Ferrand (reprise)
 
-Orchestre de l’opéra de Reims, dir. Sammy El Ghadab, mise en scène Christophe Mirambeau
+Direction Sammy El Ghadab, mise en scène Christophe Mirambeau
                 `,
 
             },
-            "linkHref": "https://theatredenimes.com/spectacle/le-barbier-de-seville/"
-        },
-        {
-            "fr": {
-                "date": "24 au 27 Mars 2026",
-                "title": "Didon et Enée, Purcell",
-                "description": `Rôle de la 2nde sorcière
-
-Théâtre des Champs- Elysées
-j
-Orchestre Les Épopées, dir. Stéphane Fuget 
-                `,
-
-            },
-            "linkHref": "https://25-26.theatrechampselysees.fr/saison-2025-2026/opera-en-concert/didon-et-enee-1"
-        },
-        {
-            "fr": {
-                "date": "1er et 2 avril 2026",
-                "title": "Le Barbier de Séville, Rossini",
-                "description": `Rôle de Berta
-
-Théâtre de St Dizier
-
-Orchestre de l’opéra de Reims, dir. Sammy El Ghadab, mise en scène Christophe Mirambeau
-                `,
-
-            },
-            "linkHref": "https://theatredenimes.com/spectacle/le-barbier-de-seville/"
-        },
-        {
-            "fr": {
-                "date": "22 au 28 avril",
-                "title": "La Petite Sirène, R. Campo",
-                "description": `Rôle de la Sorcière
-
-Grand théâtre d’Aix en Provence
-
-Ensemble Télémaque, dir. Raoul Lay
-
-Mise en scène Bérénice Collet
-                `,
-
-            },
-            "linkHref": "https://www.lestheatres.net/fr/a/5489-la-petite-sirene"
+            "linkHref": "https://www.clermontauvergnevolcans.com/fiches/le-barbier-de-seville-clermont-auvergne-opera-19-au-20-juin-2027/"
         },
     ];

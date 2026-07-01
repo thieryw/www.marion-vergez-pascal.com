@@ -68,6 +68,15 @@ export const Media = memo(() => {
 						videoUrl="https://www.youtube.com/embed/TR0tiGg_evc?si=MJS6FJboGXHoAGDo"
 					/>,*/
 					<YouTubeIframe
+						videoUrl="https://www.youtube.com/embed/Lp7vzk9ZOog"
+					/>,
+					<YouTubeIframe
+						videoUrl="https://www.youtube.com/embed/k2eEm3ZYbSg"
+					/>,
+					<YouTubeIframe
+						videoUrl="https://www.youtube.com/embed/5k8y-wB2jwo"
+					/>,
+					<YouTubeIframe
 						videoUrl="https://www.youtube.com/embed/XUVU8UrEaq8"
 					/>,
 					<YouTubeIframe
