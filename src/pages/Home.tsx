@@ -12,6 +12,7 @@ import { Article } from "../components/Article";
 import MuiLink from "@mui/material/Link";
 import { Background } from "../components/Background";
 import mediaBackgroundImageUrl from "../assets/img/home/marion-soliste.jpeg";
+import albumCoverUrl from "../assets/img/media/0.58.jpeg";
 import { Divider } from "../components/Divider";
 import { Button } from "../components/Button";
 import { YouTubeIframe } from "../components/YouTubeIframe";
@@ -96,6 +97,22 @@ export const Home = memo(() => {
 				<HeroTitle />
 			</div>
 		</section>
+
+		<Article
+			classes={{
+				"image": cx(classes.sectionImage, classes.albumImage),
+				"button": classes.button
+			}}
+			imageAltAttribute="Amor & Flores, nouvel album de Marion Vergez-Pascal"
+			heading={`${t("albumHeading")}`}
+			title={<Text className={classes.albumTitle} typo="section heading">Amor <span>&</span> Flores</Text>}
+			paragraph={t("albumParagraph")}
+			button={{
+				"label": t("albumButtonLabel"),
+				"href": "https://www.mirare.fr/albums/amor-y-flores/"
+			}}
+			imageUrl={albumCoverUrl}
+		/>
 
 		<Article
 			classes={{
@@ -299,6 +316,16 @@ const useStyles = makeStyles()(
 			}
 		},
 
+		"albumTitle": {
+			"& span": {
+				"color": theme.colors.palette.gold
+			}
+		},
+
+		"albumImage": {
+			"maxWidth": 480
+		},
+
 		"sectionImage": {
 			...(theme.windowInnerWidth < breakpointsValues.md ? {
 				"maxWidth": 500
@@ -469,6 +496,9 @@ const { HeroTitle } = (() => {
 export const { i18n } = declareComponentKeys<
 	| "newsHeading"
 	| "newsButtonLabel"
+	| "albumHeading"
+	| "albumParagraph"
+	| "albumButtonLabel"
 	| "bioTitle"
 	| "bioParagraph"
 	| "bioButtonLabel"

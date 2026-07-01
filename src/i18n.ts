@@ -59,6 +59,11 @@ export const {
 				"reviewSignature11": "Classiquenews, , à propos de Sesto /Clémence de Titus/ Opéra de Massy / avril 2025",
 				"newsHeading": "ACTUALITÉS",
 				"newsButtonLabel": "Voir Plus",
+				"albumHeading": "NOUVEL ALBUM",
+				"albumParagraph": `**Amor & Flores** réunit un florilège de la mélodie et de la chanson espagnoles : de Rodrigo et Falla aux *Canciones negras* de Montsalvatge, en passant par García Lorca, Guridi, Barbieri et Granados, jusqu’au *Volver* de Gardel.
+
+Premier album de Marion Vergez-Pascal, enregistré pour le label **Mirare** avec Héloïse Bertrand-Oleari (piano), Timothée Vinour (guitare) et Imanol Iraola (castagnettes).`,
+				"albumButtonLabel": "Découvrir",
 				"bioTitle": "Qui suis-je",
 				"bioParagraph": `Originaire du Béarn, Marion découvre le chant à 11 ans dans une maîtrise d’enfants en Pays Basque, puis intègre le chœur d’enfants du **Conservatoire de Pau** sous la direction de Pascale Verdier et de Fayçal Karoui. À 14 ans elle entre à la **Maîtrise de Radio-France** et chante pendant 3 ans dans diverses productions Radio-France sous la baguette de Sofi Jeannin, Kurt Masur, Daniele Gatti. Après des études de lettres (**hypokhâgne/khâgne classique**), elle rentre au **Département Supérieur pour Jeunes Chanteurs du CRR de Paris** en 2014 où elle travaille avec Florence Guignolet. Au sein du Jeune Chœur, elle chante dans diverses productions prestigieuses, au Châtelet, à la Philharmonie, etc...`,
 				"bioButtonLabel": "Biographie",
